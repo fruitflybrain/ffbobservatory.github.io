@@ -30,7 +30,7 @@ $(window).load(function() {
 
     //HEADER ANIMATION
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
+        if ($(".navbar").offset().top > 1) {
             $(".navbar-fixed-top").addClass("top-nav-collapse");
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
@@ -38,6 +38,28 @@ $(window).load(function() {
     });
 
 });
+
+var after_load = function() {
+  $("#banner").slideUp(400).empty();
+  $("#carousel").fadeIn();
+  $("#whole-brain-vid")[0].play();
+}
+
+// setTimeout(after_load, 5000);
+
+$(window).bind('scroll', function() {
+     if ($(window).scrollTop() > 1) {
+         $("#banner").slideUp(100);
+         $("#medulla-vid")[0].play();
+         $("#whole-brain-vid")[0].play();
+     }
+     else {
+         $("#banner").slideDown(100);
+         $("#medulla-vid")[0].pause();
+         $("#whole-brain-vid")[0].pause();
+     }
+});
+
 
 var shiftWindow = function() { scrollBy(0, -80) };
 if (location.hash) shiftWindow();

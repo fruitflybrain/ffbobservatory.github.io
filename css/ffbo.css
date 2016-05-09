@@ -69,7 +69,7 @@ body {
     background-color: #000000;
     width: 100%;
     max-height: auto;
-    height: 1080px;
+    height: 10vh;
     margin-bottom: 0px;
     position: relative;
     display: table;
@@ -84,6 +84,43 @@ body {
     margin-top: 3em;
     color: #eeeeee;
     background: rgba(100,100,100,0.5);
+    animation: banner-h1-fadein 2s;
+    -moz-animation: banner-h1-fadein 2s; /* Firefox */
+    -webkit-animation: banner-h1-fadein 2s; /* Safari and Chrome */
+    -o-animation: banner-h1-fadein banner-2s; /* Opera */
+}
+
+@keyframes banner-h1-fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes banner-h1-fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes banner-h1-fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes banner-h1-fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #banner h3 {
@@ -96,6 +133,7 @@ body {
 .countdown {
     display: table-cell;
     vertical-align: middle;
+    height:100vh;
 }
 
 #countdown {
@@ -108,16 +146,44 @@ body {
     margin-bottom: 10px;
 }
 
+/* Carousel */
+#carousel .row{
+    padding-top: 90px;
+}
+
+.carousel-inner > .item > img {
+    width: 100%;
+}
+
+.carousel-indicators li {
+    border-color: #555555;
+    background-color: #000000;
+}
+
+.carousel-indicators .active {
+    background-color: #555555;
+}
+
 /* Mission */
 #mission {
     background: #000000;
+}
+#mission .row {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #mission h2 {
     vertical-align: middle;
     text-align: center;
     font-size: 40px;
-    padding-top: 50px;
     color: #ffffff;
+}
+
+#mission h5 {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    color: #aaaaaa;
 }
 
 #mission .row p {
