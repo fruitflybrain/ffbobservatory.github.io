@@ -228,7 +228,8 @@ body {
     text-align:center;
 }
 #workflow .row p > img {
-    width:auto;
+    width:95%;
+    height:auto;
     text-align:center;
 }
 
