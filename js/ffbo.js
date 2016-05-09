@@ -25,7 +25,7 @@ $(window).load(function() {
 
 
     //PRELOADER
-    $('#preload').delay(150).fadeOut('fast');
+    $('#preload').delay(200).fadeOut('fast');
 
 
     //HEADER ANIMATION
@@ -52,6 +52,7 @@ $(window).bind('scroll', function() {
      }
 });
 
+document.getElementById("medulla-vid").playbackRate = 3.0;
 
 var shiftWindow = function() { scrollBy(0, -80) };
 if (location.hash) shiftWindow();
