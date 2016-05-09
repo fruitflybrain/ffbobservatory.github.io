@@ -25,7 +25,7 @@ $(window).load(function() {
 
 
     //PRELOADER
-    $('#preload').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $('#preload').delay(150).fadeOut('fast');
 
 
     //HEADER ANIMATION
@@ -38,14 +38,6 @@ $(window).load(function() {
     });
 
 });
-
-var after_load = function() {
-  $("#banner").slideUp(400).empty();
-  $("#carousel").fadeIn();
-  $("#whole-brain-vid")[0].play();
-}
-
-// setTimeout(after_load, 5000);
 
 $(window).bind('scroll', function() {
      if ($(window).scrollTop() > 1) {
