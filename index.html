@@ -1,1 +1,206 @@
-Hello World
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fruit Fly Brain Observatory">
+  <meta name="author" content="FFBO Team">
+
+  <title>Fruit Fly Brain Observatory | Welcome</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/ffbo.css" rel="stylesheet">
+  <link rel="shortcut icon" href="ico/favicon.ico" />
+</head>
+
+<body>
+  <!-- PRELOADING  -->
+  <div id="preload">
+    <div class="preload">
+      <div class="loader">
+        Loading...
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-fixed-top navbar-ffbo" role="navigation">
+    <div class="container">
+      <div data-scroll-header class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img width="50px" height="50px" src="img/ffbo_logo.png"></span> Fruit Fly Brain Observatory</a>
+      </div>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="nav navbar-nav navbar-right uppercase">
+          <li><a data-scroll href="#about">About</a></li>
+          <li><a data-scroll href="#team">Team</a></li>
+          <li><a data-scroll href="#tech">Technology</a></li>
+          <li><a data-scroll href="#workflow">Workflow</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Banner -->
+  <section id="banner" data-stellar-background-ratio="0.5">
+    <div class="countdown">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h1>Fruit Fly Brain Observatory</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- mission -->
+  <section id="mission">
+    <div class="row">
+      <h2>Our Mission<a name="about"></a></h2>
+      <div class="col-md-3 col-md-offset-1">
+        <p><iframe src="video/morph.mp4" height="350px" frameBorder="0"></iframe></p>
+      </div>
+      <div class="col-md-5 text-centered">
+      <p style=text-align:center;">
+        We propose to develop an open graph database platform called NeuroArch to store
+        and process all connected data related to the neural circuits of the fly brain
+        including location, morphology, connectivity and biophysical properties of
+        every neuron of the adult fruit fly brain. This will enable the automatic
+        generation of alternative models of the fly brain that can be simulated
+        efficiently using multiple Graphics Processing Units in order to help elucidate
+        the mechanisms of human neurological disorders and to help identify drug
+        targets.
+      </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2 align="center">Fruit Fly Brain Explorers<a name="team"></a></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <p><img src="img/columbia.svg"/></p>
+        <h4 align="center"><a href="http://www.bionet.ee.columbia.edu">Bionet Group</a></h4>
+        <p style=text-align:center;">
+        Located at Columbia University's Department of Electrical Engineering, the
+        Bionet Group is an interdisciplinary research team bringing together faculty
+        and students from the biological and engineering sciences focusing on
+        understanding the function of neural circuits, and the architecture of the
+        fruit fly (Drosophila melanogaster) brain.</p>
+      </div>
+      <div class="col-md-4">
+        <p><img  src="img/sheffield.png"/></p>
+        <h5 align="center"><a href="https://www.sheffield.ac.uk/acse/spcs">Centre for Signal Processing and Complex Systems</a></h5>
+        <p style=text-align:center;">
+        Located at the University of Sheffield, UK.</p>
+      </div>
+      <div class="col-md-4">
+        <p><img src="img/nthu.svg"/></p>
+        <h4 align="center"><a href="http://life.nthu.edu.tw/~lablcc/">Brain Research Center</a></h4>
+        <p style=text-align:center;">
+         Located at National Tsing Hua University, Taiwan, the Brain Research Center focuses on neural circuit
+         mechanisms of cognitive behavior and physiological functions. The works of
+         the lab emphasize simulating large scale neural networks using spiking
+         neural modeling and constructing models based on experimental observations
+         covering from.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+
+  <section id="tech">
+    <h2>Technology<a name="tech"></a></h2>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        <p><img src="img/biological_data.png"/></p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Biological Data</h4>
+        <p style=text-align:center;">
+          The fruit fly brain has ~150,000 neurons. Highly detailed open dataset
+          FlyCircuit at single neuron resolution, along with other open databases
+          of the fly brain provides increasing accessible data to study brain
+          function and neurological disease.
+        </p>
+      </div>
+    <!-- /.row -->
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-4 col-sm-offset-2">
+        <p><img src="img/neuroarch.png"/></p>
+      </div>
+      <div class="col-sm-4 col-sm-pull-4">
+        <h4>NeuroArch</h4>
+        <p>
+          NeuroArch will become an open graph database that exposes the extensive
+          neurobiological data associated with pathologies of interest and provide
+          the programming services (APIs) needed to algorithmically construct
+          executable models.
+        </p>
+      </div>
+    <!-- /.row -->
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        <p><img src="https://neurokernel.github.io/img/fly.png"/></p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Neurokernel</h4>
+        <p>
+          Neurokernel is an open source platform for emulating the fruit fly
+          brain. It provides an programming interface for efficiently executing
+          modular fly brain models on a cluster of Graphics Processing Units (GPUs).
+        </p>
+      </div>
+    <!-- /.row -->
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <section id="workflow">
+    <h2>Workflow<a name="workflow"></a></h2>
+    <div class="row">
+      <div class="col-lg-7 col-lg-offset-1 col-sm-3">
+        <img src="img/workflow.png"/></p>
+      </div>
+      <div class="col-lg-3 col-sm-3">
+        <p>
+          NeuroArch enables researchers to utilize open fly brain datasets to
+          design executable circuit models that can be evaluated with Neurokernel.
+          Deviations in evaluation results can be used to refine stored models.
+        </p>
+      </div>
+    <!-- /.row -->
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <footer class="footer">
+  <div class="row">
+    <p>Copyright ©2016 FFB. All Rights Reserved.</p>
+  </div>
+  </footer>
+
+  <!-- jQuery Version 1.12.3 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom Modernizr JavaScript -->
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/ffbo.js"></script>
+</body>
+</html>
