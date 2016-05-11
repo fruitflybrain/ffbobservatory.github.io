@@ -147,7 +147,7 @@ body {
 
 /* Carousel */
 #carousel .row{
-    padding-top: 90px;
+    /* padding-top: 90px; */
 }
 
 .carousel-inner > .item > img {
@@ -260,6 +260,10 @@ body {
     text-align: center;
     vertical-align: middle;
     font-size: 24px;
+    color: #eeeeee;
+}
+
+#tech a {
     color: #eeeeee;
 }
 

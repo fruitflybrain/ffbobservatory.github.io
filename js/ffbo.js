@@ -40,13 +40,13 @@ $(window).load(function() {
 });
 
 $(window).bind('scroll', function() {
-     if ($(window).scrollTop() > 1) {
-         $("#banner").slideUp(100);
+     if ($(window).scrollTop() > 500) {
+         /*$("#banner").slideUp(100);*/
          $("#medulla-vid")[0].play();
          $("#whole-brain-vid")[0].play();
      }
      else {
-         $("#banner").slideDown(100);
+         /*$("#banner").slideDown(100);*/
          $("#medulla-vid")[0].pause();
          $("#whole-brain-vid")[0].pause();
      }
