@@ -186,8 +186,8 @@ body {
 }
 
 #mission .row p {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 16px;
     color: #aaaaaa;
 }
@@ -226,16 +226,16 @@ body {
 }
 
 #team .row p {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 16px;
     text-align:center;
 }
 
 #team .row p > img {
     text-align:center;
-    width:150px;
-    height:auto;
+    width: 150px;
+    height: 150px;
 }
 
 /* Tech */
@@ -268,8 +268,8 @@ body {
 }
 
 #tech .row p {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 16px;
     color: #cccccc;
     text-align:center;
@@ -291,8 +291,8 @@ body {
     padding-top: 50px;
 }
 #workflow .row p {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 16px;
     text-align:center;
 }
