@@ -30,10 +30,16 @@
       </div>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="nav navbar-nav navbar-right uppercase">
-          <li><a data-scroll href="#about">About</a></li>
-          <li><a data-scroll href="#team">Team</a></li>
-          <li><a data-scroll href="#tech">Technology</a></li>
-          <li><a data-scroll href="#workflow">Workflow</a></li>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#about">About</a>
+            <ul class="dropdown-menu">
+              <li><a data-scroll href="#team">Team</a></li>
+              <li><a data-scroll href="#tech">Technology</a></li>
+              <li><a data-scroll href="#workflow">Workflow</a></li>
+            </ul>
+          </li>
+          <li><a data-scroll href="#" onclick="alert_construction()">NeuroNLP</a></li>
+          <li><a data-scroll href="#" onclick="alert_construction()">NeuroGFX</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -251,6 +257,7 @@
   <script src="js/modernizr.custom.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootbox/4.4.0/bootbox.min.js"></script>
   <script src="js/ffbo.js"></script>
 </body>
 </html>

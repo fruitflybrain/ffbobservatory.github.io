@@ -13,7 +13,9 @@ jQuery(document).ready(function($) {
     });
 });
 
-
+function alert_construction() {
+    bootbox.alert("Still under development.");
+}
 
 $(window).load(function() {
 
