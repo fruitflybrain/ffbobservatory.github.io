@@ -84,6 +84,7 @@ body {
     margin-top: 3em;
     color: #7c7c7c;
     background: rgba(100,100,100,0.5);
+    display: none;
     animation: banner-h1-fadein 3.5s;          /* generic */
     -moz-animation: banner-h1-fadein 3.5s;     /* Firefox */
     -webkit-animation: banner-h1-fadein 3.5s;  /* Safari and Chrome */
@@ -306,7 +307,6 @@ body {
     height:auto;
     text-align:center;
 }
-
 
 .footer {
   position: absolute;

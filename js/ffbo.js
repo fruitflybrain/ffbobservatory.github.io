@@ -35,6 +35,9 @@ $(window).load(function() {
 
 });
 
+$(window).ready(function() {
+    $("#banner h1").show()
+});
 $(window).bind('scroll', function() {
      if ($(window).scrollTop() > 500) {
          /*$("#banner").slideUp(100);*/
