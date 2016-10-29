@@ -45,7 +45,6 @@ body {
 .navbar-ffbo a {
     color: #ffffff;
 }
-
 .navbar-ffbo .navbar-nav > li > a:hover {
     color: #2980b9;
 }
@@ -65,11 +64,11 @@ body {
 /* Banner */
 
 #banner {
-    background: url(../img/brain.png) bottom center no-repeat;
+    background: url(../img/ffb.jpg) bottom center no-repeat;
     background-color: #000000;
     width: 100%;
     max-height: auto;
-    height: 10vh;
+    height: 70px;
     margin-bottom: 0px;
     position: relative;
     display: table;
@@ -79,14 +78,20 @@ body {
 }
 
 #banner h1 {
+    border-radius: 5px;
+    border: 3px solid #c2c2c2;
     font-size: 60px;
     margin-top: 3em;
-    color: #eeeeee;
+    color: #7c7c7c;
     background: rgba(100,100,100,0.5);
     animation: banner-h1-fadein 3.5s;          /* generic */
     -moz-animation: banner-h1-fadein 3.5s;     /* Firefox */
     -webkit-animation: banner-h1-fadein 3.5s;  /* Safari and Chrome */
     -o-animation: banner-h1-fadein 3.5s;       /* Opera */
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
 @keyframes banner-h1-fadein {
