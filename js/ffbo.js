@@ -24,10 +24,6 @@ $(window).load(function() {
     });
 
 
-    //PRELOADER
-    $('#preload').delay(200).fadeOut('fast');
-
-
     //HEADER ANIMATION
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 1) {
