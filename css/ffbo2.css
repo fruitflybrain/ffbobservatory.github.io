@@ -1123,3 +1123,11 @@ h4 {
         font-size: 2vmin !important;
     }
 }
+
+#osp-logo{
+    opacity: 0.5;
+}
+
+#osp-logo:hover{
+    opacity:1.0;
+}
