@@ -13,7 +13,7 @@
   <link href="css/ffbo2.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="shortcut icon" href="ico/favicon.ico" />
-  
+
 </head>
 
 <body>
@@ -42,35 +42,48 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav navbar-right uppercase">
             <li>
-              <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">About</a>
+              <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">Get Started</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a data-scroll href="#mission-2">Background</a></li>
-                <li><a data-scroll href="#overview-2">Overview</a></li>
-                <li><a data-scroll href="#neuronlp-2">NeuroNLP</a></li>
-                <li><a data-scroll href="#neurogfx-2">NeuroGFX</a></li>
-                <li><a data-scroll href="#neuroapp-2">NeuroAPPs</a></li>
-                <li><a data-scroll href="#under-the-hood-2">Under The Hood</a></li>
-                <li><a data-scroll href="#team-2">Fruit Fly Brain Explorers</a></li>
+                <li class="dropdown-submenu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a tabindex="-1" data-scroll href="#mission-2">Background</a></li>
+                    <li><a tabindex="-1" data-scroll href="#overview-2">Overview</a></li>
+                    <li><a tabindex="-1" data-scroll href="#neuronlp-2">NeuroNLP</a></li>
+                    <li><a tabindex="-1" data-scroll href="#neurogfx-2">NeuroGFX</a></li>
+                    <li><a tabindex="-1" data-scroll href="#neuroapp-2">NeuroAPPs</a></li>
+                    <li><a tabindex="-1" data-scroll href="#under-the-hood-2">Under The Hood</a></li>
+                    <li><a tabindex="-1" data-scroll href="#team-2">Fruit Fly Brain Explorers</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#"  class="dropdown-toggle" data-toggle="dropdown">Get Involved</a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a tabindex="-1" href="faq.html" target="_blank">FAQs</a></li>
+                    <li><a tabindex="-1" href="hackathons.html" target="_blank">Hackathons</a></li>
+                    <li><a tabindex="-1" href="https://lists.columbia.edu/mailman/listinfo/ffbo" target="_blank">Mailing List</a></li>
+                    <li><a tabindex="-1" href="workshops.html" target="_blank">Workshops</a></li>
+                    <li><a tabindex="-1" href="https://github.com/NeuralEnsemble/NeuroinformaticsTutorial/blob/master/Exercises/Exercise6_FruitFlyBrainObservatory.md" target="_blank">Tutorials</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li><a href="https://neuronlp.fruitflybrain.org" target="_blank">NeuroNLP</a></li>
+            <li><a class="dropdown-toggle" role="button" data-toggle="dropdown">NeuroNLP</a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="https://neuronlp.fruitflybrain.org" target="_blank">NeuroNLP.Adult</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://neuronlp.larva.fruitflybrain.org" target="_blank">NeuroNLP.Larva</a></li>
+                </ul>
+            </li>
             <li><a href="https://neurogfx.fruitflybrain.org" target="_blank">NeuroGFX</a></li>
             <li>
                 <a class="dropdown-toggle" role="button" data-toggle="dropdown">NeuroAPPs</a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="http://amacrine.ee.columbia.edu:8086/retina/retina.html"  target="_blank">Retinal Degeneration</a></li>
-                    <li><a href="http://amacrine.ee.columbia.edu:8086/al/al_disease.html" target="_blank">Parkinson's Disease: Olfaction</a></li>
-                    <li><a  href="https://amacrine.ee.columbia.edu:10090" target="_blank">Parkinson's Disease: Vision</a></li>
-                    <li><a href="http://amacrine.ee.columbia.edu:8086/epilepsy/epilepsy.html" target="_blank">Epilepsy</a></li>
-                </ul>
-            </li>
-            <li><a class="dropdown-toggle" role="button" data-toggle="dropdown">Get Involved</a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="faq.html" target="_blank">FAQs</a></li>
-                    <li><a href="hackathons.html" target="_blank">Hackathons</a></li>
-                    <li><a href="https://lists.columbia.edu/mailman/listinfo/ffbo" target="_blank">Mailing List</a></li>
-                    <li><a href="workshops.html" target="_blank">Workshops</a></li>
-                    <li><a href="https://github.com/NeuralEnsemble/NeuroinformaticsTutorial/blob/master/Exercises/Exercise6_FruitFlyBrainObservatory.md" target="_blank">Tutorials</a></li>
+                    <li><a href="https://neuroapps.fruitflybrain.org/retinal_degeneration"  target="_blank">Retinal Degeneration</a></li>
+                    <li><a href="https://neuroapps.fruitflybrain.org/parkinsons/olfaction" target="_blank">Parkinson's Disease: Olfaction</a></li>
+                    <li><a  href="https://neuroapps.fruitflybrain.org/parkinsons/vision" target="_blank">Parkinson's Disease: Vision</a></li>
+                    <li><a href="https://neuroapps.fruitflybrain.org/epilepsy" target="_blank">Epilepsy</a></li>
                 </ul>
             </li>
           </ul>
@@ -197,14 +210,14 @@
                 <h1>Fruit Fly Brain Observatory</h1>
               </div>
           </div>
-          
-          
+
+
       </div>
       <div class="scrollarrow">
           <a data-scroll href="#mission-2"><span></span><span></span><span></span></a>
       </div>
     </section>
-    
+
 
     <a class="anchor" id="mission-2" data-menu-offset="-70"></a>
     <section id="mission-1" class="sec">
@@ -212,7 +225,7 @@
 
       <div  class="section-caption" id="mission-cap" >
         <div class="caption-div" style="background-color:rgba(192, 255, 192, 1)">
-          
+
           <div class="row">
             <div class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 text-centered  cap-col">
               <h2>Background</h2>
@@ -220,14 +233,14 @@
           </div>
         </div>
       </div>
-      <div class="gap gap-100" style="background-image:url(img/neurogfx_cart.png);"></div>
+      <div class="gap gap-100" style="background-image:url(img/background.jpg);"></div>
       <div class="row snippet-row">
         <div id="mission_cont" class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-12 col-xs-push-0  text-centered snippet-text animated bounceInUp"  >
           <p>
               Animal behavior is governed by the activity of interconnected brain circuits. Comprehensive brain wiring maps are thus needed in order to formulate hypotheses about information flow and also to guide genetic manipulations aimed at understanding how genes and circuits orchestrate complex behaviors. A successful determination of how the brain's highly complex structure implements specific functions requires its decomposition into functional modules whose input-output relationships can be individually analyzed and whose interactions can be explained in terms of the groups of synaptic connections that exist between them.
             <p>
-          
-          
+
+
           <p style="text-align:center;"><a class="btn btn-info btn-read-more">More Details &raquo;</a></p>
           <div style="display: none">
             <h2>Background</h2>
@@ -246,10 +259,10 @@
     </section>
     <a class="anchor" id="overview-2" data-menu-offset="-70"></a>
     <section id="overview" class="sec">
-      
+
       <div class="section-caption" id="overview-cap">
         <div class="caption-div" style="color:#444;background-color:#f7fdca">
-          
+
           <div class="row">
             <div class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1 text-centered  cap-col">
               <h2>Fruit Fly Brain Observatory</h2>
@@ -258,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="gap gap-100" style="background-image:url(img/mission.png);"></div>
+      <div class="gap gap-100" style="background-image:url(img/mission.jpg);"></div>
       <div class="row snippet-row">
         <div class="col-lg-10 col-lg-push-1 col-md-10 col-md-push-1 col-sm-10 col-sm-push-1 col-xs-12 col-xs-push-0 text-center snippet-text animated zoomIn " >
           <div class="span4 collapse-group">
@@ -281,7 +294,7 @@
                   identify drug targets.</li>
               </ul>
           </p>
-          
+
             <p style="text-align:center;">
               <a class="btn btn-info btn-read-more">More Details &raquo;</a>
             </p>
@@ -289,7 +302,7 @@
               <h2>Overview</h2>
               <p>
           Despite significant investment and huge progress in understanding Drosophila neural circuits and the availability of excellent genomic and genetic community databases, a major obstacle in understanding the fly brain is the lack of communication/collaboration across the modeling community as well as lack of shared models, modeling tools and data repositories.
-          Vast amounts of experimental data that have been generated by labs around the world, 
+          Vast amounts of experimental data that have been generated by labs around the world,
           have yet to be distilled into new models or used to validate and refine existing models. Knowledge and information of the detailed neuroanatomy, neuron connectivity and gene expression of the adult Drosophila melanogaster brain has been made publicly available thanks to earlier pioneering efforts. What the community is still missing is an open source, modular software platform for accelerated model development, simulation, sharing and review, which ultimately is capable of simulating efficiently a complete model of the fly brain.
          </p>
            <p>
@@ -325,8 +338,8 @@
 
     <a class="anchor" id="neuronlp-2" data-menu-offset="-70"></a>
     <section id="neuronlp-1"  class="sec">
-      
-      
+
+
       <div class="section-caption" id="neuronlp-cap" >
         <div class="caption-div" style="color:#444;background-color:#f0776c">
           <div class="row">
@@ -355,7 +368,7 @@
                 <div style="display: none">
                   <h2>NeuroNLP</h2>
                   <p>
-                     NeuroNLP provides a modern web-based portal for navigating fruit fly brain circuit data. Increases in the availability and scale of fruit fly connectome data, demand new, scalable and accessible methods to facilitate investigation into the functions of the latest complex circuits being uncovered. NeuroNLP enables in-depth exploration and investigation of the structure of brain circuits, using intuitive natural language queries that are capable of revealing the latent structure and information, obscured due to expansive yet independent data sources. 
+                     NeuroNLP provides a modern web-based portal for navigating fruit fly brain circuit data. Increases in the availability and scale of fruit fly connectome data, demand new, scalable and accessible methods to facilitate investigation into the functions of the latest complex circuits being uncovered. NeuroNLP enables in-depth exploration and investigation of the structure of brain circuits, using intuitive natural language queries that are capable of revealing the latent structure and information, obscured due to expansive yet independent data sources.
 
                   </p>
                   <p>
@@ -378,7 +391,7 @@
               <div class="col-sm-0 col-lg-1 col-xl-3 col-md-3 col-xs-0">
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -389,7 +402,7 @@
 
     <a class="anchor" id="neurogfx-2" data-menu-offset="-70"></a>
     <section id="neurogfx-1"  class="sec">
-      
+
       <div class="section-caption" id="neurogfx-cap">
         <div class="caption-div" style="color:#333;background-color:#db9dbe">
           <div class="row">
@@ -418,7 +431,7 @@
                 fruit fly brain can be integrated towards the exploration
                 of whole brain function.
             </p>
-            
+
             <div class="row">
               <div class="col-sm-0 col-lg-0 col-xl-3 col-md-3 col-xs-0">
               </div>
@@ -466,9 +479,9 @@
               <div class="col-sm-0 col-lg-1 col-xl-3 col-md-3 col-xs-0">
               </div>
             </div>
-            
-           
-            
+
+
+
           </div>
         </div>
       </div>
@@ -479,7 +492,7 @@
 
     <a class="anchor" id="neuroapp-2" data-menu-offset="-70"></a>
     <section id="neuroapp-1" class="sec">
-      
+
       <div class="section-caption" id="neuroapp-cap">
         <div class="caption-div" style="color:#333;background-color:#c49cde">
           <div class="row">
@@ -499,7 +512,7 @@
                 FFBO
                 unifies and supports the research efforts of labs around the world, accelerating the pace of discovery
                 and the translation of fundamental neuroscience research into drug, cell and gene therapies.
-                
+
                 The FFBO platform has been designed from the bottom up to be modular and expandable, supporting both
                 publicly and privately hosted databases, opening up the possibilities of community integrated
                 'NeuroAPPs', where healthy and diseased models of the fruit fly brain
@@ -526,7 +539,7 @@
       <div class="scrollarrow">
         <a data-scroll href="#under-the-hood-2"><span></span><span></span><span></span></a>
       </div>
-      
+
     </section>
 
     <a class="anchor" id="under-the-hood-2" data-menu-offset="-70" ></a>
@@ -541,7 +554,7 @@
         </div>
       </div>
       <div class="gap gap-100" style="background-image:url(img/engine.jpg);"></div>
-      
+
       <div class="row snippet-row">
         <div id="under_cont" class="snippet-text animated rotateIn col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-10 col-xs-push-1  text-centered">
           <div class="span4 collapse-group">
@@ -552,8 +565,8 @@
                 <li> a brain emulation platform, called Neurokernel. </li>
               </ul>
             </p>
-            
-            
+
+
             <p style="text-align:center;">
               <a class="btn btn-info btn-read-more">More Details &raquo;</a>
             </p>
@@ -571,7 +584,7 @@
               <p>
                 While open-source projects have been proposed in computational neuroscience, they tend to have a monolithic structure that continue to lack strong appeal in the neuroscience community. Neurokernel provides standard APIs among local processing units (modeling neuropils) and tools to build an architecture from components developed by the community of researchers at large. Most importantly, it does not impose a unique computational model - rather it allows the existence of many models that can be comparatively evaluated. Neurokernel will accelerate the development and integration of new models of neural circuits by providing a model architecture upon which researchers can build, share compare, refine and validate models of neuropil compartments, constituent circuits and connectivity maps. The ultimate goal of this project is to enable the neuroscience community to develop and test, in the near future, the first complete computer model of Drosophila brain.
               </p>
-              
+
               <p>
                 Neurokernel is open source platform for implementing and simulating on multiple Graphics Processing Units (GPUs), neural circuit models of the fly brain, based on electrophysiological recordings, connectome data, biophysical analysis etc. The Neurokernel framework a) Enables multiple fly neuroscientists to combine their efforts in modelling individual LPUs and tracts by defining a standardized model interfaces that enable communication between LPU models, with different internal representation, developed by different groups, b) Provides highly efficient numerical implementations of neural components, which target widely available GPU hardware and c) Performs efficient and scalable management of multiple GPU resources which means that LPU model developers do not have to worry about how the GPUs to which they have access are used.
               </p>
@@ -643,7 +656,7 @@
                 focusing on various topics, including neural circuit mechanisms
                 of behavior and brain disorders, novel imaging technologies,
                 advanced behavior apparatus, connectome analysis and computational modeling.</p>
-            </div>          
+            </div>
             <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
               <p><img  src="img/sheffield.png"/></p>
               <h5 align="center"><a href="https://www.sheffield.ac.uk/acse/spcs">Centre for Signal Processing and Complex Systems</a></h5>
@@ -686,11 +699,12 @@
   <script src="js/collapse.js"></script>
   <script src="https://cdn.jsdelivr.net/bootbox/4.4.0/bootbox.min.js"></script>
   <!--<script src="js/iscroll.js"></script>-->
-  
+
   <script type="text/javascript" src="js/skrollr.min.js"></script>
   <script type="text/javascript" src="js/skrollr.menu.min.js"></script>
   <script src="js/ffbo2.js"></script>
   <script src="js/test.js"></script>
-  
+  <script src="js/submenu.js"></script>
+
 </body>
 </html>
