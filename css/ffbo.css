@@ -24,7 +24,7 @@ body {
 }
 
 .navbar-brand {
-    padding: 0 25px;
+    padding: 0px 0px 5px 20px;
 }
 
 .navbar-ffbo .navbar-nav > li > a:hover {
@@ -34,7 +34,7 @@ body {
 }
 
 .top-nav-collapse {
-    padding: 20px 0;
+    padding: 8px 0;
 }
 
 
@@ -61,6 +61,7 @@ body {
 
 .navbar-ffbo .navbar-toggle {
     background: #ffffff;
+    margin-right: 20px;
 }
 
 .top-nav-collapse {

@@ -237,10 +237,14 @@ body {
     /*font-size: 18px;*/
     border-radius: 0;
     margin-bottom: 0;
-    padding: 20px 0;
+    padding: 8px 0;
     padding-left: 5vmin !important;
     padding-right: 5vmin !important;
     color: #ffffff;
+}
+
+.navbar-toggle{
+    margin-right: 25px !important;
 }
 
 .navbar-brand {
