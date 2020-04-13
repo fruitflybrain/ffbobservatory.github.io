@@ -1,0 +1,23 @@
+<mat-card class='profile-card' color='theme'>
+  <img
+    mat-card-imag
+    class="profile-card-img"
+    *ngIf="profile.img"
+    src={{profile.img}}/>
+  <img
+    mat-card-imag
+    class="profile-card-img"
+    *ngIf="!profile.img"
+    src="../../../assets/get-involved/img/avatar.png"/>
+  <mat-card-title *ngIf="profile.url">
+    <a href={{profile.url}}>{{profile.name}}</a>
+  </mat-card-title>
+  <mat-card-title *ngIf="!profile.url">
+    {{profile.name}}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{profile.role}}
+  </mat-card-subtitle>
+  <mat-card-content *ngIf="profile.description">{{profile.description}}</mat-card-content>
+  <mat-card-content *ngIf="!profile.description">{{defaultDescription}}</mat-card-content>
+</mat-card>

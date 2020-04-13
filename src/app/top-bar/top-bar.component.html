@@ -1,0 +1,18 @@
+<mat-toolbar class='top-bar' color='primary'>
+  <a mat-button class="ffbo-logo" routerLink=''>
+    <img src="../assets/img/ffbo_logo.png">
+  </a>
+  <p class="ffbo-text">Fruit Fly Brain Observatory</p>
+  <div class="flex-spacer"></div>
+  <a class="top-bar-btn" mat-button [matMenuTriggerFor]="belowMenu">NeuroNLP</a>
+  <div>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>What is NeuroNLP</button>
+      <button mat-menu-item (click)="launchNLP('adult')">Launch NeuroNLP.Adult (with FlyCircuit and Janelia Medulla 7-column data)</button>
+      <button mat-menu-item (click)="launchNLP('larva')">Launch NeuroNLP.Larva (with Janelia Larva Olfaction Data)</button>
+      <button mat-menu-item (click)="launchNLP('EM')">Download NeuroNLP.EM (with Hemibrain and VNC data)</button>
+    </mat-menu>
+  </div>
+  <a class="top-bar-btn" mat-button (click)="launchFBL()">FlyBrainLab</a>
+  <a class="top-bar-btn" mat-button routerLink="/get-involved">Get Involved</a>
+</mat-toolbar>

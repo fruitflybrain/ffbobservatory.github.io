@@ -1,0 +1,48 @@
+@import '~@angular/material/theming';
+@import '../../../styles.scss';
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 720px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 60px;
+  padding-bottom: 72px;
+}
+
+.banner-text {
+  flex-basis: 50% or auto;
+  vertical-align: middle;
+  min-width:40%;
+  background-color: inherit;
+
+  h1 {
+    font-weight:  200;
+    letter-spacing: -.02em;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+  }
+
+  p {
+    font-size: .9rem;
+    font-weight: 200;
+    line-height: 1.8rem;
+    margin: .3rem .25rem;
+    max-width: 31.2rem;
+  }
+
+  .banner-btn {
+    background-color: mat-color($ffbo-ng-accent, lighter);
+  }
+}
+
+.banner-background {
+  flex-basis: 50% or auto;
+  vertical-align: middle;
+  max-width:60%;
+}

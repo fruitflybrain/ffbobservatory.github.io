@@ -1,0 +1,39 @@
+@import '~@angular/material/theming';
+@import '../../../styles.scss';
+
+.ffbo-component-card {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  overflow: hidden;
+  height: 120px;
+
+  .ffbo-component-card-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+
+  mat-card-title {
+    font-weight: 300;
+  }
+
+  mat-card-content {
+    font-weight: 200;
+  }
+}
+
+.ffbo-component-card-btn {
+  button {
+    // border: solid;
+    // border-color: mat-color($ffbo-ng-accent, 200);
+    // border-width: 2px;
+    background: mat-color($ffbo-ng-accent, lighter);
+  }
+}
+
+.ffbo-component-card:hover {
+  transition: box-shadow .25s cubic-bezier(0.4, 0, 0.2, 1);
+}

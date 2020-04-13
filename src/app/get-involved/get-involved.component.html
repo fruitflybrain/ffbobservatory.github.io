@@ -1,0 +1,44 @@
+<div class="get-involved-container">
+  <div class="get-involved-top">
+    <h1>Community</h1>
+    <p>
+      FFBO believes in the spirit of open collaboration and relies on the community of
+      researchers and developers to push forth our understanding of the fruit fly brain.
+    </p>
+  </div>
+  <div class="get-involved-sections get-invovled-team">
+    <h1>FFBO Team</h1>
+    <div class="get-involved-sections-cards">
+      <app-profile-card
+        *ngFor="let profile of team"
+        [profile]="profile">
+      </app-profile-card>
+    </div>
+  </div>
+  <div class="get-involved-sections get-invovled-alumni">
+    <h1>FFBO Alumni</h1>
+    <div class="get-involved-sections-cards">
+      <app-profile-card
+        *ngFor="let profile of alumni"
+        [profile]="profile">
+      </app-profile-card>
+    </div>
+  </div>
+  <div class="get-involved-sections get-invovled-collaborators-and-contributors">
+    <h1>Collaborators & Contributors</h1>
+    <div class="get-involved-sections-cards">
+      <app-profile-card
+        *ngFor="let profile of collaborators"
+        [profile]="profile">
+      </app-profile-card>
+    </div>
+    <div>
+      <ul>
+        <li *ngFor="let profile of contributors">
+          {{profile.name}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
