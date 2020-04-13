@@ -19,7 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     AppComponent,
     FFBONavBarComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

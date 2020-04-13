@@ -1,55 +1,60 @@
-<app-banner></app-banner>
-<mat-card class="ffbo-overview" color='foreground'>
-  <mat-card-title>From Structure to Function</mat-card-title>
-  <mat-card-content>
-    <mat-grid-list cols="2" rowHeight="4:1" gutterSize="10px">
-      <mat-grid-tile>
-        <mat-grid-tile-header class="ffbo-overview-section-title">
-          <fa-icon [icon]="faDatabase"></fa-icon>
+<div>
+  <app-banner></app-banner>
+  <mat-card class="ffbo-overview">
+    <mat-card-title>From Structure to Function</mat-card-title>
+    <mat-card-content>
+      <div class="ffbo-overview-section">
+        <div class="ffbo-overview-section-title">
+          <span class="ffbo-overview-section-title-icon"><fa-icon [icon]="faDatabase"></fa-icon></span>
           <h3 >Easy Data Integration</h3>
-        </mat-grid-tile-header>
+        </div>
         <p class="ffbo-overview-section-content">
           Graph-based Database NeuroArch incorporates morphology, connectomes,
           model information in a unified framework for easy access.
         </p>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header class="ffbo-overview-section-title">
-          <fa-icon [icon]="faCircuit"></fa-icon>
+      </div>
+      <div class="ffbo-overview-section">
+        <div class="ffbo-overview-section-title">
+          <span class="ffbo-overview-section-title-icon">
+            <fa-icon [icon]="faCircuit"></fa-icon>
+          </span>
           <h3 >Rapid Circuit Development & Executation</h3>
-        </mat-grid-tile-header>
+        </div>
         <p class="ffbo-overview-section-content">
           NeuroKernel API with multi-GPU support enables fast circuit development and execution.
         </p>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header class="ffbo-overview-section-title">
-          <fa-icon [icon]="faBrowser"></fa-icon>
+      </div>
+      <div class="ffbo-overview-section">
+        <div class="ffbo-overview-section-title">
+          <span class="ffbo-overview-section-title-icon">
+            <fa-icon [icon]="faBrowser"></fa-icon>
+          </span>
           <h3 >Browser-based User Interaction</h3>
-        </mat-grid-tile-header>
+        </div>
         <p class="ffbo-overview-section-content">
           Database and execution engine all come with front-end browser-based UIs for
           platform-independent real-time access from anywhere on any device.
         </p>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header class="ffbo-overview-section-title">
-          <fa-icon [icon]="faShare"></fa-icon>
-          <h3 >Fast Collaboration</h3>
-        </mat-grid-tile-header>
+      </div>
+      <div class="ffbo-overview-section">
+        <div class="ffbo-overview-section-title">
+          <span class="ffbo-overview-section-title-icon">
+            <fa-icon [icon]="faShare"></fa-icon>
+          </span>
+          <h3>Fast Collaboration</h3>
+        </div>
         <p class="ffbo-overview-section-content">
           Next generation functional circuit IDE FlyBrainLab is built upon
           JupyterLab and facilitates model sharing using Jupyter Notebooks.
         </p>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </mat-card-content>
-</mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
 
-<div class="card-container">
-  <app-ffbo-component-card
-    class="ffbo-component-card"
-    *ngFor="let comp of ffboComponents" [data]="comp">
-  </app-ffbo-component-card>
+  <div class="card-container">
+    <app-ffbo-component-card
+      class="ffbo-component-card"
+      *ngFor="let comp of ffboComponents" [data]="comp">
+    </app-ffbo-component-card>
+  </div>
 </div>
-

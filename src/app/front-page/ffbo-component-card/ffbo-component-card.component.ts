@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./ffbo-component-card.component.scss']
 })
 export class FFBOComponentCardComponent implements OnInit {
+  isActive = false;
 
   @Input()
   data: FFBODescription;

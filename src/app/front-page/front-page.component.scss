@@ -1,6 +1,9 @@
+@import '~@angular/material/theming';
+@import '../../styles.scss';
+
 mat-card.ffbo-overview {
   opacity: 0.8;
-  margin-top: -120px;
+  margin-top: -60px;
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 30px;
@@ -10,6 +13,10 @@ mat-card.ffbo-overview {
     padding-right: 20px;
     padding-top: 0px;
     padding-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   mat-card-title {
@@ -19,24 +26,33 @@ mat-card.ffbo-overview {
     text-align: center;
   }
 
+  .ffbo-overview-section{
+    padding-top: 20px;
+    width: 50%;
+    min-width: 250px;
+  }
 
-  p.ffbo-overview-section-content {
-    padding-top: 60px;
+
+  .ffbo-overview-section-content {
     text-align: initial;
     opacity: 0.8;
+    width: 90%;
   }
 
   .ffbo-overview-section-title {
-    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
     background-color: transparent;
-
-    fa-icon {
-      font-size: 2.0rem;
+    .ffbo-overview-section-title-icon {
+      width: 3rem;
+      fa-icon {
+        font-size: 2rem;
+        color: mat-color($primary);
+      }
     }
-
-    h3{
+    h3 {
       font-size: 1.1rem;
-      padding-left: 20px;
     }
   }
 }

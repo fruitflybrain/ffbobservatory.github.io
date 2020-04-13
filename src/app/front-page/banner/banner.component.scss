@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: flex-start;
   overflow: hidden;
-  max-height: 720px;
+  max-height: 400px;
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 60px;
@@ -37,12 +37,15 @@
   }
 
   .banner-btn {
-    background-color: mat-color($ffbo-ng-accent, lighter);
+    background-color: mat-color($primary, darker);
+    color: black;
   }
 }
 
 .banner-background {
   flex-basis: 50% or auto;
-  vertical-align: middle;
-  max-width:60%;
+  justify-content: baseline;
+  img {
+    width: 100%;
+  }
 }

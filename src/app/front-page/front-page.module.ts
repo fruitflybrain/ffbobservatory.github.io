@@ -10,7 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FFBOComponentDialogComponent } from './ffbo-component-dialog/ffbo-component-dialog.component';
 import { FFBOComponentCardComponent } from './ffbo-component-card/ffbo-component-card.component';
 
-
 import { FrontPageRoutingModule } from './front-page-routing.module';
 import { FrontPageComponent } from './front-page.component';
 

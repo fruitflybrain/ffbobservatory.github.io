@@ -7,6 +7,7 @@
   float: left;
   overflow: hidden;
   height: 120px;
+  cursor: pointer;
 
   .ffbo-component-card-img {
     position: absolute;
@@ -22,15 +23,6 @@
 
   mat-card-content {
     font-weight: 200;
-  }
-}
-
-.ffbo-component-card-btn {
-  button {
-    // border: solid;
-    // border-color: mat-color($ffbo-ng-accent, 200);
-    // border-width: 2px;
-    background: mat-color($ffbo-ng-accent, lighter);
   }
 }
 

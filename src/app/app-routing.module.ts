@@ -11,7 +11,14 @@ const routes: Routes = [
     path: 'get-involved',
     loadChildren: () => import('./get-involved/get-involved.module').then(m => m.GetInvolvedModule)
   },
-  { path: 'front-page', loadChildren: () => import('./front-page/front-page.module').then(m => m.FrontPageModule) }
+  {
+    path: 'front-page',
+    loadChildren: () => import('./front-page/front-page.module').then(m => m.FrontPageModule)
+  },
+  {
+    path: 'licenses-and-credits',
+    loadChildren: () => import('./licenses-and-credits/licenses-and-credits.module').then(m => m.LicensesAndCreditsModule)
+  }
 ];
 
 @NgModule({

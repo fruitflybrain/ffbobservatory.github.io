@@ -1,9 +1,15 @@
-<mat-card class='ffbo-component-card' color='theme'>
+<mat-card
+  [class.mat-elevation-z]="!isActive"
+  [class.mat-elevation-z8]="isActive"
+  class='ffbo-component-card'
+  (mouseover)="isActive = true"
+  (mouseleave)="isActive = false"
+  (click)="openDialog()">
   <mat-card-title>{{data.title}}</mat-card-title>
   <mat-card-content *ngIf="data.shortText">{{data.shortText}}</mat-card-content>
   <mat-card-content *ngIf="!(data.shortText)">{{data.mainText}}</mat-card-content>
   <img mat-card-imag class="ffbo-component-card-img" *ngIf="data.img" src={{data.img}}/>
-  <mat-card-actions class="ffbo-component-card-btn">
-    <button mat-button (click)="openDialog()">Learn More</button>
+  <mat-card-actions class="ffbo-component-card-btn" color="theme">
+    <button mat-button>Learn More</button>
   </mat-card-actions>
 </mat-card>

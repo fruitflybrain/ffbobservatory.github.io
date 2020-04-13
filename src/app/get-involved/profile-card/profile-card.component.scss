@@ -1,9 +1,10 @@
 mat-card.profile-card {
   height: 370px;
-  width: 250px;
+  width: 220px;
   text-align: center;
   box-shadow: none;
   overflow: hidden;
+  background: transparent;
 
   mat-card-title {
     font-weight: 150;
@@ -22,11 +23,13 @@ mat-card.profile-card {
     padding-bottom: 20px;
     padding-top: 0px;
     font-weight: 150;
+    opacity: .8;
   }
 }
 
 img.profile-card-img {
   // height: 30%;
-  // clip-path: circle(150px at center);
+  clip-path: circle(50px at center);
+
   width:6.2rem;
 }

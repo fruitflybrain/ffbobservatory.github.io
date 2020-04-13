@@ -9,6 +9,7 @@ import {
   faDatabase,  faWindowRestore, faProjectDiagram, faShare
 } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-front-page',
   templateUrl: './front-page.component.html',
