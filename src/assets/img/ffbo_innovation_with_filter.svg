@@ -1,0 +1,279 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 698 567" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;">
+    <defs>
+      <filter id="unhighlight-1">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        <feColorMatrix type="saturate" values="0.1"/>
+      </filter>
+      <filter id="unhighlight-5">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        <feColorMatrix type="saturate" values="0.1"/>
+      </filter>
+      <filter id="unhighlight-3">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+        <feColorMatrix type="saturate" values="0.1"/>
+      </filter>
+    </defs>
+    <g id="Layer-1" serif:id="Layer 1" transform="matrix(1,0,0,1,14.3794,-10.4572)">
+        <g class="ring stakeholders" id="stakeholders" transform="matrix(1,0,0,1,-43.1662,-5.53528)">
+            <g>
+                <path id="path4160" d="M451.441,511.909C381.696,549.026 300.796,549.878 232.216,519.87" style="fill:none;fill-rule:nonzero;stroke:rgb(255,246,213);stroke-width:4.23px;"/>
+                <path id="path41601" serif:id="path4160" d="M144.892,456.29C139.738,450.453 134.822,444.332 130.165,437.933C66.292,350.167 67.265,231.992 127.701,145.655" style="fill:none;fill-rule:nonzero;stroke:rgb(255,246,213);stroke-width:4.23px;"/>
+                <path id="path41602" serif:id="path4160" d="M209.494,71.438C295.98,22.658 406.506,28.472 487.773,91.75C545.989,137.079 579.297,204.192 583.917,273.836" style="fill:none;fill-rule:nonzero;stroke:rgb(255,246,213);stroke-width:4.23px;"/>
+                <path id="path41603" serif:id="path4160" d="M569.015,378.37C564.239,391.305 558.337,402.979 551.282,415.258" style="fill:none;fill-rule:nonzero;stroke:rgb(255,246,213);stroke-width:4.23px;"/>
+                <g transform="matrix(1,0,0,1,452.025,489.198)">
+                    <g id="text4221">
+                        <text x="0px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:23.576px;fill:rgb(255,246,213);">Stakeholders</text>
+                    </g>
+                </g>
+            </g>
+            <g class="btn stakeholder neuroBio" id="stakeholder-biologists" transform="matrix(0.418939,0,0,0.418939,618.844,-227.648)">
+                <g id="text4162">
+                    <g transform="matrix(1,0,0,1,-1122.16,702.233)">
+                        <text x="-120.544px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:32px;fill:rgb(255,170,170);">Neur<tspan x="-47.616px -28.064px " y="0px 0px ">ob</tspan>iologists</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1122.16,742.233)">
+                        <text x="-28.448px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:32px;fill:rgb(255,170,170);">and</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1122.16,782.233)">
+                        <text x="-129.76px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:32px;fill:rgb(255,170,170);">Neur<tspan x="-56.832px -37.28px " y="0px 0px ">og</tspan>eneticists</text>
+                    </g>
+                </g>
+                <circle id="circle4166" cx="-1125.71" cy="742.461" r="148.604" style="fill-opacity:0;stroke:rgb(255,246,213);stroke-width:8.33px;stroke-linecap:round;"/>
+            </g>
+            <g class="btn stakeholder  compNeuro" id="stakeholder-computational-neuroscientists" transform="matrix(0.418939,0,0,0.418939,1082.09,20.3034)">
+                <g id="text4190">
+                    <g transform="matrix(1,0,0,1,-1124.9,710.92)">
+                        <text x="-133.29px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:36px;fill:rgb(128,255,128);">Computational/</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1124.9,755.92)">
+                        <text x="-96.3px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:36px;fill:rgb(128,255,128);">Theor<tspan x="3.06px 23.724px " y="0px 0px ">et</tspan>ical</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1124.9,800.92)">
+                        <text x="-134.316px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:36px;fill:rgb(128,255,128);">Neur<tspan x="-52.272px -30.276px " y="0px 0px ">os</tspan>cientists</text>
+                    </g>
+                </g>
+                <circle id="circle4188" cx="-1125.71" cy="742.461" r="148.604" style="fill-opacity:0;stroke:rgb(255,246,213);stroke-width:8.33px;stroke-linecap:round;"/>
+            </g>
+            <g class="btn stakeholder compSci" id="stakeholder-computer-scientists" transform="matrix(0.418939,0,0,0.418939,641.566,204.491)">
+                <g id="text4202">
+                    <g transform="matrix(1,0,0,1,-1125.36,707.033)">
+                        <text x="-90.776px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:38.005px;fill:rgb(255,204,0);">Computer</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1125.36,754.539)">
+                        <text x="-96.059px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:38.005px;fill:rgb(255,204,0);">Scientists/</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1125.36,802.046)">
+                        <text x="-90.776px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:38.005px;fill:rgb(255,204,0);">Engineers</text>
+                    </g>
+                </g>
+                <circle id="circle4200" cx="-1125.71" cy="742.461" r="148.604" style="fill-opacity:0;stroke:rgb(255,246,213);stroke-width:8.33px;stroke-linecap:round;"/>
+            </g>
+        </g>
+        <g class="ring ffbo" id="ffbo" transform="matrix(1,0,0,1,-43.1662,-5.53528)">
+            <path id="path4240" d="M416.083,482.437C322.186,522.806 211.77,488.83 156.81,402.659C101.85,316.487 117.604,202.04 193.802,133.923C270,65.805 385.49,62.926 464.987,127.163C544.485,191.4 565.921,304.919 515.323,393.722" style="fill:none;fill-rule:nonzero;stroke:rgb(255,85,85);stroke-width:4.25px;"/>
+            <g id="text4426">
+                <g transform="matrix(1,0,0,1,456.15,419.496)">
+                    <text x="-82.862px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:25px;fill:rgb(255,85,85);">Fruit Fly Brain</text>
+                </g>
+                <g transform="matrix(1,0,0,1,456.15,444.746)">
+                    <text x="-73.175px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:25px;fill:rgb(255,85,85);">Observatory</text>
+                </g>
+            </g>
+        </g>
+        <g class="ring data" id="data-types" serif:id="data types" transform="matrix(1,0,0,1,-43.1662,-6.53528)">
+            <g class="btn data" id="data-celltype">
+                <g id="path9266" transform="matrix(1.17402,0,0,1.17402,-51.8244,-43.8513)">
+                    <path d="M246.119,303.726C236.994,264.001 258.129,222.767 295.652,207.088C298.604,205.855 301.229,205.058 301.487,205.318C302.099,205.933 340.952,262.33 340.848,262.45C340.804,262.501 338.986,261.934 336.808,261.192C332.057,259.572 326.28,259.391 321.778,260.719C316.657,262.231 311.166,265.537 293.34,277.842C252.752,305.859 248.119,309.027 247.738,309.027C247.517,309.027 246.789,306.642 246.119,303.726Z" style="fill:rgb(221,175,233);fill-opacity:0.49;fill-rule:nonzero;"/>
+                </g>
+                <g id="text9131">
+                    <g transform="matrix(1,0,0,1,284.983,246.972)">
+                        <text x="-30.191px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Cell T<tspan x="6.335px 13.601px " y="0px 0px ">yp</tspan>e</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,284.983,264.472)">
+                        <text x="-14.644px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Map</text>
+                    </g>
+                </g>
+            </g>
+            <g class="btn data" id="data-synaptome">
+                <g id="path9270" transform="matrix(1.17402,0,0,1.17402,-51.8244,-43.8513)">
+                    <path d="M335.977,335.818C325.295,320.282 316.664,307.461 316.797,307.327C316.931,307.193 318.162,307.482 319.533,307.968C325.78,310.185 332.957,309.569 339.988,306.212C342.242,305.136 358.597,294.244 376.331,282.009C395.781,268.589 408.721,260.006 408.943,260.377C409.145,260.715 409.877,263.538 410.57,266.649C412.49,275.273 412.755,288.767 411.184,297.972C406.116,327.673 386.045,352.313 358.229,362.981L355.401,364.065L335.977,335.818Z" style="fill:rgb(188,95,211);fill-opacity:0.49;fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,344.199,331.267)">
+                    <g id="text9121">
+                        <text x="0px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Synaptome</text>
+                    </g>
+                </g>
+            </g>
+            <g class="btn data" id="data-connectome">
+                <g id="path9278" transform="matrix(1.17402,0,0,1.17402,-51.8244,-43.8513)">
+                    <path d="M350.791,295.206C352.698,288.5 352.968,286.736 352.743,282.456C352.348,274.931 352.471,275.137 320.298,228.199C310.664,214.143 304.164,203.986 304.381,203.328C305.209,200.822 332.18,199.18 342.673,200.996C353.218,202.822 364.708,207.476 374.604,213.932C380.817,217.984 393.784,230.77 397.664,236.668C401.125,241.931 406.569,252.75 406.953,255.13C407.332,257.48 407.149,257.656 396.979,264.771C388.639,270.605 354.714,293.845 352.048,295.55L350.392,296.609L350.791,295.206Z" style="fill:rgb(221,85,255);fill-opacity:0.49;fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,377.244,243.505)">
+                    <g id="text9095">
+                        <text x="-42.903px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Connectome</text>
+                    </g>
+                </g>
+            </g>
+            <g class="btn data" id="data-activity">
+                <g id="path9272" transform="matrix(1.17402,0,0,1.17402,-51.8244,-43.8513)">
+                    <path d="M320.611,368.415C313.513,367.55 307.02,366.147 301.314,364.247C288.056,359.83 278.403,353.812 268.251,343.634C259.011,334.371 253.151,325.388 248.578,313.479L247.662,311.094L252.883,307.477C272.214,294.084 305.96,270.892 306.116,270.892C306.219,270.892 305.731,272.101 305.031,273.579C301.263,281.53 302.107,290.953 307.259,298.477C308.269,299.951 318.929,315.41 330.949,332.832C342.969,350.254 352.595,364.717 352.34,364.972C352.085,365.227 348.851,366.058 345.153,366.818C338.624,368.161 325.522,369.014 320.611,368.415Z" style="fill:rgb(205,135,222);fill-opacity:0.49;fill-rule:nonzero;"/>
+                </g>
+                <g id="text9125">
+                    <g transform="matrix(1,0,0,1,290.044,335.915)">
+                        <text x="-24.626px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Activity</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,290.044,353.415)">
+                        <text x="-14.644px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:14px;fill:white;">Map</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="innovations" transform="matrix(1,0,0,1,-43.1662,-5.53528)">
+            <path class="ring innovations" id="path4424" d="M332.748,404.093C284.091,403.824 240.723,372.444 225.252,326.311C209.782,280.178 225.463,228.995 264.121,199.446C302.779,169.897 356.283,168.196 396.74,195.231C437.197,222.265 456.097,272.348 443.587,319.371" style="fill:none;fill-rule:nonzero;stroke:rgb(42,212,255);stroke-width:2.66px;stroke-linecap:round;"/>
+            <g class="btn innovation compNeuro" id="neurocad" transform="matrix(0.480374,0,0,0.480374,1019.29,-24.1452)">
+                <g id="g4480">
+                    <g transform="matrix(1,0,0,1,-1123.68,759.678)">
+                        <g id="text4484">
+                            <text x="-70.779px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:rgb(128,255,128);">NeuroCAD</text>
+                        </g>
+                    </g>
+                    <circle id="circle4482" cx="-1125.01" cy="750.386" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g class="btn innovation compNeuro" id="functional-identification" transform="matrix(0.480374,0,0,0.480374,1019.36,-114.201)">
+                <g id="g4462">
+                    <g id="text4466">
+                        <g transform="matrix(1,0,0,1,-1120.56,713.433)">
+                            <text x="-50.552px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(128,255,128);">Functional</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,738.433)">
+                            <text x="-62.222px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(128,255,128);">Identiﬁcation</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,763.433)">
+                            <text x="-43.887px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(128,255,128);">of Circuit</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,788.433)">
+                            <text x="-29.438px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(128,255,128);">Motifs</text>
+                        </g>
+                    </g>
+                    <circle id="circle4464" cx="-1120.87" cy="745.694" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g class="btn innovation compNeuro" id="insilico-workbench" transform="matrix(0.480374,0,0,0.480374,963.184,-192.064)">
+                <g id="g4443">
+                    <g id="text4447">
+                        <g transform="matrix(1,0,0,1,-1120.56,732.633)">
+                            <text x="-44.678px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:rgb(128,255,128);">in silico</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,762.633)">
+                            <text x="-63.346px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:rgb(128,255,128);">workbench</text>
+                        </g>
+                    </g>
+                    <circle id="circle4445" cx="-1120.87" cy="745.694" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g class="btn innovation neuroBio"  id="transgenic-lines" transform="matrix(0.476613,0,0,0.476613,429.838,-4.57476)">
+                <g id="text4375">
+                    <g transform="matrix(1,0,0,1,-204.075,276.655)">
+                        <text x="-62.37px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.981px;fill:rgb(255,170,170);">Establishing</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-204.075,302.882)">
+                        <text x="-65.295px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.981px;fill:rgb(255,170,170);">Transgenetic</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-204.075,329.109)">
+                        <text x="-27.4px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.981px;fill:rgb(255,170,170);">Lines</text>
+                    </g>
+                </g>
+                <circle id="circle4373" cx="-204.384" cy="296.035" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+            </g>
+            <g class="btn innovation neuroBio"  id="neuron-identifier" transform="matrix(0.480374,0,0,0.480374,781.009,-187.887)">
+                <g id="g4378">
+                    <g id="text4382">
+                        <g transform="matrix(1,0,0,1,-1120.56,717.633)">
+                            <text x="-33.887px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,170,170);">Unique</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,742.633)">
+                            <text x="-35px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,170,170);">Neuron</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,767.633)">
+                            <text x="-47.788px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,170,170);">Identiﬁers</text>
+                        </g>
+                    </g>
+                    <circle id="circle4380" cx="-1120.87" cy="737.612" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g class="btn innovation neuroBio"  id="neuron-classification" transform="matrix(0.480374,0,0,0.480374,623.522,-10.8891)">
+                <g id="text4343">
+                    <g transform="matrix(1,0,0,1,-909.637,495.149)">
+                        <text x="-42px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:rgb(255,170,170);">Neuron</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-909.637,525.149)">
+                        <text x="-78.023px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:rgb(255,170,170);">Classiﬁcation</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-909.637,555.149)">
+                        <text x="-63.334px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:rgb(255,170,170);">Algorithms</text>
+                    </g>
+                </g>
+                <circle id="circle4341" cx="-909.946" cy="525.712" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+            </g>
+            <g class="btn innovation compSci"  id="bioinpired-processing" transform="matrix(0.480374,0,0,0.480374,726.698,-15.2288)">
+                <g id="g4326">
+                    <circle id="circle4328" cx="-1120.87" cy="737.612" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                    <g id="text4330">
+                        <g transform="matrix(1,0,0,1,-1120.56,707.033)">
+                            <text x="-56.123px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Biologically</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,732.033)">
+                            <text x="-38.896px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Inspired</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,757.033)">
+                            <text x="-53.911px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Processing</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,782.033)">
+                            <text x="-52.778px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Algorithms</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g class="btn innovation compSci"  id="bioinspired-learning" transform="matrix(0.480374,0,0,0.480374,782.871,61.8269)">
+                <g id="g4548">
+                    <g id="text4552">
+                        <g transform="matrix(1,0,0,1,-1120.56,703.523)">
+                            <text x="-56.123px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Biologically</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,728.523)">
+                            <text x="-38.896px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Inspired</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,753.523)">
+                            <text x="-42.227px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Learning</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,778.523)">
+                            <text x="-52.778px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(255,204,0);">Algorithms</text>
+                        </g>
+                    </g>
+                    <circle id="circle4550" cx="-1120.87" cy="737.612" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g class="btn innovation compSci"  id="deep-learning" transform="matrix(0.480374,0,0,0.480374,872.163,91.4886)">
+                <g id="g4532">
+                    <g id="text4536">
+                        <g transform="matrix(1,0,0,1,-1120.56,715.556)">
+                            <text x="-72.296px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.817px;fill:rgb(255,204,0);">Deep Learning</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,738.663)">
+                            <text x="-42.219px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.817px;fill:rgb(255,204,0);">Platform</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,761.77)">
+                            <text x="-13.875px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.817px;fill:rgb(255,204,0);">for</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,-1120.56,784.877)">
+                            <text x="-56.683px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20.817px;fill:rgb(255,204,0);">Fly Circuits</text>
+                        </g>
+                    </g>
+                    <circle id="circle4534" cx="-1120.87" cy="734.282" r="80.999" style="fill-opacity:0;stroke:rgb(42,212,255);stroke-width:4.54px;stroke-linecap:round;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

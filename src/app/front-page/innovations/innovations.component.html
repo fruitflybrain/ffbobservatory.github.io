@@ -1,0 +1,24 @@
+<div class="innovations-container">
+  <div class="innovations-svg" [innerHTML]="innovationsSVG"></div>
+  <div class="innovations-details">
+    <h1 class="innovations-details-title">Innovations</h1>
+    <h3 class="innovations-details-subtitle">Meeting ground for biologists, theorists and computer scientists.</h3>
+    <mat-card class="stakeholders-tabs">
+      <mat-card-content>
+        <mat-tab-group
+          [(selectedIndex)]=selectedIndex
+          (selectedTabChange)="onSelectedTabChange()"
+          animationDuration="0ms">
+          <mat-tab
+            *ngFor="let stakeholder of stakeholders"
+            label={{stakeholder.label}}>
+            {{stakeholder.description}}
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+      <!-- <mat-card-actions align="start">
+          <button mat-button (click)="onAction1">Action1</button>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

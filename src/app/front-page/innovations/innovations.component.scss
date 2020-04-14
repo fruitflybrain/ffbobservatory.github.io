@@ -1,0 +1,57 @@
+.innovations-container{
+  padding-left: 50px;
+  padding-right: 50px;
+
+  display:flex;
+  justify-content: space-around;
+
+  div.innovations-svg {
+    width: 60%;
+  }
+  .innovations-details {
+    width: 40%;
+
+    .innovations-details-title {
+      font-weight: 250;
+      font-size: 32px;
+    }
+
+    .innovations-details-subtitle {
+      font-weight: 150;
+      opacity: 0.8
+    }
+  }
+
+  .stakeholders-tabs {
+    top: 5%;
+    .mat-tab-labels{
+      font-size: 0.6rem;
+    }
+  }
+}
+
+:host ::ng-deep .innovations-svg svg {
+  .btn.data {
+    filter: url('#unhighlight-1');
+  }
+
+  .ring {
+    filter: url('#unhighlight-3');
+  }
+
+  .btn.innovation {
+    filter: url('#unhighlight-3');
+  }
+
+  .btn.stakeholder {
+    filter: url('#unhighlight-5');
+  }
+
+  .btn:hover, .ring:hover {
+    filter: none !important;
+  }
+
+  .highlight {
+    filter: none !important;
+  }
+}
