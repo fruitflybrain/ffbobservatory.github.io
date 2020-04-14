@@ -33,7 +33,8 @@ export class InnovationsComponent implements OnInit {
   ngOnInit(): void {
     const headers = new HttpHeaders();
     headers.set('Accept', 'image/svg+xml');
-    this.http.get('assets/img/ffbo_innovation_with_filter.svg', {headers, responseType: 'text'}).subscribe(
+    this.http.get('assets/front-page/img/ffbo_innovation_with_filter.svg',
+    {headers, responseType: 'text'}).subscribe(
       data => {
         this.innovationsSVG = this.sanitizer.bypassSecurityTrustHtml(data);
       }

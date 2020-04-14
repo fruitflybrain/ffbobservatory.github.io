@@ -25,8 +25,8 @@ export class FFBOComponentCardComponent implements OnInit {
       data: this.data
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
   }
 }

@@ -36,8 +36,23 @@
     max-width: 31.2rem;
   }
 
-  .banner-btn {
+  .banner-btns-container{
+    display: flex;
+    justify-content: flex-start;
+
+    .banner-btn{
+      margin-top: 20px;
+      margin-right: 20px;
+
+    }
+  }
+
+  .banner-btn:nth-child(2n+1){
     background-color: mat-color($primary, darker);
+    color: white;
+  }
+  .banner-btn:nth-child(2n){
+    background-color: mat-color($primary, lighter);
     color: black;
   }
 }

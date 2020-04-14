@@ -27,4 +27,4 @@ export const OVERVIEW: FFBODescription = {
   url: 'https://www.biorxiv.org/content/biorxiv/early/2016/12/14/092288.full.pdf',
   publication: 'https://doi.org/10.1101/092288',
   slides: 'http://fruitflybrain.org/docs/FFBO_overview_slides.pdf'
-}
+};

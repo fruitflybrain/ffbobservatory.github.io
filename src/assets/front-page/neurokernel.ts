@@ -45,5 +45,4 @@ export const NEUROKERNEL: FFBODescription = {
   ].join(''),
   url: 'https://neurokernel.github.io/',
   img: 'assets/front-page/img/neurokernel.png',
-}
-
+};

@@ -33,18 +33,22 @@
 :host ::ng-deep .innovations-svg svg {
   .btn.data {
     filter: url('#unhighlight-1');
+    // filter: url('#grayscale');
   }
 
   .ring {
-    filter: url('#unhighlight-3');
+    filter: url('#unhighlight-1');
+    // filter: url('#grayscale');
   }
 
   .btn.innovation {
     filter: url('#unhighlight-3');
+    // filter: url('#grayscale');
   }
 
   .btn.stakeholder {
-    filter: url('#unhighlight-5');
+    filter: url('#unhighlight-3');
+    // filter: url('#grayscale');
   }
 
   .btn:hover, .ring:hover {

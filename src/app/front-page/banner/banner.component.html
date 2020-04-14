@@ -5,7 +5,11 @@
       Open source Open collaborative ecosystem, standardized tools
       for storing, visualizing, manipulating, modeling, sharing fruit fly brain data and models.
     </p>
-    <a mat-button class='banner-btn'> Publications</a>
+    <div class='banner-btns-container'>
+      <a mat-button class='banner-btn' (click)="openDialog('background')"> Background </a>
+      <a mat-button class='banner-btn' (click)="openDialog('overview')"> Overview </a>
+      <a mat-button class='banner-btn' href={{overview.publication}}> Publication </a>
+    </div>
   </div>
   <div class='banner-background'>
     <img [src]="backgroundImg"/>

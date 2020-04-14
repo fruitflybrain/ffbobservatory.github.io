@@ -32,4 +32,4 @@ export const NEURONLP: FFBODescription = {
   url: 'http://www.biorxiv.org/content/biorxiv/early/2016/12/14/092429.full.pdf',
   publication:'https://doi.org/10.1101/092429',
   img: 'assets/front-page/img/neuronlp.jpg'
-}
+};

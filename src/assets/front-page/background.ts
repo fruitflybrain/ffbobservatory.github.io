@@ -27,4 +27,4 @@ export const BACKGROUND: FFBODescription = {
     'for elucidating the mechanisms of human neurodegenerative diseases such as Epilepsy and',
     'Parkinson`s disease.'
   ].join('')
-}
+};
