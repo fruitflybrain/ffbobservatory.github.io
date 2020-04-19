@@ -4,8 +4,8 @@ import { BannerComponent } from './banner/banner.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule} from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 
@@ -15,9 +15,8 @@ import { FFBOComponentCardComponent } from './ffbo-component-card/ffbo-component
 import { FrontPageRoutingModule } from './front-page-routing.module';
 import { FrontPageComponent } from './front-page.component';
 import { InnovationsComponent } from './innovations/innovations.component';
-
-
-
+import { FFBOOverviewCardComponent } from './ffbo-overview-card/ffbo-overview-card.component';
+import { ImageTileComponent } from './image-tile/image-tile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,9 @@ import { InnovationsComponent } from './innovations/innovations.component';
     FrontPageComponent,
     FFBOComponentDialogComponent,
     FFBOComponentCardComponent,
-    InnovationsComponent
+    InnovationsComponent,
+    FFBOOverviewCardComponent,
+    ImageTileComponent
   ],
   imports: [
     CommonModule,
@@ -34,9 +35,14 @@ import { InnovationsComponent } from './innovations/innovations.component';
     MatButtonModule,
     MatDialogModule,
     MatGridListModule,
-    FontAwesomeModule,
     HttpClientModule,
-    MatTabsModule
-  ]
+    MatTabsModule,
+    MatIconModule
+  ],
+  exports: [
+    FFBOComponentCardComponent,
+    FFBOComponentCardComponent
+  ],
+  providers:[]
 })
 export class FrontPageModule { }

@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+@import '../../../styles.scss';
+
+mat-card.overview {
+  width: 220px;
+  height: 280px;
+  background: transparent;
+  box-shadow: none !important;
+
+  .overview-title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .overview-img{
+      height: 100px;
+      max-width: 80px;
+      color: mat-color($primary);
+    }
+
+  }
+}

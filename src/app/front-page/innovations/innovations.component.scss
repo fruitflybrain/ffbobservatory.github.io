@@ -59,3 +59,17 @@
     filter: none !important;
   }
 }
+
+
+div.ffbo-overview-container {
+  display:flex;
+  align-items: stretch;
+  overflow: hidden;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.ffbo-component-card {
+  max-width: 25%;
+}

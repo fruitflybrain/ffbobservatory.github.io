@@ -21,7 +21,7 @@ export class FFBOComponentCardComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(FFBOComponentDialogComponent, {
       width: '80%',
-      maxWidth: '500px',
+      maxWidth: '1000px',
       data: this.data
     });
 

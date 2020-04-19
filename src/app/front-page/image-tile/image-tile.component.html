@@ -1,0 +1,12 @@
+<mat-grid-list cols="3" rowHeight="300px" gutterSize="10px">
+  <a class="ripple-effect" *ngFor="let tile of tiles">
+    <mat-grid-tile
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+      class="tile">
+      <img class="tile-img" [src]="tile.img"/>
+      <span class="tile-text">{{tile.text}}</span>
+    </mat-grid-tile>
+  </a>
+</mat-grid-list>

@@ -11,7 +11,7 @@ import { OVERVIEW } from '../../../assets/front-page/overview';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-  backgroundImg = 'assets/front-page/img/brain.png';
+  backgroundImg = 'assets/front-page/img/hmm2b_484848.png';
   overview: FFBODescription = OVERVIEW;
   background: FFBODescription = BACKGROUND;
 

@@ -1,71 +1,27 @@
 @import '~@angular/material/theming';
 @import '../../styles.scss';
 
-mat-card.ffbo-overview {
+.ffbo-overview {
   opacity: 0.8;
+  display: block;
   margin-top: -60px;
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 30px;
-
-  mat-card-content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 20px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  mat-card-title {
-    font-weight: 200;
-    font-size: 2.0rem;
-    margin: 0 0 2.4rem;
-    text-align: center;
-  }
-
-  .ffbo-overview-section{
-    padding-top: 20px;
-    width: 50%;
-    min-width: 250px;
-  }
-
-
-  .ffbo-overview-section-content {
-    text-align: initial;
-    opacity: 0.8;
-    width: 90%;
-  }
-
-  .ffbo-overview-section-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    background-color: transparent;
-    .ffbo-overview-section-title-icon {
-      width: 3rem;
-      fa-icon {
-        font-size: 2rem;
-        color: mat-color($primary);
-      }
-    }
-    h3 {
-      font-size: 1.1rem;
-    }
-  }
 }
 
-div.card-container{
-  display:flex;
-  align-items: stretch;
-  overflow: hidden;
-  justify-content: space-evenly;
-  padding-top: 30px;
-  padding-bottom: 60px;
+.ffbo-overview-title {
+  font-size: 2rem;
+  text-align: center;
 }
 
-.ffbo-component-card {
-  max-width: 25%;
+.ffbo-overview-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

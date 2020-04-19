@@ -1,0 +1,39 @@
+<div class="innovations-container">
+  <div class="innovations-banner">
+    <h1 class="innovations-title">Innovations</h1>
+    <h3 class="innovations-subtitle">Meeting ground for biologists, theorists and computer scientists.</h3>
+    <mat-card class="stakeholders-tabs">
+      <mat-card-content>
+        <mat-tab-group
+          [(selectedIndex)]=selectedIndex
+          (selectedTabChange)="onSelectedTabChange()"
+          animationDuration="0ms">
+          <mat-tab
+            *ngFor="let stakeholder of stakeholders"
+            label={{stakeholder.label}}>
+            {{stakeholder.description}}
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+      <!-- <mat-card-actions align="start">
+          <button mat-button (click)="onAction1">Action1</button>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>
+  <div class="innovations-svg" [innerHTML]="innovationsSVG"></div>
+</div>
+
+<div class="ffbo-component-wrapper">
+  <div class="ffbo-component-title">
+    <h2>Key FFBO Components</h2>
+    <h3>Under the hood, FFBO is powered by a collection of tools which
+      can serve as stand alone applications for visualization, circuit execution
+      and data storage. </h3>
+  </div>
+  <div class="ffbo-component-container">
+  <app-ffbo-component-card
+    class="ffbo-component-card"
+    *ngFor="let comp of ffboComponents" [data]="comp">
+  </app-ffbo-component-card>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.tile {
+  background:rgb(66, 66, 66);
+}
+
+.tile-img {
+  width: 100%;
+  display: block;
+  box-shadow: none;
+  filter: saturate(0.1);
+}
+
+.tile:hover {
+  box-shadow: 0 14px 28px gray, 0 10px 10px gray;
+  transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  img{
+    filter: saturate(1);
+    transition: filter 0.5s ease-in-out;
+  }
+}
+
+
+.tile-text {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: white;
+}

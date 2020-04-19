@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'licenses-and-credits',
     loadChildren: () => import('./licenses-and-credits/licenses-and-credits.module').then(m => m.LicensesAndCreditsModule)
-  }
+  },
+  { path: 'innovations', loadChildren: () => import('./innovations/innovations.module').then(m => m.InnovationsModule) }
 ];
 
 @NgModule({
