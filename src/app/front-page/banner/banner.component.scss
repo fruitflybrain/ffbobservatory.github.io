@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: flex-start;
   overflow: hidden;
-  max-height: 400px;
+  max-height: 500px;
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 60px;
@@ -14,7 +14,7 @@
 }
 
 .banner-text {
-  flex-basis: 50% or auto;
+  flex-basis: 40% or auto;
   vertical-align: middle;
   min-width:40%;
   background-color: inherit;
@@ -58,12 +58,14 @@
 }
 
 .banner-background {
-  flex-basis: 50% or auto;
+  flex-basis: 60% or auto;
   justify-content: baseline;
+
+  text-align: center;
   img {
-    width: 100%;
+    width: 70%;
   }
-  img {
+  video {
     width: 70%;
   }
 }
