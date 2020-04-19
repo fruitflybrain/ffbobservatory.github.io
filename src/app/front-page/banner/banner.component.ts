@@ -12,6 +12,7 @@ import { OVERVIEW } from '../../../assets/front-page/overview';
 })
 export class BannerComponent implements OnInit {
   backgroundImg = 'assets/front-page/img/brain.png';
+  backgroundVid = 'assets/front-page/img/bannervideo.mp4';
   overview: FFBODescription = OVERVIEW;
   background: FFBODescription = BACKGROUND;
 
