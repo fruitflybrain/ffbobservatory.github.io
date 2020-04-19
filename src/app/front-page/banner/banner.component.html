@@ -11,7 +11,10 @@
       <a mat-button class='banner-btn' href={{overview.publication}}> Publication </a>
     </div>
   </div>
-  <div class='banner-background'>
+<!--   <div class='banner-background'>
     <img [src]="backgroundImg"/>
-  </div>
+  </div> -->
+  <div class='banner-background'>
+    <video style="width: 60%;" loop="true" autoplay="autoplay" muted="true">  <source [src]="backgroundVid" type="video/mp4"></video>
+  </div> 
 </div>

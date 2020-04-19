@@ -19,6 +19,13 @@ $warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-dark-theme($primary, $accent, $warn);
+$custom-background-color: #0e0e0e;
+$custom-navbar-color: #d86e00;
+
+$background: map-get($theme, background);
+$background: map_merge($background, (background: $custom-background-color));
+$theme: map_merge($theme, (background: $background));
+
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -27,6 +34,14 @@ $theme: mat-dark-theme($primary, $accent, $warn);
 
 
 /* You can add global styles to this file, and also import other style files */
+
+.mat-toolbar.mat-primary {
+  color: #ffffff;
+}
+
+.mat-toolbar.mat-primary {
+  background: #d86e00;
+}
 
 html, body {
   height: 100%;
@@ -50,9 +65,13 @@ h1 {
 }
 
 h2, h3 {
-  font-size: 200;
+  font-weight: 400;
 }
 
 p {
-  font-weight: 150;
+  font-weight: 400;
+}
+
+.banner-text p{
+  font-weight: 400 !important;
 }

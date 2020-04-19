@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ffbo-ng"
+    }
+  },
+  "defaultProject": "ffbo-ng",
+  "cli": {
+    "analytics": false
+  }
 }
