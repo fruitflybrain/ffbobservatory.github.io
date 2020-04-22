@@ -9,10 +9,29 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $display-4: (
+    margin: 0 0 0.6rem
+  ),
+  $display-3: (
+    margin: 0 0 0.6rem
+  ),
+  $display-2: (
+    margin: 0 0 10px !important
+  ),
+  $display-1: (
+    margin: 0 0 0.6rem
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$primary: mat-palette($mat-orange);
+$primary: mat-palette($mat-red);
 $accent: mat-palette($mat-teal, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $warn: mat-palette($mat-red);
@@ -20,18 +39,18 @@ $warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-dark-theme($primary, $accent, $warn);
 $custom-background-color: #0e0e0e;
-$custom-navbar-color: #d86e00;
 
 $background: map-get($theme, background);
 $background: map_merge($background, (background: $custom-background-color));
 $theme: map_merge($theme, (background: $background));
-
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($theme);
 
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -39,9 +58,6 @@ $theme: map_merge($theme, (background: $background));
   color: #ffffff;
 }
 
-.mat-toolbar.mat-primary {
-  background: #d86e00;
-}
 
 html, body {
   height: 100%;
@@ -60,18 +76,7 @@ a:link {
   text-decoration: none;
 }
 
-h1 {
-  font-weight: 250;
-}
-
-h2, h3 {
-  font-weight: 400 !important;
-}
 
 p {
   font-weight: 400;
-}
-
-.banner-text p{
-  font-weight: 400 !important;
 }
