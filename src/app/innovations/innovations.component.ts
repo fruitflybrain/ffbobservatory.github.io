@@ -9,15 +9,57 @@ import { NEURONLP } from '../../assets/innovations/neuronlp';
 const STAKEHOLDERS = [
   {
     label: 'Neurobiologists',
-    description: 'Short description of innovations targeting Neurobiologists and Neurogeneticists.'
+    description: 'Short description of innovations targeting Neurobiologists and Neurogeneticists.',
+    innovations: [
+      {
+        title: 'Innovation 1',
+        description:  'Neurobiologists Innovation 1 description'
+      },
+      {
+        title: 'Innovation 2',
+        description:  'Neurobiologists Innovation 2 description'
+      },
+      {
+        title: 'Innovation 3',
+        description:  'Neurobiologists Innovation 3 description'
+      }
+    ]
   },
   {
     label: 'Computational Neuroscientists',
-    description: 'Short description of innovations targeting Computationtal/Theoretical Neuroscientists.'
+    description: 'Short description of innovations targeting Computationtal/Theoretical Neuroscientists.',
+    innovations: [
+      {
+        title: 'Innovation 1',
+        description:  'Computational Neuroscientists Innovation 1 description'
+      },
+      {
+        title: 'Innovation 2',
+        description:  'Computational Neuroscientists Innovation 2 description'
+      },
+      {
+        title: 'Innovation 3',
+        description:  'Computational Neuroscientists Innovation 3 description'
+      }
+    ]
   },
   {
     label: 'Computer Scientists',
-    description: 'Short description of innovations targeting Computer Scientists/Engineers.'
+    description: 'Short description of innovations targeting Computer Scientists/Engineers.',
+    innovations: [
+      {
+        title: 'Innovation 1',
+        description:  'Computer ScientistsInnovation 1 description'
+      },
+      {
+        title: 'Innovation 2',
+        description:  'Computer ScientistsInnovation 2 description'
+      },
+      {
+        title: 'Innovation 3',
+        description:  'Computer ScientistsInnovation 3 description'
+      }
+    ]
   }
 ];
 
@@ -29,7 +71,7 @@ const STAKEHOLDERS = [
 })
 export class InnovationsComponent implements OnInit {
   innovationsSVG: SafeHtml;
-  selectedIndex = 0;
+  selected = 'Neurobiologists';
   stakeholders = STAKEHOLDERS;
   ffboComponents: FFBODescription[];
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
@@ -52,16 +94,16 @@ export class InnovationsComponent implements OnInit {
     const btnsData: HTMLCollection = svg.getElementsByClassName('btn data');
     let btns: HTMLCollection;
     let btnsTarget: HTMLCollection;
-    switch (this.selectedIndex) {
-      case 0: // neuroBio
+    switch (this.selected) {
+      case 'Neurobiologists': // neuroBio
         btns = svg.getElementsByClassName('btn');
         btnsTarget = svg.getElementsByClassName('btn neuroBio');
         break;
-      case 1: // compNeuro
+      case 'Computational Neuroscientists': // compNeuro
         btns = svg.getElementsByClassName('btn');
         btnsTarget = svg.getElementsByClassName('btn compNeuro');
         break;
-      case 2: // compSci
+      case 'Computer Scientists': // compSci
         btns = svg.getElementsByClassName('btn');
         btnsTarget = svg.getElementsByClassName('btn compSci');
         break;
