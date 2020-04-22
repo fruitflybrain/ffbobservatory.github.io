@@ -1,9 +1,11 @@
-<mat-card class="overview">
-  <mat-card-title class="overview-title">
-    <img class="overview-img" [src]="img">
-    <h2>{{title}}</h2>
-  </mat-card-title>
-  <mat-card-content class="overview-content">
-    {{description}}
-  </mat-card-content>
-</mat-card>
+<div class="overview-wrapper">
+  <mat-card class="overview">
+    <mat-card-title class="overview-title">
+      <h2>{{title}}</h2>
+    </mat-card-title>
+    <mat-card-content class="overview-content">
+      {{description}}
+    </mat-card-content>
+  </mat-card>
+  <img [src]="img"/>
+</div>

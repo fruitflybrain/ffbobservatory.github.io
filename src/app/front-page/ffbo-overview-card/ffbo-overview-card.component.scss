@@ -1,9 +1,21 @@
-@import '~@angular/material/theming';
 @import '../../../styles.scss';
 
+.overview-wrapper {
+  max-width: 800px;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.overview-img{
+  flex-basis: 50% or auto;
+  height: 100%;
+}
+
 mat-card.overview {
-  width: 220px;
-  height: 280px;
+  // width: 220px;
+  // height: 280px;
+  flex-basis: 50% or auto;
   background: transparent;
   box-shadow: none !important;
 
@@ -13,12 +25,5 @@ mat-card.overview {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .overview-img{
-      height: 100px;
-      max-width: 80px;
-      color: mat-color($primary);
-    }
-
   }
 }
