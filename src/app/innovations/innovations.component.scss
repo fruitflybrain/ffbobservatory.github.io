@@ -1,31 +1,60 @@
-h1 {
-  font-size: 3rem;
-}
+@import '../../styles.scss';
+.innovations-wrapper {
+  padding:10px 10px 60px 60px;
 
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1rem;
+  h1, h2, h3 {
+    margin: 0 0 0.6rem 0.6rem;
+  }
 }
 
 .innovations-container{
-  margin-top: 60px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  vertical-align: middle;
 
-  display:flex;
-  justify-content: space-between;
+  .innovations-drawer{
+    width: 50% or auto;
+    height: auto;
+    mat-drawer-content {
+      padding-left: 10px;
+    }
 
-
-  div.innovations-svg {
-    width: 60%;
+    .innovation-detail-stepper {
+      background: none;
+    }
   }
 
   .stakeholders-tabs {
-    top: 5%;
-    .mat-tab-labels{
-      font-size: 0.6rem;
+    border-radius: 25px;
+    color: mat-color($background, lighter);
+    min-height: 400px;
+
+    mat-drawer {
+      width: 25%;
+      max-width: 200px;
     }
+
+    mat-drawer-content {
+      opacity: 0.8;
+    }
+  }
+
+  .innovations-svg {
+    width: 50% or auto;
+    height: auto;
+
+    svg {
+      height:auto;
+      width: auto;
+    }
+  }
+
+  .stakeholder-tabs-btn {
+    vertical-align: middle;
+    font-size: 0.9rem;
   }
 }
 

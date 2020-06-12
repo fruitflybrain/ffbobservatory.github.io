@@ -1,0 +1,12 @@
+<div class="brainmaps-wrapper">
+<h2 class="mat-display-2">Brain Maps</h2>
+<h3>Data of the Brain (placeholder).</h3>
+<div class="brainmaps-svg" [innerHTML]="banner"></div>
+<div class="brainmaps-detail-wrapper">
+  <app-map-card
+    class="brainmaps-detail"
+    *ngFor="let map of brainmaps"
+    [content]="map"
+  ></app-map-card>
+</div>
+</div>
