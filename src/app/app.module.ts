@@ -13,8 +13,7 @@ import { FFBONavBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
-
+//I keep the new line
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,4 +34,5 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

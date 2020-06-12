@@ -1,0 +1,25 @@
+<mat-card class="map-card-wrapper">
+    <mat-card-header>
+        <mat-card-title class="map-card-title">{{content.title}}</mat-card-title>
+        <mat-card-subtitle class="map-card-subtitle">{{content.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img matCardImage src="Card wide image source"> -->
+    <mat-card-content class="map-card-content">
+      <p class="map-card-description">{{content.description}}</p>
+      <div class="map-card-gallery">
+        <igx-carousel class="map-card-carousel" #carousel [loop]="false" indicatorsOrientation="bottom">
+          <igx-slide  *ngFor="let img of content.gallery">
+            <div class="image-container">
+              <img [src]="img" [alt]="placeholder">
+            </div>
+          </igx-slide>
+        </igx-carousel>
+      </div>
+    </mat-card-content>
+    <mat-card-actions  class="map-card-buttons" align="start">
+      <a mat-button href={{content.url}}> Learn More </a>
+    </mat-card-actions>
+    <!-- <mat-card-footer>
+        Footer
+    </mat-card-footer> -->
+</mat-card>

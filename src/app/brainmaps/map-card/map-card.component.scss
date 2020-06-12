@@ -1,0 +1,45 @@
+@import '../../../styles.scss';
+
+.map-card-title {
+  font-size: 2.5rem !important;
+}
+.map-card-subtitle {
+  font-size: 1.5rem !important;
+}
+.map-card-wrapper {
+  background-color: inherit;
+}
+.map-card-content {
+  display: flex;
+  .map-card-description {
+    flex: 30% or auto;
+    font-size: 1rem !important;
+  }
+  .map-card-gallery {
+    flex: 70% or auto;
+  }
+}
+
+.map-card-gallery {
+  .map-card-carousel {
+    background-color: transparent;
+    color: transparent
+  }
+
+  .igx-slide {
+    background: transparent;
+  }
+
+  .image-container {
+    height: 100%;
+    color: transparent;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    img {
+      text-align: center;
+      height:100%;
+      display:inline-block;
+    }
+  }
+}

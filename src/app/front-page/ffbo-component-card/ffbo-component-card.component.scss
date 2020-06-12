@@ -14,14 +14,17 @@
     right: 0px;
     height: 100%;
     mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    z-index: 0;
   }
 
   mat-card-title {
     font-weight: 300;
+    z-index: 10;
   }
 
   mat-card-content {
     font-weight: 200;
+    z-index: 10;
   }
 }
 
