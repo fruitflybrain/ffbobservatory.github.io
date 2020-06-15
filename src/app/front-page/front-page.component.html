@@ -3,12 +3,13 @@
   <mat-card class="ffbo-overview">
     <h1 class="ffbo-overview-title">From Structure to Function</h1>
     <div class="ffbo-overview-container">
-      <mat-horizontal-stepper linear="true" #stepper>
+      <mat-horizontal-stepper linear="false" #stepper>
         <ng-template matStepperIcon="edit">
-          <mat-icon>check_circle</mat-icon>
+          <mat-icon></mat-icon>
         </ng-template>
         <mat-step
           *ngFor="let overview of overviews"
+          completed="false"
           [label]="overview.title">
           <app-ffbo-overview-card
             title = {{overview.title}}

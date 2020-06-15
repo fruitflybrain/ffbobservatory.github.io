@@ -6,9 +6,23 @@
   <div class="flex-spacer"></div>
 
   <a class="top-bar-btn" mat-button routerLink="/innovations">Innovations</a>
-  <a class="top-bar-btn" mat-button (click)="launchNLP('adult')">Cell Map</a>
+  <a class="top-bar-btn" mat-button [matMenuTriggerFor]="beforeMenu">Cell Map</a>
+  <mat-menu #beforeMenu="matMenu" xPosition="before" class="nlp-dropdown">
+    <button mat-menu-item (click)="showNLPComponentCard()">
+      What is NeuroNLP
+    </button>
+    <button mat-menu-item (click)="launchNLP('adult')">
+      Launch NeuroNLP.Adult (with FlyCircuit and Janelia Medulla 7-column Data)
+    </button>
+    <button mat-menu-item (click)="launchNLP('larva')">
+      Launch NeuroNLP.Larva (with Janelia Larva Olfaction Data)
+    </button>
+    <button mat-menu-item (click)="launchNLP('EM')">
+      Download NeuroNLP.EM (with Hemibrain and VNC data)
+    </button>
+  </mat-menu>
   <a class="top-bar-btn" mat-button (click)="launchActivityMap()">Activity Map</a>
   <!-- <a class="top-bar-btn" mat-button routerLink="/brainmaps">Brainmaps</a> -->
   <a class="top-bar-btn" mat-button (click)="launchFBL()">FlyBrainLab</a>
-  <a class="top-bar-btn" mat-button routerLink="/get-involved">Get Involved</a>
+  <a class="top-bar-btn" mat-button routerLink="/get-involved">Meet the Team</a>
 </mat-toolbar>

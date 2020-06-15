@@ -10,7 +10,7 @@ export class ProfileCardComponent implements OnInit {
   @Input()
   profile: Profile;
 
-  defaultDescription = `Test`;
+  defaultDescription = `Member of the FFBO Team (placeholder)`;
 
   constructor() { }
 

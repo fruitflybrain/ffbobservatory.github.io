@@ -23,9 +23,9 @@
             {{stakeholder.description}}
             <mat-horizontal-stepper class="innovation-detail-stepper" labelPosition="bottom" #stepper>
               <ng-template matStepperIcon="edit">
-                <mat-icon>check_circle</mat-icon>
+                <mat-icon></mat-icon>
               </ng-template>
-              <mat-step *ngFor="let innovation of stakeholder.innovations">
+              <mat-step *ngFor="let innovation of stakeholder.innovations" completed="false">
                 <ng-template matStepLabel>{{innovation.title}}</ng-template>
                 {{innovation.description}}
               </mat-step>
