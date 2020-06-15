@@ -1,6 +1,13 @@
 # Fruit Fly Brain Observatory
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+
+## TODO
+- [ ] Stylize popup dialog panels
+- [ ] Clarify rfc vs. publication
+- [ ] Meet the Team should include how to contribute
+- [ ] Content of innovations page should be filled in
+- [ ] Video loading should be optimized
+
 
 ## Development server
 
