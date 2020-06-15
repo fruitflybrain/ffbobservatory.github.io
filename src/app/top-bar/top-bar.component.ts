@@ -35,4 +35,8 @@ export class FFBONavBarComponent implements OnInit {
     window.location.href = 'http://fbl.fruitflybrain.org';
   }
 
+  launchActivityMap(){
+    window.location.href = 'http://amacrine.ee.columbia.edu:15000/';
+  }
+
 }

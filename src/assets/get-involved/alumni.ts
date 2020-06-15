@@ -4,25 +4,29 @@ export const ALUMNI: Profile[] = [
   {
     name: 'Chung-Heng Yeh',
     url: '',
-    role: 'FFBO Alumni',
-    img: 'assets/get-involved/img/chungheng_yeh.jpg'
+    role: 'FFBO Alumnus',
+    img: 'assets/get-involved/img/chungheng_yeh.png',
+    description: ''
   },
   {
     name: 'Nikul H. Ukani',
     url: '',
-    role: 'FFBO Alumni',
-    img: 'assets/get-involved/img/nikul_ukani.jpeg'
+    role: 'FFBO Alumnus',
+    img: 'assets/get-involved/img/nikul_ukani.png',
+    description: ''
   },
   {
     name: 'Lev Givon',
     url: '',
-    role: 'FFBO Alumni',
-    img: 'assets/get-involved/img/lev_givon.jpg'
+    role: 'FFBO Alumnus',
+    img: 'assets/get-involved/img/lev_givon.png',
+    description: ''
   },
   {
     name: 'Adam Tomkins',
     url: '',
-    role: 'FFBO Alumni',
-    img: 'assets/get-involved/img/adam_tomkins.png'
+    role: 'FFBO Alumnus',
+    img: 'assets/get-involved/img/adam_tomkins.png',
+    description: ''
   },
 ];

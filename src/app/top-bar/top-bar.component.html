@@ -4,8 +4,11 @@
   </a>
   <p class="ffbo-text">Fruit Fly Brain Observatory</p>
   <div class="flex-spacer"></div>
+
   <a class="top-bar-btn" mat-button routerLink="/innovations">Innovations</a>
-  <a class="top-bar-btn" mat-button routerLink="/brainmaps">Brainmaps</a>
+  <a class="top-bar-btn" mat-button (click)="launchNLP('adult')">Cell Map</a>
+  <a class="top-bar-btn" mat-button (click)="launchActivityMap()">Activity Map</a>
+  <!-- <a class="top-bar-btn" mat-button routerLink="/brainmaps">Brainmaps</a> -->
   <a class="top-bar-btn" mat-button (click)="launchFBL()">FlyBrainLab</a>
   <a class="top-bar-btn" mat-button routerLink="/get-involved">Get Involved</a>
 </mat-toolbar>

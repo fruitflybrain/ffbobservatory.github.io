@@ -13,13 +13,17 @@
 }
 
 mat-card.overview {
-  // width: 220px;
+  width: 320px;
   // height: 280px;
   flex-basis: 50% or auto;
   background: transparent;
   box-shadow: none !important;
 
   .overview-title{
+    h2 {
+      line-height: 30px;
+    }
+
     text-align: center;
     display: flex;
     flex-direction: column;

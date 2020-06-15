@@ -26,14 +26,14 @@ export class BannerComponent implements OnInit {
       case 'background':
         this.dialog.open(FFBOComponentDialogComponent, {
           width: '80%',
-          maxWidth: '500px',
+          maxWidth: '800px',
           data: this.background
         });
         break;
       case 'overview':
         this.dialog.open(FFBOComponentDialogComponent, {
           width: '80%',
-          maxWidth: '500px',
+          maxWidth: '800px',
           data: this.overview
         });
         break;
