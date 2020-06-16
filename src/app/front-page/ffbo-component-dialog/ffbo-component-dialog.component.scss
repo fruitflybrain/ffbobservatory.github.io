@@ -1,0 +1,7 @@
+.dialog-wrapper-content {
+  ::ng-deep ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 15px;
+  }
+}

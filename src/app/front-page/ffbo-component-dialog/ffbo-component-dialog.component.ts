@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { FFBODescription} from '../ffbo-description';
+import { FFBODescription} from '../../ffbo-description';
 
 @Component({
   selector: 'app-ffbo-component-dialog',

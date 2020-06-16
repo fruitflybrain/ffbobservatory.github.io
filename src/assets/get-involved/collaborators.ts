@@ -6,7 +6,7 @@ export const COLLABORATORS: Profile[] = [
     role: 'Collaborator',
     url: 'http://brc.life.nthu.edu.tw/lab/about.html',
     img: 'assets/get-involved/img/ann-shyn-chiang.png',
-    description: ''
+    description: 'NTHU, Taiwan'
   },
   {
     name: 'Daniel Coca',

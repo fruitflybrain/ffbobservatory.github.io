@@ -3,9 +3,10 @@
 .banner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
-  max-height: 500px;
+  height: 100vh;
+  // max-height: 500px;
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 60px;
@@ -63,10 +64,14 @@
 
   text-align: center;
   img {
-    width: 70%;
+    width: 90%;
+    max-height: 100vh;
+    min-height: 500px;
   }
   video {
-    width: 70%;
+    width: 90%;
+    max-height: 100vh;
+    min-height: 500px;
   }
 }
 

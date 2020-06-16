@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FFBODescription } from '../ffbo-description';
+import { FFBODescription } from '../../ffbo-description';
 import { FFBOComponentDialogComponent } from '../ffbo-component-dialog/ffbo-component-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 

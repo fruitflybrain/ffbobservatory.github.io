@@ -1,5 +1,5 @@
 mat-card.profile-card {
-  height: 300px;
+  height: 180px;
   width: 220px;
   text-align: center;
   box-shadow: none;
@@ -13,6 +13,7 @@ mat-card.profile-card {
 
   mat-card-subtitle {
     font-size: .8rem;
+    margin-bottom: 0;
   }
 
   mat-card-content {
@@ -25,11 +26,10 @@ mat-card.profile-card {
     font-weight: 150;
     opacity: .8;
   }
-}
 
-img.profile-card-img {
-  // height: 30%;
-  clip-path: circle(50px at center);
-
-  width:6.2rem;
+  img.profile-card-img {
+    // height: 30%;
+    clip-path: circle(50px at center);
+    width:6.2rem;
+  }
 }

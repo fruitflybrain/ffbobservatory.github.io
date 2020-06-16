@@ -20,6 +20,21 @@
       </mat-horizontal-stepper>
     </div>
   </mat-card>
+
+  <div class="ffbo-component-title">
+    <h2 class="mat-display-1">Key FFBO Components</h2>
+    <h3 style="line-height: 30px;">Under the hood, FFBO is powered by a collection of tools which
+      can serve as stand alone applications for visualization, circuit execution
+      and data storage. </h3>
+  </div>
+  <div class="ffbo-component-container">
+    <app-ffbo-component-card
+      class="ffbo-component-card"
+      *ngFor="let comp of ffboComponents" [data]="comp">
+    </app-ffbo-component-card>
+  </div>
+  <h3 class="mat-display-1">Gallery</h3>
+
   <div class="image-tile">
     <app-image-tile [tiles]="showcase"></app-image-tile>
   </div>

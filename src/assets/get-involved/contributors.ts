@@ -30,4 +30,29 @@ export const CONTRIBUTORS: Profile[] = [
     role: 'Contributor',
     url: ''
   },
+  {
+    name: 'Vivek Kumar',
+    role: 'Contributor',
+    url: ''
+  },
+  {
+    name: 'Neha Arora',
+    role: 'Contributor',
+    url: ''
+  },
+  {
+    name: 'Mark Mazel',
+    role: 'Contributor',
+    url: ''
+  },
+  {
+    name: 'Mingen Pan',
+    role: 'Contributor',
+    url: ''
+  },
+  {
+    name: 'David Kuhta',
+    role: 'Contributor',
+    url: ''
+  },
 ];

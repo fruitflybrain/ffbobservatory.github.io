@@ -9,12 +9,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
+import { NgxMdModule } from 'ngx-md';
+
+
 import { FFBOComponentDialogComponent } from './ffbo-component-dialog/ffbo-component-dialog.component';
 import { FFBOComponentCardComponent } from './ffbo-component-card/ffbo-component-card.component';
 
 import { FrontPageRoutingModule } from './front-page-routing.module';
 import { FrontPageComponent } from './front-page.component';
-import { InnovationsComponent } from './innovations/innovations.component';
 import { FFBOOverviewCardComponent } from './ffbo-overview-card/ffbo-overview-card.component';
 import { ImageTileComponent } from './image-tile/image-tile.component';
 
@@ -24,7 +26,6 @@ import { ImageTileComponent } from './image-tile/image-tile.component';
     FrontPageComponent,
     FFBOComponentDialogComponent,
     FFBOComponentCardComponent,
-    InnovationsComponent,
     FFBOOverviewCardComponent,
     ImageTileComponent
   ],
@@ -38,10 +39,11 @@ import { ImageTileComponent } from './image-tile/image-tile.component';
     HttpClientModule,
     MatTabsModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    NgxMdModule.forRoot(),
+    HttpClientModule
   ],
   exports: [
-    FFBOComponentCardComponent,
     FFBOComponentCardComponent
   ],
   providers:[]

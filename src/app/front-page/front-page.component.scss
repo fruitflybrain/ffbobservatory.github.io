@@ -29,3 +29,25 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+
+.ffbo-component-container {
+  display:flex;
+  align-items: stretch;
+  overflow: hidden;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.ffbo-component-title {
+  max-width: 600px;
+}
+
+.ffbo-component-card {
+  max-width: 25%;
+}
+
+.mat-display-1 {
+  margin-bottom: 0px;
+}

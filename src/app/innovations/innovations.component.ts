@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { FFBODescription } from './../front-page/ffbo-description';
+import { FFBODescription } from '../ffbo-description';
 import { NEUROARCH } from '../../assets/innovations/neuroarch';
 import { NEUROKERNEL } from '../../assets/innovations/neurokernel';
 import { NEURONLP } from '../../assets/innovations/neuronlp';
@@ -12,16 +12,19 @@ const STAKEHOLDERS = [
     description: 'Short description of innovations targeting Neurobiologists and Neurogeneticists.',
     innovations: [
       {
-        title: 'Innovation 1',
-        description:  'Neurobiologists Innovation 1 description'
+        title: 'Neuron Classification Algorithms',
+        description:  'Classification algorithms for neurons based on morphology and connectivity.'
       },
       {
-        title: 'Innovation 2',
-        description:  'Neurobiologists Innovation 2 description'
+        title: 'Unique Neuron Identifiers',
+        description:  'Each neuron is uniquely identifiable in the database.'
       },
       {
-        title: 'Innovation 3',
-        description:  'Neurobiologists Innovation 3 description'
+        title: 'Establishing Transgenic Lines',
+        description:  `
+          Overlay of expression pattern for transgenic lines on neuron morphologies enable identification
+          of transgenic lines.
+          `
       }
     ]
   },
@@ -30,16 +33,16 @@ const STAKEHOLDERS = [
     description: 'Short description of innovations targeting Computationtal/Theoretical Neuroscientists.',
     innovations: [
       {
-        title: 'Innovation 1',
-        description:  'Computational Neuroscientists Innovation 1 description'
+        title: 'in silico workbench',
+        description:  `Complete suites of simulation engines provide <i>in silico</i> workbench for researchers.`
       },
       {
-        title: 'Innovation 2',
-        description:  'Computational Neuroscientists Innovation 2 description'
+        title: 'Functional Identification of Circuit Motifs',
+        description:  'Circuit utility libraries that support analysis and visualization of circuit motifs.'
       },
       {
-        title: 'Innovation 3',
-        description:  'Computational Neuroscientists Innovation 3 description'
+        title: 'NeuroCAD',
+        description:  'CAD-like interactive tools for creating circuit diagrams from biological neural networks.'
       }
     ]
   },
@@ -48,15 +51,15 @@ const STAKEHOLDERS = [
     description: 'Short description of innovations targeting Computer Scientists/Engineers.',
     innovations: [
       {
-        title: 'Innovation 1',
+        title: 'Bio-inspired Processing Algorithsm',
         description:  'Computer ScientistsInnovation 1 description'
       },
       {
-        title: 'Innovation 2',
+        title: 'Bio-inspired Learning Algorithsm',
         description:  'Computer ScientistsInnovation 2 description'
       },
       {
-        title: 'Innovation 3',
+        title: 'Deep Learning Platform',
         description:  'Computer ScientistsInnovation 3 description'
       }
     ]
