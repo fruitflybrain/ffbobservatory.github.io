@@ -40,14 +40,18 @@ export class BannerComponent implements AfterViewInit {
         this.dialog.open(FFBOComponentDialogComponent, {
           width: '80%',
           maxWidth: '800px',
-          data: this.background
+          data: this.background,
+          hasBackdrop: true,
+          backdropClass: 'ffbo-dialog-backdrop'
         });
         break;
       case 'overview':
         this.dialog.open(FFBOComponentDialogComponent, {
           width: '80%',
           maxWidth: '800px',
-          data: this.overview
+          data: this.overview,
+          hasBackdrop: true,
+          backdropClass: 'ffbo-dialog-backdrop'
         });
         break;
       default:
