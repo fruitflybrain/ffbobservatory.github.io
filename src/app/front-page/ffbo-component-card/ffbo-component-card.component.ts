@@ -22,7 +22,9 @@ export class FFBOComponentCardComponent implements OnInit {
     const dialogRef = this.dialog.open(FFBOComponentDialogComponent, {
       width: '80%',
       maxWidth: '1000px',
-      data: this.data
+      data: this.data,
+      hasBackdrop: true,
+      backdropClass: 'ffbo-dialog-backdrop'
     });
 
     // dialogRef.afterClosed().subscribe(result => {

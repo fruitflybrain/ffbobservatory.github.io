@@ -32,15 +32,23 @@ $custom-typography: mat-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$primary: mat-palette($mat-red);
-$accent: mat-palette($mat-teal, A200, A100, A400);
-// The warn palette is optional (defaults to red).
-$warn: mat-palette($mat-red);
 
+// $primary: mat-palette($mat-red);
+// $accent: mat-palette($mat-teal, A200, A100, A400);
+// // The warn palette is optional (defaults to red).
+// $warn: mat-palette($mat-red);
+
+$primary: mat-palette($mat-gray, A900);
+$accent: mat-palette($mat-gray, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$warn: mat-palette($mat-light-blue, A900);
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-dark-theme($primary, $accent, $warn);
-$custom-background-color: #0e0e0e;
-$custom-foreground-color: #424242;
+// $foreground: map-get($theme, foreground);
+// $background: map-get($theme, background);
+
+$custom-background-color: #020202;
+$custom-foreground-color: #000000;
 
 $background: map-get($theme, background);
 $background: map_merge($background, (background: $custom-background-color));
@@ -59,6 +67,23 @@ $theme: map_merge($theme, (background: $background, foreground: $foreground));
 
 .mat-toolbar.mat-primary {
   color: #ffffff;
+  // background-color: #000000;
+}
+
+.mat-card {
+  background: #212121;
+}
+
+.mat-stepper-horizontal {
+  background: #212121;
+}
+
+.ffbo-dialog-backdrop {
+  background: #020202eb;
+}
+
+.mat-step-icon.mat-step-icon-selected {
+  background-color: mat-color($warn, darker);
 }
 
 
@@ -72,7 +97,7 @@ body {
 }
 
 a {
-  color: mat-color($primary, darker);
+  color: mat-color($warn, darker);
 }
 
 a:link {

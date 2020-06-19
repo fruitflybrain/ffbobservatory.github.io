@@ -17,16 +17,17 @@
     z-index: 0;
   }
 
-  mat-card-title {
+  .mat-card-title {
     font-weight: 300;
     z-index: 10;
   }
 
-  mat-card-content {
+  .mat-card-content {
     font-weight: 200;
     z-index: 10;
   }
 }
+
 
 .ffbo-component-card:hover {
   transition: box-shadow .25s cubic-bezier(0.4, 0, 0.2, 1);
