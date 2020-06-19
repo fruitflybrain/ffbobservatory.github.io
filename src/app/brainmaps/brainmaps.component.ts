@@ -6,14 +6,6 @@ import { ACTIVITY, CONNECTOME, CELLTYPE, SYNAPTOME } from '../../assets/brainmap
 
 const BRAINMAPS: BrainMap[] = [ CELLTYPE, CONNECTOME, ACTIVITY, SYNAPTOME ];
 
-/**
- * Scroll to an HTML element
- * @param $element HTMLElement
- */
-function scrollToElement($element: HTMLElement): void {
-  console.log($element);
-  $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-}
 
 @Component({
   selector: 'app-brainmaps',

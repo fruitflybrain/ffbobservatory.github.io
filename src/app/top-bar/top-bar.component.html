@@ -7,7 +7,7 @@
   </a>
   <div class="flex-spacer"></div>
 
-  <!-- <a class="top-bar-btn" mat-button routerLink="/innovations">Innovations</a> -->
+  <a class="top-bar-btn" mat-button (click)="getStarted()">Get Started</a>
   <a class="top-bar-btn" mat-button [matMenuTriggerFor]="beforeMenu">BrainMapViz</a>
   <mat-menu #beforeMenu="matMenu" xPosition="before" class="nlp-dropdown">
     <!-- <button mat-menu-item (click)="showNLPComponentCard()">

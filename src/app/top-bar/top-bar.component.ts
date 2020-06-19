@@ -3,6 +3,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { FFBOComponentDialogComponent } from '../front-page/ffbo-component-dialog/ffbo-component-dialog.component';
 import { NEURONLP } from '../../assets/innovations/neuronlp';
 
+/**
+ * Scroll to an HTML element
+ * @param $element HTMLElement
+ */
+function scrollToElement($element: HTMLElement): void {
+  console.log($element);
+  $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+}
+
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './top-bar.component.html',
@@ -34,6 +44,11 @@ export class FFBONavBarComponent implements OnInit {
     if (url){
       window.location.href = url;
     }
+  }
+
+  getStarted() {
+    const structToFuncDiv = document.getElementsByClassName('mat-card ffbo-overview')[0] as HTMLElement;
+    scrollToElement(structToFuncDiv);
   }
 
   showNLPComponentCard(){

@@ -7,20 +7,23 @@ import { NEURONLP } from '../../assets/innovations/neuronlp';
 
 export const OVERVIEWS = [
   {
-    img: 'assets/icons/database.svg',
+    // img: 'assets/icons/database.svg',
+    img: 'assets/front-page/img/neuroarch.png',
     title: 'Data Integration',
     description: `
     Graph-based Database NeuroArch incorporates morphology, connectomes,
     model information in a unified framework for easy access.`
   },
   {
-    img: 'assets/icons/circuit.svg',
+    img: 'assets/front-page/img/neurokernel.png',
+    // img: 'assets/icons/circuit.svg',
     title: 'Circuit Development & Execution',
     description: `
     NeuroKernel API with multi-GPU support enables fast circuit development and execution.`
   },
   {
-    img: 'assets/icons/browser.svg',
+    // img: 'assets/icons/browser.svg',
+    img: 'assets/front-page/img/flybrainlab_example.png',
     title: 'Browser GUI',
     description: `
     Database and execution engine all come with front-end browser-based UIs for
