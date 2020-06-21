@@ -1,4 +1,4 @@
-import { ImageTile } from './../../app/front-page/image-tile/image-tile';
+import { ImageTile } from '../../app/front-page/image-tile/image-tile';
 export const showCase: ImageTile[] = [
   {
     cols: 2,

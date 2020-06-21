@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { InnovationsRoutingModule } from './innovations-routing.module';
 import { InnovationsComponent } from './innovations.component';
-import { FrontPageModule } from './../front-page/front-page.module';
+import { FrontPageModule } from '../front-page/front-page.module';
 
 @NgModule({
   declarations: [

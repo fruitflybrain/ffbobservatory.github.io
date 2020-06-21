@@ -1,4 +1,4 @@
-import { BrainMap } from './../brainmaps';
+import { BrainMap } from '../brainmaps';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

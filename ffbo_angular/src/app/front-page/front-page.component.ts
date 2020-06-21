@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { showCase } from './../../assets/front-page/showcase-tiles';
+import { showCase } from '../../assets/front-page/showcase-tiles';
 import { NEUROARCH } from '../../assets/innovations/neuroarch';
 import { NEUROKERNEL } from '../../assets/innovations/neurokernel';
 import { NEURONLP } from '../../assets/innovations/neuronlp';
