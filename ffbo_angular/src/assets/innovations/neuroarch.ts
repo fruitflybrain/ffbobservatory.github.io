@@ -1,8 +1,8 @@
 import { FFBODescription } from '../../app/ffbo-description';
 export const NEUROARCH: FFBODescription = {
   title: 'NeuroArch',
-  shortText: 'Graph-based database for biological & circuit data storage.',
-  mainText: `
+  shortDesc: 'Graph-based database for biological & circuit data storage.',
+  desc: `
     NeuroArch provides a common interface for defining, querying, and manipulating
     integrated stored model data, potentially developed by multiple independent parties
     at multiple levels of structural abstraction, using the object-graph mapping (OGM) approach.

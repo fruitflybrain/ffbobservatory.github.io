@@ -6,7 +6,10 @@
       researchers and developers to push forth our understanding of the fruit fly brain.
     </p>
   </div>
-  <div class="get-involved-sections get-invovled-team">
+  <div
+    *ngIf="team.length > 0"
+    class="get-involved-sections get-invovled-team"
+  >
     <h3 class="mat-display-1" style="margin-bottom: 0px;">FFBO Team</h3>
     <div class="get-involved-sections-cards">
       <app-profile-card
@@ -15,7 +18,10 @@
       </app-profile-card>
     </div>
   </div>
-  <div class="get-involved-sections get-invovled-alumni">
+  <div
+    *ngIf="alumni.length > 0"
+    class="get-involved-sections get-invovled-alumni"
+  >
     <h3 class="mat-display-1" style="margin-bottom: 0px;">Past Members</h3>
     <div class="get-involved-sections-cards">
       <app-profile-card
@@ -24,7 +30,10 @@
       </app-profile-card>
     </div>
   </div>
-  <div class="get-involved-sections get-invovled-collaborators-and-contributors">
+  <div
+    *ngIf="contributors.length > 0 || collaborators.length > 0"
+    class="get-involved-sections get-invovled-collaborators-and-contributors"
+  >
     <h3 class="mat-display-1" style="margin-bottom: 0px;">Past Collaborators & Contributors</h3>
     <div class="get-involved-sections-cards">
       <app-profile-card

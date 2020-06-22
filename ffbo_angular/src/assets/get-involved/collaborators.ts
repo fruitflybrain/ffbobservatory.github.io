@@ -6,20 +6,20 @@ export const COLLABORATORS: Profile[] = [
     role: 'Collaborator',
     url: 'http://brc.life.nthu.edu.tw/lab/about.html',
     img: 'assets/get-involved/img/ann-shyn-chiang.png',
-    description: 'NTHU, Taiwan'
+    desc: 'NTHU, Taiwan'
   },
   {
     name: 'Daniel Coca',
     role: 'Collaborator',
     url: 'https://www.sheffield.ac.uk/acse/department/people/academic/daniel-coca',
     img: 'assets/get-involved/img/daniel-coca.png',
-    description: ''
+    desc: ''
   },
   {
     name: 'Chang-Chuan Lo',
     role: 'Collaborator',
     url: 'http://life.nthu.edu.tw/~cclo/',
     img: 'assets/get-involved/img/cclo.png',
-    description: ''
+    desc: ''
   },
 ];

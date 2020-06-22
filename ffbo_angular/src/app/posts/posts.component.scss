@@ -1,0 +1,42 @@
+.post-container {
+  margin-bottom: 50px;
+}
+
+.post-markdown {
+
+  ::ng-deep h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  ::ng-deep hr {
+    border-style: groove;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: .4;
+  }
+
+  ::ng-deep p {
+    margin: 0;
+  }
+
+  ::ng-deep h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+
+  ::ng-deep h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+
+  ::ng-deep h4 {
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: normal;
+  }
+}

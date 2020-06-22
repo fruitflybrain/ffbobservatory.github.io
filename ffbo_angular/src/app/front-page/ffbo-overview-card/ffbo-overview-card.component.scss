@@ -6,6 +6,10 @@
   max-height: 300px;
   display: flex;
   justify-content: space-around;
+
+  img {
+    max-width: 50%;
+  }
 }
 .overview-img{
   flex-basis: 50% or auto;

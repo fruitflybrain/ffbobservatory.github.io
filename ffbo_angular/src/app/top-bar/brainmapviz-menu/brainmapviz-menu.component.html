@@ -1,0 +1,18 @@
+<a class="top-bar-btn" mat-button [matMenuTriggerFor]="beforeMenu">BrainMapViz</a>
+<mat-menu #beforeMenu="matMenu" xPosition="before" class="nlp-dropdown">
+  <!-- <button mat-menu-item (click)="showNLPComponentCard()">
+    What is NeuroNLP
+  </button> -->
+  <button mat-menu-item (click)="launchActivityMap()">
+    Download <i>in vivo</i> Antenna Activity Data
+  </button>
+  <button mat-menu-item (click)="launchNLP('adult')">
+    Launch NeuroNLP.Adult (with FlyCircuit and Janelia Medulla 7-column Data)
+  </button>
+  <button mat-menu-item (click)="launchNLP('larva')">
+    Launch NeuroNLP.Larva (with Janelia Larva Olfaction Data)
+  </button>
+  <button mat-menu-item (click)="launchNLP('EM')">
+    Download NeuroNLP.EM (with Hemibrain and VNC data)
+  </button>
+</mat-menu>

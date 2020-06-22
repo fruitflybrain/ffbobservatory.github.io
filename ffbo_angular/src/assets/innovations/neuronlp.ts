@@ -1,8 +1,8 @@
 import { FFBODescription } from '../../app/ffbo-description'
 export const NEURONLP: FFBODescription = {
   title: 'NeuroNLP',
-  shortText: 'Modern web-based portal for navigating fruit fly brain circuit data.',
-  mainText: `
+  shortDesc: 'Modern web-based portal for navigating fruit fly brain circuit data.',
+  desc: `
     NeuroNLP provides a modern web-based portal for navigating fruit fly brain circuit data.
     Increases in the availability and scale of fruit fly connectome data, demand new, scalable
     and accessible methods to facilitate investigation into the functions of the latest complex

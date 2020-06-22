@@ -1,7 +1,8 @@
 <div class="dialog-wrapper">
+  <img [src]="data.img" class="dialog-wrapper-bg" />
   <h3 mat-dialog-title>{{data.title}}</h3>
   <div Markdown mat-dialog-content class="dialog-wrapper-content">
-    {{data.mainText}}
+    {{data.desc}}
   </div>
   <div mat-dialog-actions>
     <button mat-button *ngIf="data.url" (click)="redirectURL()">Learn More</button>

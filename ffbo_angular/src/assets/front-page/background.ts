@@ -1,7 +1,7 @@
 import { FFBODescription } from '../../app/ffbo-description'
 export const BACKGROUND: FFBODescription = {
   title: 'Background',
-  mainText: `
+  desc: `
     Animal behavior is governed by the activity of interconnected brain circuits.
     Comprehensive brain wiring maps are thus needed in order to formulate hypotheses
     about information flow and also to guide genetic manipulations aimed at understanding

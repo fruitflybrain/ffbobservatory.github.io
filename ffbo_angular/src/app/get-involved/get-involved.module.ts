@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -14,7 +15,8 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
   imports: [
     CommonModule,
     GetInvolvedRoutingModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ]
 })
 export class GetInvolvedModule { }

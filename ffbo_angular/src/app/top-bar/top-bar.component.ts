@@ -9,7 +9,9 @@ import { NEURONLP } from '../../assets/innovations/neuronlp';
  */
 function scrollToElement($element: HTMLElement): void {
   console.log($element);
-  $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  $element.scrollIntoView({
+    behavior: 'smooth', block: 'start', inline: 'nearest'
+  });
 }
 
 
@@ -24,26 +26,6 @@ export class FFBONavBarComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
-  }
-
-  launchNLP(organism: string){
-    let url: string;
-    switch (organism) {
-      case 'adult':
-        url = 'https://neuronlp.adult.fruitflybrain.org';
-        break;
-      case 'larva':
-        url = 'https://neuronlp.larva.fruitflybrain.org';
-        break;
-      case 'EM':
-        url = 'http://hemibrain.fruitflybrain.org/';
-        break;
-      default:
-        break;
-    }
-    if (url){
-      window.location.href = url;
-    }
   }
 
   getStarted() {
@@ -63,8 +45,5 @@ export class FFBONavBarComponent implements OnInit {
     window.location.href = 'http://fbl.fruitflybrain.org';
   }
 
-  launchActivityMap(){
-    window.location.href = 'http://amacrine.ee.columbia.edu:15000/';
-  }
 
 }

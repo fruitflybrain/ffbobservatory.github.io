@@ -6,27 +6,27 @@ export const ALUMNI: Profile[] = [
     url: 'http://www.bionet.ee.columbia.edu/people',
     role: 'FFBO Alumnus',
     img: 'assets/get-involved/img/chungheng_yeh.png',
-    description: ''
+    desc: ''
   },
   {
     name: 'Nikul H. Ukani',
     url: 'http://www.bionet.ee.columbia.edu/people',
     role: 'FFBO Alumnus',
     img: 'assets/get-involved/img/nikul_ukani.png',
-    description: ''
+    desc: ''
   },
   {
     name: 'Lev Givon',
     url: 'http://www.bionet.ee.columbia.edu/people',
     role: 'FFBO Alumnus',
     img: 'assets/get-involved/img/lev_givon.png',
-    description: ''
+    desc: ''
   },
   {
     name: 'Adam Tomkins',
     url: 'http://www.bionet.ee.columbia.edu/people',
     role: 'FFBO Alumnus',
     img: 'assets/get-involved/img/adam_tomkins.png',
-    description: ''
+    desc: ''
   },
 ];

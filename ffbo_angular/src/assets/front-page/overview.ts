@@ -1,7 +1,7 @@
 import { FFBODescription } from '../../app/ffbo-description'
 export const OVERVIEW: FFBODescription = {
   title: 'Overview',
-  mainText: `
+  desc: `
     Despite significant investment and huge progress in understanding Drosophila neural circuits and
     the availability of excellent genomic and genetic community databases, a major obstacle in understanding
     the fly brain is the lack of communication/collaboration across the modeling community as well as lack of

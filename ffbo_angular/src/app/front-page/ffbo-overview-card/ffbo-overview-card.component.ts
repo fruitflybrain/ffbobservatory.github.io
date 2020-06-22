@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FFBOOverviewCardComponent implements OnInit {
   @Input() title: string;
-  @Input() description: string;
+  @Input() desc: string;
   @Input() img: string;
 
   constructor() { }

@@ -1,0 +1,27 @@
+<a class="top-bar-btn" mat-button [matMenuTriggerFor]="beforeMenu">Get Involved</a>
+  <mat-menu #beforeMenu="matMenu" xPosition="before" class="get-involved-dropdown">
+    <!-- <button mat-menu-item (click)="showNLPComponentCard()">
+      What is NeuroNLP
+    </button> -->
+    <button mat-menu-item routerLink='/posts/faqs'>
+      FAQs
+    </button>
+    <button mat-menu-item routerLink='/posts/code'>
+      Code
+    </button>
+    <button mat-menu-item routerLink='/posts/hackathons'>
+      Hackathons
+    </button>
+    <a mat-menu-item href="https://lists.columbia.edu/mailman/listinfo/ffbo">
+      Mailing List
+    </a>
+    <button mat-menu-item routerLink='/posts/workshops'>
+      Workshops
+    </button>
+    <a mat-menu-item href="https://github.com/NeuralEnsemble/NeuroinformaticsTutorial/blob/master/Exercises/Exercise6_FruitFlyBrainObservatory.md">
+      Tutorials
+    </a>
+    <button mat-menu-item routerLink='/get-involved'>
+      Meet the Team
+    </button>
+  </mat-menu>

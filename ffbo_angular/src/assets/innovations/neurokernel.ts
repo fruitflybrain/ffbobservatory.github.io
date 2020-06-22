@@ -1,8 +1,8 @@
 import { FFBODescription } from '../../app/ffbo-description'
 export const NEUROKERNEL: FFBODescription = {
   title: 'NeuroKernel',
-  shortText: 'LPU-based circuit Emulation Engine with multi-GPU support.',
-  mainText: `
+  shortDesc: 'LPU-based circuit Emulation Engine with multi-GPU support.',
+  desc: `
     Neurokernel is a groundbreaking open-source platform for the isolated and integrated emulation of fruit fly
     brain model neural circuits (e.g., sensory and locomotion systems), their connectivity patterns, and other
     parts of the fly's nervous system on clusters of GPUs. The Neurokernel project challenges the basic model of

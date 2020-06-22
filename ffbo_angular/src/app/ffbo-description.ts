@@ -1,9 +1,9 @@
 export interface FFBODescription {
   title: string;
-  mainText: string | string[];
+  desc: string | string[];
   img?: string;
-  shortText?: string | string[];
-  publication?: string;
+  shortDesc?: string | string[];
   url?: string;
   slides?: string;
+  publication?: string;
 }
