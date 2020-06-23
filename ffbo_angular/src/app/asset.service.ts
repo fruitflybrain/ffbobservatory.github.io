@@ -26,4 +26,8 @@ export class AssetService {
   getOnePost(id): Observable<any> {
     return this.http.get(`${this.baseurl}/post/${id}/`, {headers: this.httpHeaders});
   }
+
+  getAnnouncements(): Observable<any> {
+    return this.http.get(`${this.baseurl}/announcement/`, {headers: this.httpHeaders});
+  }
 }

@@ -39,4 +39,9 @@
     margin: 0;
     line-height: normal;
   }
+
+  ::ng-deep ul {
+    list-style: inside;
+  }
+
 }

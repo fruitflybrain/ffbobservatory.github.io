@@ -5,6 +5,32 @@ import { NEUROKERNEL } from '../../assets/innovations/neurokernel';
 import { NEURONLP } from '../../assets/innovations/neuronlp';
 import { AssetService } from '../asset.service';
 
+export interface FrontPageCard {
+  title: string;
+  subtitle: string;
+  desc: string;
+  img: string;
+  url?: string;  // url to another website
+  link?: string; // routerLink
+}
+
+const CARDS: FrontPageCard[] = [
+  {
+    title: 'BrainMapsViz',
+    subtitle: 'Visualizers for various brain maps',
+    desc: 'Description to be filled in. Set of Visualizers for BrainMaps',
+    img: 'assets/front-page/img/neuronlp.jpg',
+    link: '/brainmapsviz'
+  },
+  {
+    title: 'FlyBrainLab',
+    subtitle: 'Integrated Development Environment for developing models of the fly brain',
+    desc: 'Description to be filled in. Set of Visualizers for BrainMaps',
+    img: 'assets/front-page/img/flybrainlab_example.png',
+    url: 'https://mkturkcan.github.io/FBLWebNew/'
+  }
+];
+
 export const OVERVIEWS = [
   {
     // img: 'assets/icons/database.svg',
@@ -47,6 +73,7 @@ export class FrontPageComponent implements OnInit {
   overviews = OVERVIEWS;
   showcase = showCase;
   ffboComponents = [NEURONLP, NEUROKERNEL, NEUROARCH];
+  cards = CARDS;
 
   constructor(private asset: AssetService){}
 

@@ -25,6 +25,7 @@ router.register(r'member', views.MemberViewSet)
 router.register(r'component', views.ComponentViewSet)
 router.register(r'gallery', views.GalleryViewSet)
 router.register(r'post', views.PostViewSet)
+router.register(r'announcement', views.AnnouncementViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

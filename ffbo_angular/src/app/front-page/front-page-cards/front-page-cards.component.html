@@ -1,0 +1,19 @@
+<mat-card class="front-page-card">
+  <div class="front-page-container">
+    <div class="front-page-content">
+      <mat-card-title [innerHTML]="data.title"></mat-card-title>
+      <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
+      <p>{{data.desc}}</p>
+      <a *ngIf="data.link" mat-button [routerLink]="data.link">Learn More</a>
+      <a *ngIf="data.url" mat-button [href]="data.url">Learn More</a>
+    </div>
+    <div class="front-page-img">
+      <a *ngIf="data.url" [href]="data.url">
+        <img [src]="data.img" alt="Photo">
+      </a>
+      <a *ngIf="data.link" [routerLink]="data.link">
+        <img [src]="data.img" alt="Photo">
+      </a>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,15 @@
+<mat-card class="brainmapviz-card">
+  <div class="brainmapviz-container">
+    <div class="brainmapviz-content">
+      <mat-card-title [innerHTML]="data.title"></mat-card-title>
+      <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
+      <p>{{data.desc}}</p>
+      <a mat-button [href]="data.url">Launch</a>
+    </div>
+    <div class="brainmapviz-img">
+      <a  [href]="data.url">
+        <img [src]="data.img" alt="Photo">
+      </a>
+    </div>
+  </div>
+</mat-card>

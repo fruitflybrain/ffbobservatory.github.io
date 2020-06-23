@@ -1,0 +1,31 @@
+.brainmapviz-card {
+  margin: 50px;
+}
+
+.brainmapviz-card .brainmapviz-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .brainmapviz-content {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    width: 45%;
+    margin: 30px;
+  }
+
+  .brainmapviz-img {
+    width: 45%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+
+    img {
+      max-height: 356px;
+    }
+  }
+}

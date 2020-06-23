@@ -27,7 +27,14 @@ const routes: Routes = [
     path: 'brainmaps',
     loadChildren: () => import('./brainmaps/brainmaps.module').then(m => m.BrainmapsModule)
   },
-  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) }
+  {
+    path: 'posts',
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+  },
+  {
+    path: 'brainmapsviz',
+    loadChildren: () => import('./brainmapsviz/brainmapsviz.module').then(m => m.BrainmapsvizModule)
+  }
 ];
 
 @NgModule({

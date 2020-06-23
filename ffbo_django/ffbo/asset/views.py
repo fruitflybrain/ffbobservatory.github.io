@@ -2,8 +2,12 @@ from django.shortcuts import render
 
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .models import Member, Component, Gallery, Post
-from .serializers import MemberSerializer, ComponentSerializer, GallerySerializer, PostSerializer
+from .models import Member, Component, Gallery, Post, Announcement
+from .serializers import (
+  MemberSerializer, ComponentSerializer,
+  GallerySerializer, PostSerializer,
+  AnnouncementSerializer
+)
 
 
 class MemberViewSet(viewsets.ModelViewSet):
@@ -33,3 +37,11 @@ class PostViewSet(viewsets.ModelViewSet):
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+
+class AnnouncementViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer

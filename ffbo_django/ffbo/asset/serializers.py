@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Component, Member, Gallery, Post
+from .models import Component, Member, Gallery, Post, Announcement
 
 class ComponentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,3 +21,8 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('id', 'title', 'body', 'updated_at')
+
+class AnnouncementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Announcement
+        fields = ('id', 'desc', 'url', 'show', 'updated_at')

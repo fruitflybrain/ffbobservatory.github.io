@@ -1,6 +1,11 @@
 <div>
   <app-banner></app-banner>
-  <mat-card class="ffbo-overview">
+  <div *ngFor="let data of cards">
+    <app-front-page-cards [data]="data">
+    </app-front-page-cards>
+  </div>
+
+  <!-- <mat-card class="ffbo-overview">
     <h1 class="ffbo-overview-title">From Structure to Function</h1>
     <div class="ffbo-overview-container">
       <mat-horizontal-stepper linear="false" #stepper>
@@ -37,5 +42,5 @@
 
   <div class="image-tile">
     <app-image-tile [tiles]="showcase"></app-image-tile>
-  </div>
+  </div> -->
 </div>

@@ -19,6 +19,7 @@ import { FrontPageRoutingModule } from './front-page-routing.module';
 import { FrontPageComponent } from './front-page.component';
 import { FFBOOverviewCardComponent } from './ffbo-overview-card/ffbo-overview-card.component';
 import { ImageTileComponent } from './image-tile/image-tile.component';
+import { FrontPageCardsComponent } from './front-page-cards/front-page-cards.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ImageTileComponent } from './image-tile/image-tile.component';
     FFBOComponentDialogComponent,
     FFBOComponentCardComponent,
     FFBOOverviewCardComponent,
-    ImageTileComponent
+    ImageTileComponent,
+    FrontPageCardsComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,7 @@ import { ImageTileComponent } from './image-tile/image-tile.component';
     MatTabsModule,
     MatIconModule,
     MatStepperModule,
-    NgxMdModule.forRoot(),
+    NgxMdModule,
     HttpClientModule
   ],
   exports: [

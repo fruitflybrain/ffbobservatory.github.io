@@ -1,0 +1,31 @@
+.front-page-card {
+  margin: 50px;
+}
+
+.front-page-card .front-page-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .front-page-content {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    width: 45%;
+    margin: 30px;
+  }
+
+  .front-page-img {
+    width: 45%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+
+    img {
+      max-height: 356px;
+    }
+  }
+}
