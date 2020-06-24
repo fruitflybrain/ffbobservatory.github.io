@@ -21,16 +21,27 @@ function scrollToElement($element: HTMLElement): void {
   styleUrls: ['./top-bar.component.scss']
 })
 export class FFBONavBarComponent implements OnInit {
-
-
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   getStarted() {
-    const structToFuncDiv = document.getElementsByClassName('mat-card ffbo-overview')[0] as HTMLElement;
-    scrollToElement(structToFuncDiv);
+    let structToFuncDiv = document.getElementsByClassName(
+        'mat-card front-page-card'
+      )[0] as HTMLElement;
+
+    if (!structToFuncDiv) {
+      setTimeout(
+        () => {
+          structToFuncDiv = document.getElementsByClassName(
+            'mat-card front-page-card'
+          )[0] as HTMLElement;
+          scrollToElement(structToFuncDiv);
+        }, 500);
+    } else {
+      scrollToElement(structToFuncDiv);
+    }
   }
 
   showNLPComponentCard(){
