@@ -58,6 +58,41 @@ class Gallery(models.Model):
     title = models.CharField(max_length=128)
     img = models.ImageField()
     desc = models.TextField(blank=True)
+    component = models.CharField(
+      max_length=128,
+      blank=True,
+      default='na',
+      choices=[
+        ('nlp', 'NeuroNLP'),
+        ('gfx', 'NeuroGFX'),
+        ('fbl', 'FlyBrainLab'),
+        ('neuroarch', 'NeuroArch'),
+        ('na', 'N/A')
+      ])
+    species = models.CharField(
+      max_length=128,
+      blank=True,
+      default='na',
+      choices=[
+        ('adult', 'Adult'),
+        ('larva', 'Larva'),
+        ('na', 'N/A'),
+      ])
+    dataset = models.CharField(
+      max_length=128,
+      blank=True,
+      default='na',
+      choices=[
+        ('flycircuit', 'Fly Circuit'),
+        ('hemibrain', 'Hemibrain'),
+        ('l1em', 'Larva L1EM'),
+        ('7col', 'Janelia 7 Columns'),
+        ('na', 'N/A'),
+      ])
+    tag_url  = models.URLField(
+      null=True,
+      blank=True
+    )
 
 
 class Announcement(models.Model):
@@ -73,3 +108,16 @@ class Announcement(models.Model):
 
     # whether this annoucement should be shown
     show = models.BooleanField(default=False)
+
+class BrainMaps(models.Model):
+    def __str__(self):
+        return 'BrainMaps: ' + self.title
+
+    def __unicode__(self):
+        return 'BrainMaps: ' + self.title
+
+    title = models.CharField(max_length=256)
+    subtitle = models.CharField(max_length=512)
+    img = models.ImageField()
+    desc = models.TextField()
+    url = models.URLField()

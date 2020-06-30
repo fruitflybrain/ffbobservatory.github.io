@@ -1,3 +1,4 @@
+import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -43,7 +44,8 @@ import { AnnouncementBannerComponent } from './announcement-banner/announcement-
     FontAwesomeModule,
     MatDialogModule,
     HttpClientModule,
-    IgxBannerModule
+    IgxBannerModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

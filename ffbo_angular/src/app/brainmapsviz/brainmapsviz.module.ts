@@ -1,3 +1,5 @@
+import { MatGridListModule } from '@angular/material/grid-list';
+import { GalleryComponent } from './gallery/gallery.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
@@ -9,12 +11,17 @@ import { MapVizCardComponent } from './map-viz-card/map-viz-card.component';
 
 
 @NgModule({
-  declarations: [BrainmapsvizComponent, MapVizCardComponent],
+  declarations: [
+    BrainmapsvizComponent,
+    MapVizCardComponent,
+    GalleryComponent
+  ],
   imports: [
     CommonModule,
     BrainmapsvizRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule
   ]
 })
 export class BrainmapsvizModule { }

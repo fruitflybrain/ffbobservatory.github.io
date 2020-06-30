@@ -1,3 +1,5 @@
+import { AssetService } from './../asset.service';
+import { GalleryComponent } from './gallery/gallery.component';
 import { Component, OnInit } from '@angular/core';
 
 export interface BrainMapVizCard {
@@ -8,41 +10,46 @@ export interface BrainMapVizCard {
   desc: string;
 }
 
-const BRAINMAPSVIZ: BrainMapVizCard[] = [
-  {
-    title: '<i>in vivo</i> Antenna Activity Data',
-    subtitle: 'Activity Data',
-    img: '../../assets/brainmapsviz/ffbo_gfx.jpg',
-    url: 'http://amacrine.ee.columbia.edu:15000/',
-    desc: `
-    The Alpha release (v0.1) of the in vivo electrophysiology recordings of the
-    fruit fly antenna. The recordings are used to validate the antenna model published in
-    "A Molecular Odorant Transduction Model and the Complexity of Spatio-Temporal
-    Encoding in the Drosophila Antenna."
-    `
-  },
-  {
-    title: 'FlyCircuit Adult Data',
-    subtitle: 'Activity Data',
-    img: '../../assets/brainmapsviz/flycircuit.png',
-    url: 'https://neuronlp.adult.fruitflybrain.org/',
-    desc: 'Activity Data'
-  },
-  {
-    title: 'L1EM Larval Data',
-    subtitle: 'Activity Data',
-    img: '../../assets/brainmapsviz/larval_l1em.png',
-    url: 'https://neuronlp.larva.fruitflybrain.org/',
-    desc: 'Activity Data'
-  },
-  {
-    title: 'Hemibrain Adult Data',
-    subtitle: 'Activity Data',
-    img: '../../assets/brainmapsviz/hemibrain.png',
-    url: 'http://hemibrain.fruitflybrain.org/',
-    desc: 'Activity Data'
-  }
-];
+// const BRAINMAPSVIZ: BrainMapVizCard[] = [
+//   {
+//     title: '<i>in vivo</i> Antenna Activity Data',
+//     subtitle: 'Activity Data',
+//     img: '../../assets/brainmapsviz/ffbo_gfx.jpg',
+//     url: 'http://amacrine.ee.columbia.edu:15000/',
+//     desc: `
+//     The Alpha release (v0.1) of the in vivo electrophysiology recordings of the
+//     fruit fly antenna. The recordings are used to validate the antenna model published in
+//     "A Molecular Odorant Transduction Model and the Complexity of Spatio-Temporal
+//     Encoding in the Drosophila Antenna."
+//     `
+//   },
+//   {
+//     title: 'FlyCircuit Adult Data',
+//     subtitle: 'Morphology & Connectome Data',
+//     img: '../../assets/brainmapsviz/flycircuit.png',
+//     url: 'https://neuronlp.adult.fruitflybrain.org/',
+//     desc: 'Activity Data'
+//   },
+//   {
+//     title: 'L1EM Larval Data',
+//     subtitle: 'Morphology & Connectome Data',
+//     img: '../../assets/brainmapsviz/larval_l1em.png',
+//     url: 'https://neuronlp.larva.fruitflybrain.org/',
+//     desc: `
+//     Larval Data
+//     `
+//   },
+//   {
+//     title: 'Hemibrain Adult Data',
+//     subtitle: 'Morphology & Connectome Data',
+//     img: '../../assets/brainmapsviz/hemibrain.png',
+//     url: 'http://hemibrain.fruitflybrain.org/',
+//     desc: `
+//     This is the Alpha release (v0.1) of the FFBO NeuroArch Database with
+//     Hemibrain v1.0 and VNC, containing ~25,000 neurons and millions of synapses between them.
+//     `
+//   }
+// ];
 
 @Component({
   selector: 'app-brainmapsviz',
@@ -50,11 +57,20 @@ const BRAINMAPSVIZ: BrainMapVizCard[] = [
   styleUrls: ['./brainmapsviz.component.scss']
 })
 export class BrainmapsvizComponent implements OnInit {
-  vizs: BrainMapVizCard[] = BRAINMAPSVIZ;
+  vizs: BrainMapVizCard[];
 
-  constructor() { }
+  constructor(private asset: AssetService) { }
 
   ngOnInit(): void {
+    this.asset.getBrainMaps().subscribe(
+      data => {
+        console.log('Got BrainMaps', data);
+        this.vizs = data;
+      },
+      error => {
+        console.log('Get BrainMaps Error', error);
+      }
+    );
   }
 
 }

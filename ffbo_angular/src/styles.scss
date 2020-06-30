@@ -109,6 +109,19 @@ p {
   font-weight: 400;
 }
 
+.page-title {
+  margin-bottom: .3rem !important;
+  font-size: 3rem !important;
+  font-weight: 400 !important;
+}
+
+.page-subtitle {
+  font-size: 1.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: .6rem !important;
+}
+
+
 @import "~igniteui-angular/lib/core/styles/themes/index";
 // Uncomment the following lines if you want to add a custom palette:
 // $primary: #731963 !default;

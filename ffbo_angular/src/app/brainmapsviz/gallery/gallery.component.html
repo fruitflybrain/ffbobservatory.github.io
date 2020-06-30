@@ -1,0 +1,33 @@
+<div class="gallery-container">
+  <mat-grid-list [cols]="Ncols" gutterSize="10px">
+    <div *ngFor="let tile of tiles">
+
+      <a *ngIf="tile.tag_url" [href]="tile.tag_url">
+        <mat-grid-tile
+          [colspan]="tile.cols ? tile.cols : 1"
+          [rowspan]="tile.rows ? tile.rows : 1"
+          class="tile"
+          [style.background]="'url(' + tile.img + ')'"
+          >
+          <div class="tile-overlay">
+            <span class="tile-title">{{tile.title}}</span>
+            <span class="tile-desc">{{tile.desc}}</span>
+          </div>
+        </mat-grid-tile>
+      </a>
+      <div *ngIf="!tile.tag_url">
+        <mat-grid-tile
+          [colspan]="tile.cols ? tile.cols : 1"
+          [rowspan]="tile.rows ? tile.rows : 1"
+          class="tile"
+          [style.background]="'url(' + tile.img + ')'"
+          >
+          <div class="tile-overlay">
+            <span class="tile-title">{{tile.title}}</span>
+            <div class="tile-desc">{{tile.desc}}</div>
+          </div>
+        </mat-grid-tile>
+      </div>
+    </div>
+  </mat-grid-list>
+</div>

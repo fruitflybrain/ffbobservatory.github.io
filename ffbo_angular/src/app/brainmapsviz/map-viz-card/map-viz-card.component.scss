@@ -1,31 +1,57 @@
 .brainmapviz-card {
-  margin: 50px;
-}
+  max-width: 280px;
 
-.brainmapviz-card .brainmapviz-container {
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .brainmapviz-content {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    width: 45%;
-    margin: 30px;
+  .mat-card-title {
+    font-size: 1.2rem;
   }
 
   .brainmapviz-img {
-    width: 45%;
-    text-align: center;
-    position: relative;
-    margin: auto;
-
+    height: 280px;
+    overflow: hidden;
     img {
-      max-height: 356px;
+      height: 100%;
+      object-fit: cover;
     }
   }
+
+  .mat-card-content {
+    padding-top: 20px;
+    height: 200px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .mat-card-content::-webkit-scrollbar {
+    display: none;
+  }
+
 }
+
+// .brainmapviz-card .brainmapviz-container {
+//   margin: 20px;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+
+//   .brainmapviz-content {
+//     // display: flex;
+//     // flex-direction: row;
+//     // flex-wrap: wrap;
+//     // justify-content: space-around;
+//     width: 45%;
+//     margin: 30px;
+//   }
+
+//   .brainmapviz-img {
+//     width: 45%;
+//     text-align: center;
+//     position: relative;
+//     margin: auto;
+
+//     img {
+//       max-height: 356px;
+//     }
+//   }
+// }

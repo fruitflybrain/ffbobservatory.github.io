@@ -1,4 +1,19 @@
 <mat-card class="brainmapviz-card">
+  <mat-card-title [innerHTML]="data.title"></mat-card-title>
+  <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
+
+  <div class="brainmapviz-img">
+    <img [src]="data.img" alt="Photo">
+  </div>
+  <mat-card-content>
+    <p>{{data.desc}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [href]="data.url">Launch</a>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <mat-card class="brainmapviz-card">
   <div class="brainmapviz-container">
     <div class="brainmapviz-content">
       <mat-card-title [innerHTML]="data.title"></mat-card-title>
@@ -12,4 +27,4 @@
       </a>
     </div>
   </div>
-</mat-card>
+</mat-card> -->

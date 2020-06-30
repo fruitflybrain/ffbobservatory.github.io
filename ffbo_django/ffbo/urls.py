@@ -26,6 +26,8 @@ router.register(r'component', views.ComponentViewSet)
 router.register(r'gallery', views.GalleryViewSet)
 router.register(r'post', views.PostViewSet)
 router.register(r'announcement', views.AnnouncementViewSet)
+router.register(r'gallery', views.GalleryViewSet)
+router.register(r'brainmaps', views.BrainMapsViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

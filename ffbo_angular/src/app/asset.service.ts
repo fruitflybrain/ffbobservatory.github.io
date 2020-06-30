@@ -30,4 +30,12 @@ export class AssetService {
   getAnnouncements(): Observable<any> {
     return this.http.get(`${this.baseurl}/announcement/`, {headers: this.httpHeaders});
   }
+
+  getGallery(): Observable<any> {
+    return this.http.get(`${this.baseurl}/gallery/`, {headers: this.httpHeaders});
+  }
+
+  getBrainMaps(): Observable<any> {
+    return this.http.get(`${this.baseurl}/brainmaps/`, {headers: this.httpHeaders});
+  }
 }
