@@ -31,6 +31,14 @@ export class AssetService {
     return this.http.get(`${this.baseurl}/announcement/`, {headers: this.httpHeaders});
   }
 
+  getFrontPageVideo(): Observable<any> {
+    return this.http.get(`${this.baseurl}/frontpage/video/`, {headers: this.httpHeaders});
+  }
+
+  getFrontPageCards(): Observable<any> {
+    return this.http.get(`${this.baseurl}/frontpage/cards/`, {headers: this.httpHeaders});
+  }
+
   getGallery(): Observable<any> {
     return this.http.get(`${this.baseurl}/gallery/`, {headers: this.httpHeaders});
   }

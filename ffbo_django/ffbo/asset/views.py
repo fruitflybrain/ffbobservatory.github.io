@@ -2,11 +2,15 @@ from django.shortcuts import render
 
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .models import Member, Component, Gallery, Post, Announcement, BrainMaps
+from .models import (
+  Member, Component, Gallery, Post, Announcement,
+  BrainMaps, FrontPageVideo, FrontPageCard
+)
 from .serializers import (
   MemberSerializer, ComponentSerializer,
   GallerySerializer, PostSerializer,
-  AnnouncementSerializer, BrainMapsSerializer
+  AnnouncementSerializer, BrainMapsSerializer,
+  FrontPageVideoSerializer, FrontPageCardSerializer
 )
 
 
@@ -52,3 +56,17 @@ class BrainMapsViewSet(viewsets.ModelViewSet):
     """
     queryset = BrainMaps.objects.all()
     serializer_class = BrainMapsSerializer
+
+class FrontPageVideoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = FrontPageVideo.objects.all()
+    serializer_class = FrontPageVideoSerializer
+
+class FrontPageCardViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = FrontPageCard.objects.all()
+    serializer_class = FrontPageCardSerializer

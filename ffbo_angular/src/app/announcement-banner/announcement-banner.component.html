@@ -1,5 +1,9 @@
 <div *ngFor="let ann of announcements">
-  <igx-banner #announcementBanner>
-    {{ann.desc}}
-  </igx-banner>
+  <div *ngIf="ann.show" class="announcement-banner">
+    <span class="announcement-text">{{ann.desc}}</span>
+    <a mat-button *ngIf="ann.url" [href]="ann.url">Learn More</a>
+    <button mat-button class="announcement-close" (click)="hideBanner(ann)" aria-label="Dismiss">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-<div class='banner' color='primary'>
+<div class='banner'>
   <div class='banner-text'>
     <h1 class='mat-display-3'>Fruit Fly Brain Observatory</h1>
     <p>
@@ -6,21 +6,20 @@
       for storing, visualizing, manipulating, modeling, sharing fruit fly brain data and models.
     </p>
     <div class='banner-btns-container'>
-      <a mat-button class='banner-btn' (click)="openDialog('background')"> Background </a>
+      <!-- <a mat-button class='banner-btn' (click)="openDialog('background')"> Background </a>
       <a mat-button class='banner-btn' (click)="openDialog('overview')"> Overview </a>
-      <a mat-button class='banner-btn' href={{overview.publication}}> Publication </a>
+      <a mat-button class='banner-btn' href={{overview.publication}}> Publication </a> -->
+      <a mat-button class='banner-btn' href='https://github.com/fruitflybrain'> Source Code </a>
+      <a mat-button class='banner-btn' routerLink='/posts/workshops'> FFBH 2020 </a>
+      <a mat-button class='banner-btn' routerLink='/posts/hackathons'> BCMC 2020 </a>
     </div>
   </div>
-<!--   <div class='banner-background'>
-    <img [src]="backgroundImg"/>
-  </div> -->
-  <div class='banner-background'>
+  <div id='banner-background'>
     <!-- <iframe width="560" height="315" [src]="backgroundVidURL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
     <!-- <iframe [src]="backgroundVidURL" frameborder="0"></iframe> -->
-    <video id='banner-background-video' autoplay muted loop>
+    <video id='banner-background-video' autoplay muted loop [src]="backgroundVidURL">
       <!-- <img [src]="backgroundImg" alt='From Structure to Function...' /> -->
-      <source [src]="backgroundVid" type="video/mp4">
+      <!-- <source [src]="backgroundVidURL" type="video/mp4"> -->
     </video>
   </div>
 </div>

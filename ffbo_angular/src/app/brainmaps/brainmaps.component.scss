@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "~src/_variables.scss";
 
 .brainmaps-wrapper {
   margin-top: 60px;
@@ -21,7 +21,7 @@
   background-color: black;
 }
 .brainmaps-detail:nth-child(2n){
-  background-color: mat-color($foreground, lighter);
+  background-color: $foreground;
 }
 
 :host ::ng-deep .brainmaps-svg svg{

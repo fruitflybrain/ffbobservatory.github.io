@@ -14,7 +14,6 @@ interface Announcement {
 })
 export class AnnouncementBannerComponent implements OnInit {
   announcements: Announcement[];
-
   constructor(private asset: AssetService) { }
 
   ngOnInit(): void {
@@ -29,4 +28,7 @@ export class AnnouncementBannerComponent implements OnInit {
     );
   }
 
+  hideBanner(ann: Announcement): void {
+    ann.show = false;
+  }
 }

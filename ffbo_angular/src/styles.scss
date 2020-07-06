@@ -13,8 +13,15 @@
 
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
+// 'Roboto, monospace',
 $custom-typography: mat-typography-config(
-  $font-family: 'Roboto, monospace',
+  $font-family: 'Roboto, Helvetica Neue, sans-serif',
+  $body-1:  (
+    font-weight: 200,
+    font-size: 1rem,
+    line-height: 1.4rem,
+    color: gray
+  ),
   $display-4: (
     margin: 0 0 0.6rem
   ),
@@ -33,22 +40,20 @@ $custom-typography: mat-typography-config(
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-// $primary: mat-palette($mat-red);
-// $accent: mat-palette($mat-teal, A200, A100, A400);
-// // The warn palette is optional (defaults to red).
-// $warn: mat-palette($mat-red);
+// // $primary: mat-palette($mat-red);
+// // $accent: mat-palette($mat-teal, A200, A100, A400);
+// // // The warn palette is optional (defaults to red).
+// // $warn: mat-palette($mat-red);
 
 $primary: mat-palette($mat-gray, A900);
-$accent: mat-palette($mat-gray, A200, A100, A400);
-// The warn palette is optional (defaults to red).
-$warn: mat-palette($mat-light-blue, A900);
-// Create the theme object (a Sass map containing all of the palettes).
+$accent: mat-palette($mat-blue, A200);
+$warn: mat-palette($mat-deep-orange, A200);
 $theme: mat-dark-theme($primary, $accent, $warn);
 // $foreground: map-get($theme, foreground);
 // $background: map-get($theme, background);
 
-$custom-background-color: #020202;
-$custom-foreground-color: #000000;
+$custom-background-color: #000000;
+$custom-foreground-color: #212121;
 
 $background: map-get($theme, background);
 $background: map_merge($background, (background: $custom-background-color));
@@ -71,11 +76,11 @@ $theme: map_merge($theme, (background: $background, foreground: $foreground));
 }
 
 .mat-card {
-  background: #212121;
+  background: $custom-foreground-color;
 }
 
 .mat-stepper-horizontal {
-  background: #212121;
+  background: $custom-foreground-color;
 }
 
 .ffbo-dialog-backdrop {
@@ -91,13 +96,13 @@ html, body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
 
 a {
-  color: mat-color($warn, darker);
+  color: mat-color($accent, darker);
 }
 
 a:link {
@@ -105,18 +110,18 @@ a:link {
 }
 
 
-p {
-  font-weight: 400;
-}
+// p {
+//   font-weight: 400;
+// }
 
 .page-title {
   margin-bottom: .3rem !important;
-  font-size: 3rem !important;
+  font-size: 2.5rem !important;
   font-weight: 400 !important;
 }
 
 .page-subtitle {
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   margin-top: 0 !important;
   margin-bottom: .6rem !important;
 }

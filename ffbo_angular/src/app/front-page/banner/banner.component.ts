@@ -1,3 +1,4 @@
+import { AssetService } from './../../asset.service';
 // import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Component, AfterViewInit } from '@angular/core';
 import { FFBODescription } from '../../ffbo-description';
@@ -12,26 +13,23 @@ import { OVERVIEW } from '../../../assets/front-page/overview';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements AfterViewInit {
-  backgroundImg = 'assets/front-page/img/brain.png';
-  backgroundVid = 'assets/front-page/img/bannervideo.mp4';
+  // backgroundImg = 'assets/front-page/img/brain.png';
+  // backgroundVid = 'assets/front-page/img/bannervideo.mp4';
   overview: FFBODescription = OVERVIEW;
   background: FFBODescription = BACKGROUND;
-  // backgroundVidURL: SafeResourceUrl;
+  backgroundVidURL: string | URL | any;
 
   constructor(
     public dialog: MatDialog,
-    // private sanitizer: DomSanitizer
+    private asset: AssetService
   ) {
     // this.backgroundVidURL = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/bPj5V_pqNuU');
   }
 
   ngAfterViewInit(): void {
-    // const div = document.getElementById('banner-background-video') as HTMLVideoElement;
-    // const vid = document.createElement('source');
-    // vid.src = this.backgroundVid;
-    // vid.type = 'video/mp4';
-    // div.insertBefore(vid, div.firstChild);
-    // div.autoplay =  true;
+    this.getVideo();
+    // const videoDOM = document.getElementById('banner-background-video') as HTMLVideoElement;
+    // videoDOM.play();
   }
 
   openDialog(name: string): void {
@@ -59,4 +57,18 @@ export class BannerComponent implements AfterViewInit {
     }
   }
 
+  getVideo() {
+    this.asset.getFrontPageVideo().subscribe(
+      data => {
+        const videos = data.sort((v1, v2) => {
+          return v1.updated_at >= v2.updated_at;
+        });
+        console.log('Got video', videos);
+        this.backgroundVidURL = videos[0].videofile;
+      },
+      error => {
+        console.log('Get video error', error);
+      }
+    );
+  }
 }

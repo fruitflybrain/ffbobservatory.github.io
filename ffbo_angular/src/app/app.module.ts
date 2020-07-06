@@ -17,7 +17,6 @@ import { FFBONavBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { GetInvolvedMenuComponent } from './top-bar/get-involved-menu/get-involved-menu.component';
 import { BrainmapvizMenuComponent } from './top-bar/brainmapviz-menu/brainmapviz-menu.component';
-import { IgxBannerModule } from 'igniteui-angular';
 import { AnnouncementBannerComponent } from './announcement-banner/announcement-banner.component';
 
 // import { PostsComponent } from './posts/posts.component';
@@ -44,8 +43,8 @@ import { AnnouncementBannerComponent } from './announcement-banner/announcement-
     FontAwesomeModule,
     MatDialogModule,
     HttpClientModule,
-    IgxBannerModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

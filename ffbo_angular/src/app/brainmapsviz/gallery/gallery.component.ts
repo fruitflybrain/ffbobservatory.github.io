@@ -1,5 +1,6 @@
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AssetService } from './../../asset.service';
-import { Component, OnInit, Input } from '@angular/core';
 import { GalleryItem } from './gallery-item';
 
 @Component({
@@ -11,7 +12,24 @@ export class GalleryComponent implements OnInit {
   @Input() tiles: GalleryItem[];
   Ncols = 8; // number of columns in the grid
 
-  constructor(private asset: AssetService ) { }
+  constructor(
+    private asset: AssetService,
+    public dialog: MatDialog
+  ) { }
+
+  openDialog(url?: string | URL) {
+    console.log(`Clicked with ${url}`);
+    let dialogRef;
+    if (url) {
+      dialogRef = this.dialog.open(
+        GalleryDialogComponent, {
+          width: '80%',
+          maxWidth: '800px',
+          data: url,
+        });
+    }
+  }
+
 
   ngOnInit(): void {
     this.asset.getGallery().subscribe(
@@ -24,5 +42,16 @@ export class GalleryComponent implements OnInit {
       }
     );
   }
+
+}
+
+
+@Component({
+  selector: 'app-gallery-dialog',
+  templateUrl: 'gallery-dialog.html',
+  styleUrls: ['./gallery.component.scss']
+})
+export class GalleryDialogComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public url: any) { }
 
 }

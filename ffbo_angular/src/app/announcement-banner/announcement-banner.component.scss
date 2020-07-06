@@ -1,0 +1,21 @@
+@import "~src/_variables.scss";
+
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+
+  .announcement-close {
+    position: absolute;
+    right: 0;
+    color: $warn;
+  }
+}
+
+.announcement-banner:nth-child(2n+1) {
+  background-color: #0e0e0e;
+}
+.announcement-banner:nth-child(2n){
+  background-color: #020202;
+}
