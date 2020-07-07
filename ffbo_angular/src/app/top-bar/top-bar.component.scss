@@ -32,6 +32,10 @@
 
 .top-bar-btn {
   flex: initial;
+
+  ::ng-deep span {
+    font-family: Exo, "Helvetica Neue", sans-serif;
+  }
 }
 
 .dropdown-menu {
@@ -39,6 +43,10 @@
 
   .dropdown-item {
     color: white;
+
+    ::ng-deep span {
+      font-family: Exo, "Helvetica Neue", sans-serif;
+    }
   }
 }
 

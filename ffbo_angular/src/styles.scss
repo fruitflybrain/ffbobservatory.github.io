@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
@@ -71,7 +74,9 @@ $theme: map_merge($theme, (background: $background, foreground: $foreground));
   font-family: Lato, "Helvetica Neue", sans-serif;
 }
 
-.mat-display-1 .mat-display-2 .mat-display-3 .mat-display-4 .page-title .page-subtitle {
+.mat-display-1 .mat-display-2 .mat-display-3 
+.mat-display-4 .page-title .page-subtitle .mat-card-title 
+.mat-card-subtitle {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -87,6 +92,7 @@ $theme: map_merge($theme, (background: $background, foreground: $foreground));
 .mat-card-actions .mat-button {
   background-color: rgba(110, 117, 119, 0.15);
 }
+
 
 .mat-stepper-horizontal {
   background: $custom-foreground-color;
