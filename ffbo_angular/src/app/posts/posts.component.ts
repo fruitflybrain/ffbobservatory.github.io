@@ -171,3 +171,29 @@ export class FAQsComponent implements OnInit {
     );
   }
 }
+
+
+@Component({
+  template: POST_TEMPLATE,
+  styleUrls: ['./posts.component.scss']
+})
+export class LicenseComponent implements OnInit {
+  title: string;
+  body: HTMLElement;
+  md: any;
+
+  constructor( private asset: AssetService ) {}
+
+
+  ngOnInit(): void {
+    this.asset.getOnePost(5).subscribe(
+      data => {
+        this.title = data.title;
+        this.body = data.body;
+      },
+      error => {
+        console.log('Get Posts Error', error);
+      }
+    );
+  }
+}

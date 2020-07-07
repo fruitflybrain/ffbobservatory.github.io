@@ -20,6 +20,7 @@
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+  cursor: pointer;
 
   .tile-overlay {
     display: none;
@@ -35,6 +36,7 @@
     height: 100%;
     width: 100%;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -42,8 +44,4 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-}
-
-.mat-dialog-title {
-  font: 500 20px/32px Roboto,Helvetica Neue,sans-serif;
 }

@@ -6,7 +6,7 @@
         [rowspan]="tile.rows ? tile.rows : 1"
         class="tile"
         [style.background]="'url(' + tile.img + ')'"
-        (click)="openDialog(tile.tag_url)"
+        (click)="openDialog(tile)"
         >
         <div class="tile-overlay">
           <span class="tile-title">{{tile.title}}</span>

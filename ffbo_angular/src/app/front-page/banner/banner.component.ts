@@ -61,7 +61,7 @@ export class BannerComponent implements AfterViewInit {
     this.asset.getFrontPageVideo().subscribe(
       data => {
         const videos = data.sort((v1, v2) => {
-          return v1.updated_at >= v2.updated_at;
+          return v1.updated_at <= v2.updated_at ? 1: -1;
         });
         console.log('Got video', videos);
         this.backgroundVidURL = videos[0].videofile;

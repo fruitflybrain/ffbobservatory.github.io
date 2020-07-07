@@ -10,12 +10,7 @@
       </mat-card-actions>
     </div>
     <div class="front-page-img">
-      <a *ngIf="data.url" [href]="data.url">
-        <img [src]="data.img" alt="Photo">
-      </a>
-      <a *ngIf="data.link" [routerLink]="data.link">
-        <img [src]="data.img" alt="Photo">
-      </a>
+      <img [src]="data.img" alt="Photo">
     </div>
   </div>
 

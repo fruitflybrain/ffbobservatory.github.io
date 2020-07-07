@@ -18,17 +18,16 @@ export class GalleryComponent implements AfterViewInit {
     public dialog: MatDialog
   ) { }
 
-  openDialog(url?: string | URL) {
-    console.log(`Clicked with ${url}`);
+  openDialog(tile: GalleryItem) {
     let dialogRef;
-    if (url) {
-      dialogRef = this.dialog.open(
-        GalleryDialogComponent, {
-          width: '80%',
-          maxWidth: '800px',
-          data: url,
-        });
-    }
+    dialogRef = this.dialog.open(
+      GalleryDialogComponent, {
+        width: '80%',
+        maxWidth: '800px',
+        data: tile,
+        hasBackdrop: true,
+        backdropClass: 'ffbo-dialog-backdrop'
+      });
   }
 
 
@@ -62,5 +61,5 @@ export class GalleryComponent implements AfterViewInit {
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public url: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public tile: GalleryItem) { }
 }

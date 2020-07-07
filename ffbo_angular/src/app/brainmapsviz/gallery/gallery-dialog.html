@@ -1,9 +1,13 @@
-<h2 mat-dialog-title>Explore tag in NeuroNLP?</h2>
-<mat-dialog-content class="mat-typography">
-  This set of neurons can be explored in an interactive NeuroNLP session.
-  Would you like to be redirected to the NeuroNLP site?
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <a mat-button [href]="url">Explore</a>
-</mat-dialog-actions>
+<div style="display:flex;flex-direction:column;">
+  <h2 mat-dialog-title>{{tile.title}}</h2>
+  <img [src]="tile.img" style="margin:auto;max-height:420px;width:auto;"/>
+  <mat-dialog-content class="mat-typography">
+    {{tile.desc}}
+    <!-- This set of neurons can be explored in an interactive NeuroNLP session.
+    Would you like to be redirected to the NeuroNLP site? -->
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <a mat-button *ngIf="tile.tag_url" [href]="tile.tag_url" target="_blank">Explore in NeuroNLP</a>
+  </mat-dialog-actions>
+</div>

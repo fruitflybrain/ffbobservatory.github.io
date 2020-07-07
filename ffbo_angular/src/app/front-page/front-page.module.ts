@@ -20,6 +20,9 @@ import { FrontPageComponent } from './front-page.component';
 import { FFBOOverviewCardComponent } from './ffbo-overview-card/ffbo-overview-card.component';
 import { ImageTileComponent } from './image-tile/image-tile.component';
 import { FrontPageCardsComponent } from './front-page-cards/front-page-cards.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { FrontPageCardsComponent } from './front-page-cards/front-page-cards.com
     MatIconModule,
     MatStepperModule,
     NgxMdModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     FFBOComponentCardComponent

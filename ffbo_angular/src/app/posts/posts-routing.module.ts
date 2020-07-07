@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {
   PostsComponent,
+  LicenseComponent,
   FAQsComponent,
   WorkshopsComponent,
   CodeComponent,
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'code', component: CodeComponent },
   { path: 'hackathons', component: HackathonsComponent },
   { path: 'workshops', component: WorkshopsComponent },
+  { path: 'licenses', component: LicenseComponent },
 ];
 
 @NgModule({

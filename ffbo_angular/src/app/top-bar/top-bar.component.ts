@@ -55,7 +55,7 @@ export class FFBONavBarComponent implements OnInit {
   }
 
   launchFBL(){
-    window.location.href = 'https://mkturkcan.github.io/FBLWebDraft/';
+    window.location.href = 'http://fbl.fruitflybrain.org/';
   }
 
   launchNLP(organism: string){
@@ -74,12 +74,12 @@ export class FFBONavBarComponent implements OnInit {
         break;
     }
     if (url){
-      window.location.href = url;
+      window.open(url);
     }
   }
 
   launchActivityMap(){
-    window.location.href = 'http://amacrine.ee.columbia.edu:15000/';
+    window.open('http://amacrine.ee.columbia.edu:15000/');
   }
 
 }

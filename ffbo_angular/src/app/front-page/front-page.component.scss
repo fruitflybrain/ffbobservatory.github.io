@@ -1,3 +1,5 @@
+@import "~src/_variables.scss";
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,90 @@
     margin-bottom: 20px;
   }
 }
+
+.innovations-container{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  vertical-align: middle;
+
+  .innovations-drawer{
+    width: 50% or auto;
+    height: auto;
+    mat-drawer-content {
+      padding-left: 10px;
+    }
+
+    .innovation-detail-stepper {
+      background: none;
+    }
+  }
+
+  .stakeholders-tabs {
+    border-radius: 25px;
+    color: $background;
+    min-height: 400px;
+
+    mat-drawer {
+      width: 25%;
+      max-width: 200px;
+    }
+
+    mat-drawer-content {
+      opacity: 0.8;
+    }
+  }
+
+  .innovations-svg {
+    width: 50% or auto;
+    height: auto;
+
+    svg {
+      height:auto;
+      width: auto;
+    }
+  }
+
+  .stakeholder-tabs-btn {
+    vertical-align: middle;
+    font-size: 0.9rem;
+  }
+}
+
+
+:host ::ng-deep .innovations-svg svg {
+  .btn.data {
+    // filter: url('#unhighlight-1');
+    filter: url('#grayscale');
+  }
+
+  .ring {
+    // filter: url('#unhighlight-1');
+    filter: url('#grayscale');
+  }
+
+  .btn.innovation {
+    // filter: url('#unhighlight-3');
+    filter: url('#grayscale');
+  }
+
+  .btn.stakeholder {
+    // filter: url('#unhighlight-3');
+    filter: url('#grayscale');
+  }
+
+  .btn:hover, .ring:hover {
+    filter: none !important;
+  }
+
+  .highlight {
+    filter: none !important;
+  }
+}
+
+
 
 // .ffbo-overview {
 //   opacity: 0.8;
