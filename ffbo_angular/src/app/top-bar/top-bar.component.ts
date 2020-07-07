@@ -55,7 +55,7 @@ export class FFBONavBarComponent implements OnInit {
   }
 
   launchFBL(){
-    window.location.href = 'http://fbl.fruitflybrain.org';
+    window.location.href = 'https://mkturkcan.github.io/FBLWebDraft/';
   }
 
   launchNLP(organism: string){
