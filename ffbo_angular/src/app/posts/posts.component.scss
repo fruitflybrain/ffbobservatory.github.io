@@ -49,4 +49,13 @@
     list-style: inside;
   }
 
+  ::ng-deep a {
+    color: #62a9f5; //mat-color($accent, lighter);
+  }
+  
+  ::ng-deep a:hover {
+    color: #47a0ff;
+    text-decoration: none;
+  }
+
 }
