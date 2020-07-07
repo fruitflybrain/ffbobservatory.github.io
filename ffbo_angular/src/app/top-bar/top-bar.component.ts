@@ -21,6 +21,8 @@ function scrollToElement($element: HTMLElement): void {
   styleUrls: ['./top-bar.component.scss']
 })
 export class FFBONavBarComponent implements OnInit {
+  isCollapsed = true;
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -56,5 +58,28 @@ export class FFBONavBarComponent implements OnInit {
     window.location.href = 'http://fbl.fruitflybrain.org';
   }
 
+  launchNLP(organism: string){
+    let url: string;
+    switch (organism) {
+      case 'adult':
+        url = 'https://neuronlp.adult.fruitflybrain.org';
+        break;
+      case 'larva':
+        url = 'https://neuronlp.larva.fruitflybrain.org';
+        break;
+      case 'EM':
+        url = 'http://hemibrain.fruitflybrain.org/';
+        break;
+      default:
+        break;
+    }
+    if (url){
+      window.location.href = url;
+    }
+  }
+
+  launchActivityMap(){
+    window.location.href = 'http://amacrine.ee.columbia.edu:15000/';
+  }
 
 }

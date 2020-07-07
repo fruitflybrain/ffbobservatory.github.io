@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 export class FooterComponent implements OnInit {
   faTwitter = faTwitter;
   faGithub = faGithub;
+  faScale = faBalanceScale;
   constructor() { }
 
   ngOnInit(): void {

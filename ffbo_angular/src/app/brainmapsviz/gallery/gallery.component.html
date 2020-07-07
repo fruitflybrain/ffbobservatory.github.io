@@ -1,5 +1,5 @@
-<div class="gallery-container">
-  <mat-grid-list [cols]="Ncols" gutterSize="10px">
+<div class="gallery-container" id="brainmapsviz-gallery">
+  <mat-grid-list [cols]="Ncols" gutterSize="10px" (window:resize)="onResize($event)">
     <div *ngFor="let tile of tiles">
       <mat-grid-tile
         [colspan]="tile.cols ? tile.cols : 1"

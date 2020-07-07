@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, Input, Inject, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AssetService } from './../../asset.service';
 import { GalleryItem } from './gallery-item';
@@ -8,8 +8,9 @@ import { GalleryItem } from './gallery-item';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements AfterViewInit {
   @Input() tiles: GalleryItem[];
+  // @ViewChild('divToMeasure')  divToMeasureElement: ElementRef;
   Ncols = 8; // number of columns in the grid
 
   constructor(
@@ -31,7 +32,7 @@ export class GalleryComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.asset.getGallery().subscribe(
       data => {
         console.log('Got Gallery', data);
@@ -41,8 +42,17 @@ export class GalleryComponent implements OnInit {
         console.log('Get Gallery Error', error);
       }
     );
+    const divToMeasure = document.getElementById('brainmapsviz-gallery');
+    const divToMeasureWidth = divToMeasure.offsetWidth;
+    console.log('Init Resize', divToMeasureWidth, Math.floor(divToMeasureWidth / 82));
+
+    this.Ncols = (divToMeasureWidth <= 720) ? Math.floor(divToMeasureWidth / 82) : 8;
   }
 
+  onResize(event) {
+    console.log('Reszied', event.target.innerWidth, Math.floor(event.target.innerWidth / 82));
+    this.Ncols = (event.target.innerWidth <= 720) ? Math.floor(event.target.innerWidth / 82) : 8;
+  }
 }
 
 
@@ -53,5 +63,4 @@ export class GalleryComponent implements OnInit {
 })
 export class GalleryDialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public url: any) { }
-
 }

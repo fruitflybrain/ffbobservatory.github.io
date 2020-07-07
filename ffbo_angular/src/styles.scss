@@ -1,5 +1,9 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
 // CSS Reset, comment out if not required or using a different module
 @import '~minireset.css/minireset';
+
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -16,12 +20,6 @@
 // 'Roboto, monospace',
 $custom-typography: mat-typography-config(
   $font-family: 'Roboto, Helvetica Neue, sans-serif',
-  $body-1:  (
-    font-weight: 200,
-    font-size: 1rem,
-    line-height: 1.4rem,
-    color: gray
-  ),
   $display-4: (
     margin: 0 0 0.6rem
   ),
@@ -125,15 +123,3 @@ a:link {
   margin-top: 0 !important;
   margin-bottom: .6rem !important;
 }
-
-
-@import "~igniteui-angular/lib/core/styles/themes/index";
-// Uncomment the following lines if you want to add a custom palette:
-// $primary: #731963 !default;
-// $secondary: #ce5712 !default;
-// $app-palette: igx-palette($primary, $secondary);
-
-/* autoprefixer grid: on */
-
-@include igx-core();
-@include igx-theme($default-palette);

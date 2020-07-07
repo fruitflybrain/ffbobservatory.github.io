@@ -19,14 +19,14 @@ const routes: Routes = [
     path: 'licenses-and-credits',
     loadChildren: () => import('./licenses-and-credits/licenses-and-credits.module').then(m => m.LicensesAndCreditsModule)
   },
-  {
-    path: 'innovations',
-    loadChildren: () => import('./innovations/innovations.module').then(m => m.InnovationsModule)
-  },
-  {
-    path: 'brainmaps',
-    loadChildren: () => import('./brainmaps/brainmaps.module').then(m => m.BrainmapsModule)
-  },
+  // {
+  //   path: 'innovations',
+  //   loadChildren: () => import('./innovations/innovations.module').then(m => m.InnovationsModule)
+  // },
+  // {
+  //   path: 'brainmaps',
+  //   loadChildren: () => import('./brainmaps/brainmaps.module').then(m => m.BrainmapsModule)
+  // },
   {
     path: 'posts',
     loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
@@ -38,7 +38,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

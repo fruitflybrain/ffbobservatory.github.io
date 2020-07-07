@@ -1,19 +1,26 @@
-.mat-toolbar {
+@import "~src/_variables.scss";
+
+.top-bar {
   display: flex;
   align-content: center;
-  vertical-align: middle;
+  justify-content: center;
+  background-color: $primary;
+
   .ffbo-logo {
     img {
       width: 50px;
       height: 50px;
     }
+
+    .ffbo-text {
+      margin-left: 10px;
+      color: white;
+      font-weight: 400;
+      font-size: 1rem;
+    }
   }
 
-  p.ffbo-text {
-    margin: 0;
-  }
 }
-
 
 .flex-spacer {
   flex-grow:1;
@@ -25,4 +32,17 @@
 
 .top-bar-btn {
   flex: initial;
+}
+
+.dropdown-menu {
+  background-color: $foreground;
+
+  .dropdown-item {
+    color: white;
+  }
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: transparent;
 }

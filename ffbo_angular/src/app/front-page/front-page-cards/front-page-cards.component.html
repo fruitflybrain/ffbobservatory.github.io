@@ -16,4 +16,19 @@
       </a>
     </div>
   </div>
+
+  <div class="front-page-container-sm">
+    <div class="front-page-content-sm">
+      <mat-card-title [innerHTML]="data.title"></mat-card-title>
+      <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
+      <img mat-card-image [src]="data.img" alt="Photo">
+      <mat-card-content>
+        <p>{{data.desc}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a *ngIf="data.link" mat-button [routerLink]="data.link">Learn More</a>
+        <a *ngIf="data.url" mat-button [href]="data.url">Learn More</a>
+      </mat-card-actions>
+    </div>
+  </div>
 </mat-card>

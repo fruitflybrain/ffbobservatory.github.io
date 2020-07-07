@@ -15,11 +15,25 @@
     }
   }
 
+  .footer-text-license-alt {
+    display: none;
+  }
 }
+
 .footer-text {
   flex: flex-start;
 }
 
 .flex-spacer {
   flex-grow:1;
+}
+
+@media only screen and (max-width:500px) {
+  .footer-text-license {
+    display:none;
+  }
+
+  .footer-text-license-alt {
+    display: inline-block !important;
+  }
 }

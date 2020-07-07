@@ -5,7 +5,7 @@ import marked from 'marked';
 const POST_TEMPLATE = `
 <div class="post-container">
 <div class="post-markdown">
-  <h1>{{title}}</h1>
+  <h2 class="mat-display-1">{{title}}</h2>
   <div [innerHTML]="body"></div>
 </div>
 `;

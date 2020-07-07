@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GetInvolvedMenuComponent } from './top-bar/get-involved-menu/get-involved-menu.component';
 import { BrainmapvizMenuComponent } from './top-bar/brainmapviz-menu/brainmapviz-menu.component';
 import { AnnouncementBannerComponent } from './announcement-banner/announcement-banner.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // import { PostsComponent } from './posts/posts.component';
 
@@ -44,7 +45,8 @@ import { AnnouncementBannerComponent } from './announcement-banner/announcement-
     MatDialogModule,
     HttpClientModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,8 @@
 }
 
 .post-markdown {
+  padding-left: 30px;
+  padding-right: 30px;
 
   ::ng-deep h1 {
     font-size: 2.5rem;
@@ -15,6 +17,7 @@
     margin-top: 15px;
     margin-bottom: 15px;
     opacity: .2;
+    border-bottom-width: 1px;
   }
 
   ::ng-deep p {

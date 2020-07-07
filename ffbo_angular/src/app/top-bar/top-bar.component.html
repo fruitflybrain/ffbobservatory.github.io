@@ -1,17 +1,78 @@
-<mat-toolbar class='top-bar' color='primary'>
-  <a mat-button class="ffbo-logo" routerLink=''>
-    <img src="../assets/img/ffbo_logo.png">
-  </a>
-  <a mat-button routerLink='' class="ffbo-text" style="color: white; font-size: 1.2rem;">
-    Fruit Fly Brain Observatory
-  </a>
-  <div class="flex-spacer"></div>
+<!-- <nav class="top-bar navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="">Brand/Logo</a>
+  <button class="navbar-toggler" (click)="isCollapsed=!isCollapsed" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <a class="top-bar-btn" mat-button routerLink='' (click)="getStarted()">Get Started</a>
-  <app-brainmapviz-menu></app-brainmapviz-menu>
-  <!-- <a class="top-bar-btn" mat-button (click)="launchActivityMap()">Activity Map</a> -->
-  <!-- <a class="top-bar-btn" mat-button routerLink="/brainmaps">Brainmaps</a> -->
-  <a class="top-bar-btn" mat-button (click)="launchFBL()">FlyBrainLab</a>
-  <!-- <a class="top-bar-btn" mat-button routerLink="/get-involved">Meet the Team</a> -->
-  <app-get-involved-menu></app-get-involved-menu>
-</mat-toolbar>
+  <div class="navbar-collapse" (click)="isCollapsed=true" [hidden]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">About</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="top-bar navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a mat-button class="navbar-brand ffbo-logo" routerLink=''>
+    <img src="../assets/img/ffbo_logo.png">
+    <span class="ffbo-text">Fruit Fly Brain Observatory</span>
+  </a>
+  <button class="navbar-toggler" (click)="isCollapsed=!isCollapsed" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed"  [hidden]="isCollapsed">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a mat-button class="top-bar-btn nav-link" routerLink='' (click)="getStarted()">Overview</a>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a mat-button class="nav-link" style="cursor: pointer" ngbDropdownToggle id="brainmapsviz-dropdown" >
+          BrainMapsViz
+        </a>
+        <div ngbDropdownMenu aria-labelledby="brainmapsviz-dropdown" class="dropdown-menu dropdown-menu-right">
+          <a mat-button ngbDropdownItem  routerLink='/brainmapsviz'>About</a>
+          <a mat-button ngbDropdownItem  (click)="launchActivityMap()">
+            Download <i>in vivo</i> Antenna Activity Data
+          </a>
+          <a mat-button ngbDropdownItem  (click)="launchNLP('adult')">
+            Launch NeuroNLP.Adult
+            <!-- (with FlyCircuit and Janelia Medulla 7-column Data) -->
+          </a>
+          <a mat-button ngbDropdownItem  (click)="launchNLP('larva')">
+            Launch NeuroNLP.Larva
+            <!-- (with Janelia Larva Olfaction Data) -->
+          </a>
+          <a mat-button ngbDropdownItem  (click)="launchNLP('EM')">
+            Download NeuroNLP.EM
+            <!-- (with Hemibrain and VNC data) -->
+          </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a mat-button class="top-bar-btn nav-link" (click)="launchFBL()" >FlyBrainLab</a>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a mat-button class="nav-link" style="cursor: pointer" ngbDropdownToggle id="brainmapsviz-dropdown" role="button" >
+          Get Involved
+        </a>
+        <div ngbDropdownMenu aria-labelledby="getinvolved-dropdown" class="dropdown-menu dropdown-menu-right">
+          <a mat-button ngbDropdownItem routerLink='/posts/faqs' >FAQs</a>
+          <a mat-button ngbDropdownItem routerLink='/posts/code'>Code</a>
+          <a mat-button ngbDropdownItem routerLink='/posts/hackathons'>Hackathons</a>
+          <a mat-button ngbDropdownItem href='https://lists.columbia.edu/mailman/listinfo/ffbo'>
+            Mailing List
+          </a>
+          <a mat-button ngbDropdownItem routerLink='/posts/workshops' >Workshops</a>
+          <a mat-button ngbDropdownItem href='https://github.com/NeuralEnsemble/NeuroinformaticsTutorial/blob/master/Exercises/Exercise6_FruitFlyBrainObservatory.md'>
+            Tutorials
+          </a>
+          <a mat-button ngbDropdownItem routerLink='/get-involved'  >Meet the Team</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
