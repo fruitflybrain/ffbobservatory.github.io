@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import marked from 'marked';
 
 const POST_TEMPLATE = `
-<div class="post-container">
+<div class="page post-container">
 <div class="post-markdown">
   <h2 class="mat-display-1">{{title}}</h2>
   <div [innerHTML]="body"></div>

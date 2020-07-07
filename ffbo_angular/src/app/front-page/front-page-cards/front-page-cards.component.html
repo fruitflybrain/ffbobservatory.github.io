@@ -4,8 +4,10 @@
       <mat-card-title [innerHTML]="data.title"></mat-card-title>
       <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
       <p>{{data.desc}}</p>
-      <a *ngIf="data.link" mat-button [routerLink]="data.link">Learn More</a>
-      <a *ngIf="data.url" mat-button [href]="data.url">Learn More</a>
+      <mat-card-actions>
+        <a *ngIf="data.link" mat-button [routerLink]="data.link">Learn More</a>
+        <a *ngIf="data.url" mat-button [href]="data.url">Learn More</a>
+      </mat-card-actions>
     </div>
     <div class="front-page-img">
       <a *ngIf="data.url" [href]="data.url">

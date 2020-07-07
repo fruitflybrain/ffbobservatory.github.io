@@ -16,7 +16,7 @@
 
 
 .tile {
-  border-radius: 10px;
+  border-radius: 2px;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -27,7 +27,8 @@
 }
 
 .tile:hover {
-  box-shadow: 0 14px 20px gray, 0 10px 10px gray;
+  box-shadow: 0 4px 5px grey, 0 3px 13px grey;
+  // box-shadow: 0 14px 20px gray, 0 10px 10px gray;
   transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   .tile-overlay {

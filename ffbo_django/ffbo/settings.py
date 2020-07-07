@@ -25,10 +25,13 @@ SECRET_KEY = 'fmz#(dtv29czr%t!tk!o+=67#mp$cl0o$dv2n3z*l^pggxlsfu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "amacrine.ee.columbia.edu"
+]
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
+    "http://amacrine.ee.columbia.edu:4200",
 ]
 
 # Application definition
