@@ -26,7 +26,8 @@ SECRET_KEY = 'fmz#(dtv29czr%t!tk!o+=67#mp$cl0o$dv2n3z*l^pggxlsfu'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "amacrine.ee.columbia.edu"
+    "amacrine.ee.columbia.edu",
+    "localhost"
 ]
 
 CORS_ORIGIN_WHITELIST = [
