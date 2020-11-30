@@ -11,33 +11,25 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json
+from django.core.exceptions import ImproperlyConfigured
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+print(BASE_DIR)
 
+with open(os.path.join(BASE_DIR, 'ffbo_django_secrets.json')) as f:
+    secrets = json.loads(f.read())
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+def get_secret_setting(setting, secrets=secrets):
+    try:
+        return secrets[setting]
+    except KeyError:
+        raise ImproperlyConfigured("Set the {} setting".format(setting))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fmz#(dtv29czr%t!tk!o+=67#mp$cl0o$dv2n3z*l^pggxlsfu'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [
-    "amacrine.ee.columbia.edu",
-    "localhost"
-]
-
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200",
-    "http://amacrine.ee.columbia.edu:4200",
-]
 
 # Application definition
-
 INSTALLED_APPS = [
+    'sslserver',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'ffbo.urls'
@@ -124,18 +116,5 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS =  (
-  os.path.join(BASE_DIR, 'static'),
-)
-
-# Media files (Images, Videos)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
-
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
