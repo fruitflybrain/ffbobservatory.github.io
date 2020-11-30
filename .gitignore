@@ -1,3 +1,4 @@
 ffbo_angular/~/ffbo_website/ffbo_dev_staging
 ffbo_django/static_prod
 *.py~
+ffbo_django/ffbo_django_secrets.json
