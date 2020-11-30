@@ -14,12 +14,25 @@ SECRET_KEY = 'fmz#(dtv29czr%t!tk!o+=67#mp$cl0o$dv2n3z*l^pggxlsfu'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "amacrine.ee.columbia.edu",
     "localhost"
 ]
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
-    "https://localhost:4200"
+    "https://localhost:4200",
+    "http://amacrine.ee.columbia.edu:4200",
+    "http://amacrine.ee.columbia.edu:4202",
+    "http://amacrine.ee.columbia.edu:4203",
+    "http://lab.neuronlp.fruitflybrain.org",
+    "http://www.fruitflybrain.org",
+    "http://fruitflybrain.org",
+    "https://amacrine.ee.columbia.edu:4200",
+    "https://amacrine.ee.columbia.edu:4202",
+    "https://amacrine.ee.columbia.edu:4203",
+    "https://lab.neuronlp.fruitflybrain.org",
+    "https://www.fruitflybrain.org",
+    "https://fruitflybrain.org",
 ]
 
 # Static files (CSS, JavaScript, Images)

@@ -18,9 +18,20 @@ ALLOWED_HOSTS = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
+    "http://localhost:4200",
     "https://localhost:4200",
     "http://amacrine.ee.columbia.edu:4200",
+    "http://amacrine.ee.columbia.edu:4202",
+    "http://amacrine.ee.columbia.edu:4203",
+    "http://lab.neuronlp.fruitflybrain.org",
+    "http://www.fruitflybrain.org",
+    "http://fruitflybrain.org",
     "https://amacrine.ee.columbia.edu:4200",
+    "https://amacrine.ee.columbia.edu:4202",
+    "https://amacrine.ee.columbia.edu:4203",
+    "https://lab.neuronlp.fruitflybrain.org",
+    "https://www.fruitflybrain.org",
+    "https://fruitflybrain.org"
 ]
 
 
