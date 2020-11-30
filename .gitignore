@@ -1,1 +1,3 @@
 ffbo_angular/~/ffbo_website/ffbo_dev_staging
+ffbo_django/static_prod
+*.py~
