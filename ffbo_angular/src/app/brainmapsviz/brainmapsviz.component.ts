@@ -7,6 +7,7 @@ export interface BrainMapVizCard {
   subtitle: string;
   img: string | URL;
   url: string | URL;
+  info_url?: string | URL;
   desc: string;
 }
 
@@ -58,8 +59,39 @@ export interface BrainMapVizCard {
 })
 export class BrainmapsvizComponent implements OnInit {
   vizs: BrainMapVizCard[];
+  header = {
+    title: 'Brain Maps Visualizers', 
+    subtitle: '',
+    desc: ''
+  };
 
-  constructor(private asset: AssetService) { }
+  sectionHeader = {
+    title: 'Brain Maps Datasets', 
+    subtitle: '',
+    desc: ''
+  };
+
+  constructor(private asset: AssetService) { 
+    this.asset.getOnePageHeader(1).subscribe(
+      data => {
+        console.log('Got BrainMaps Header', data);
+        this.header = data;
+      },
+      error => {
+        console.log('Get BrainMaps Header Error', error);
+      }
+    );
+
+    this.asset.getOnePageHeader(2).subscribe(
+      data => {
+        console.log('Got BrainMaps Section Header', data);
+        this.sectionHeader = data;
+      },
+      error => {
+        console.log('Get BrainMaps Section Header Error', error);
+      }
+    );
+  }
 
   ngOnInit(): void {
     this.asset.getBrainMaps().subscribe(

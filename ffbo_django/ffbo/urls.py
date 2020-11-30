@@ -30,6 +30,7 @@ router.register(r'gallery', views.GalleryViewSet)
 router.register(r'brainmaps', views.BrainMapsViewSet)
 router.register(r'frontpage/video', views.FrontPageVideoViewSet)
 router.register(r'frontpage/cards', views.FrontPageCardViewSet)
+router.register(r'pageheader', views.PageHeaderViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

@@ -136,7 +136,7 @@ a:link {
 
 .page {
   max-width: 1248px;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -150,6 +150,12 @@ a:link {
 
 .page-subtitle {
   font-size: 1.2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: .6rem !important;
+}
+
+.page-desc {
+  font-size: 1rem !important;
   margin-top: 0 !important;
   margin-bottom: .6rem !important;
 }

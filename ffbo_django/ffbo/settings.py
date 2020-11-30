@@ -32,6 +32,11 @@ ALLOWED_HOSTS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
     "http://amacrine.ee.columbia.edu:4200",
+    "http://amacrine.ee.columbia.edu:4202",
+    "http://amacrine.ee.columbia.edu:4203",
+    "http://lab.neuronlp.fruitflybrain.org",
+    "http://www.fruitflybrain.org",
+    "http://fruitflybrain.org",
 ]
 
 # Application definition
@@ -131,6 +136,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =  (
   os.path.join(BASE_DIR, 'static'),
 )
+
+STATIC_ROOT = '/home/bionet/ffbo_website/ffbo_static_files/';
 
 # Media files (Images, Videos)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

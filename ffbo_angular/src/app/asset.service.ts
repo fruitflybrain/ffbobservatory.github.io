@@ -46,4 +46,8 @@ export class AssetService {
     getBrainMaps(): Observable<any> {
         return this.http.get(`${this.baseurl}/brainmaps/`, { headers: this.httpHeaders });
     }
+
+    getOnePageHeader(id): Observable<any> {
+        return this.http.get(`${this.baseurl}/pageheader/${id}/`, { headers: this.httpHeaders });
+    }
 }

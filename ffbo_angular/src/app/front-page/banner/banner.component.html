@@ -2,8 +2,7 @@
   <div class='banner-text'>
     <h1 class='mat-display-3'>Fruit Fly Brain Observatory</h1>
     <p>
-      Open source Open collaborative ecosystem, standardized tools
-      for storing, visualizing, manipulating, modeling, sharing fruit fly brain data and models.
+      Open source collaborative ecosystem for accelerating the discovery of the functional logic of the fruit fly brain.
     </p>
     <div class='banner-btns-container'>
       <!-- <a mat-button class='banner-btn' (click)="openDialog('background')"> Background </a>
@@ -17,7 +16,12 @@
   <div id='banner-background'>
     <!-- <iframe width="560" height="315" [src]="backgroundVidURL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     <!-- <iframe [src]="backgroundVidURL" frameborder="0"></iframe> -->
-    <video id='banner-background-video' autoplay muted loop [src]="backgroundVidURL"></video>
-    <!-- <img [src]="backgroundVidURL" alt='From Structure to Function...' /> -->
+    <video id='banner-background-video' *ngIf="!showImage" [poster]="backgroundImg" (onerror)="onVideoError()" playsinline autoplay loop muted="true" controls="true" [src]="backgroundVidURL" type="video/mp4"></video>
+    <img *ngIf="showImage" [src]="backgroundImg" alt='From Structure to Function...'/>
+<!--     <object>
+        <param name="movie" *ngIf="showImage" value="http://www.youtube.com/v/cuiR_sdrdeA&autoplay=1">
+        <embed *ngIf="showImage" src="http://www.youtube.com/v/cuiR_sdrdeA&autoplay=1" type="application/x-shockwave-flash">
+    </object> -->
+    
   </div>
 </div>

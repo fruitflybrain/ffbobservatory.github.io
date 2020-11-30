@@ -6,10 +6,11 @@
     <img [src]="data.img" alt="Photo">
   </div>
   <mat-card-content>
-    <p>{{data.desc}}</p>
+    <p [innerHTML]="desc"></p>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-button [href]="data.url" target="_blank">Launch</a>
+    <a mat-button *ngIf="data.url" [href]="data.url" target="_blank">Launch</a>
+    <a mat-button *ngIf="data.info_url" [href]="data.info_url" target="_blank">Info</a>
   </mat-card-actions>
 </mat-card>
 

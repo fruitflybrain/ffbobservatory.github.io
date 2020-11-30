@@ -29,6 +29,12 @@
       // justify-content: space-around;
       width: 45%;
       margin: 30px;
+
+      .front-page-card-desc {
+        ::ng-deep ul {
+          list-style: inside;
+        }
+      }
     }
 
     .front-page-img {

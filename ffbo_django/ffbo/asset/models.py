@@ -121,6 +121,7 @@ class BrainMaps(models.Model):
     img = models.ImageField()
     desc = models.TextField()
     url = models.URLField()
+    info_url = models.URLField(blank=True)
 
 class FrontPageVideo(models.Model):
     def __str__(self):
@@ -130,6 +131,7 @@ class FrontPageVideo(models.Model):
         return 'FrontPage: {} - {}'.format(self.name, self.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%f%z'))
     name = models.CharField(null=True, max_length=256)
     videofile = models.FileField(upload_to='')
+    imagefile = models.ImageField(blank=True, upload_to='')
     updated_at = models.DateTimeField(auto_now=True)
 
 class FrontPageCard(models.Model):
@@ -139,9 +141,22 @@ class FrontPageCard(models.Model):
     def __unicode__(self):
         return 'FrontPageCard: {}'.format(self.title)
     title = models.CharField(max_length=256)
-    subtitle = models.CharField(max_length=2048)
+    subtitle = models.CharField(blank=True, max_length=2048)
     desc = models.TextField()
     img = models.ImageField()
+    order = models.IntegerField(blank=True)
     url = models.URLField(blank=True, help_text="url to a nother website")
     link = models.CharField(blank=True, max_length=256, help_text="rounterLink on the angular page")
+    updated_at = models.DateTimeField(auto_now=True)
+
+class PageHeader(models.Model):
+    def __str__(self):
+        return 'Post: ' + self.title
+
+    def __unicode__(self):
+        return 'Post: ' + self.title
+
+    title = models.CharField(max_length=1024)
+    subtitle = models.CharField(blank=True, max_length=1024)
+    desc =  models.TextField()
     updated_at = models.DateTimeField(auto_now=True)

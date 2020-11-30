@@ -29,7 +29,10 @@
       <li class="nav-item">
         <a mat-button class="top-bar-btn nav-link" routerLink='' (click)="getStarted()">Overview</a>
       </li>
-      <li class="nav-item" ngbDropdown>
+      <li class="nav-item">
+        <a mat-button class="top-bar-btn nav-link" routerLink='/brainmapsviz'>BrainMapsViz</a>
+      </li>
+      <!-- <li class="nav-item" ngbDropdown>
         <a mat-button class="top-bar-btn nav-link" style="cursor: pointer" ngbDropdownToggle id="brainmapsviz-dropdown" >
           BrainMapsViz
         </a>
@@ -40,18 +43,18 @@
           </a>
           <a mat-button ngbDropdownItem  (click)="launchNLP('adult')">
             Launch NeuroNLP.Adult
-            <!-- (with FlyCircuit and Janelia Medulla 7-column Data) -->
+            (with FlyCircuit and Janelia Medulla 7-column Data)
           </a>
           <a mat-button ngbDropdownItem  (click)="launchNLP('larva')">
             Launch NeuroNLP.Larva
-            <!-- (with Janelia Larva Olfaction Data) -->
+            (with Janelia Larva Olfaction Data)
           </a>
           <a mat-button ngbDropdownItem  (click)="launchNLP('EM')">
             Download NeuroNLP.EM
-            <!-- (with Hemibrain and VNC data) -->
+            (with Hemibrain and VNC data)
           </a>
         </div>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a mat-button class="top-bar-btn nav-link" (click)="launchFBL()" >FlyBrainLab</a>
       </li>

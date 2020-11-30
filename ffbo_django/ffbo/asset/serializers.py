@@ -2,7 +2,8 @@ from rest_framework import serializers
 from .models import (
   Component, Member, Gallery, Post,
   Announcement, BrainMaps,
-  FrontPageVideo, FrontPageCard
+  FrontPageVideo, FrontPageCard,
+  PageHeader
 )
 
 class ComponentSerializer(serializers.ModelSerializer):
@@ -33,14 +34,19 @@ class AnnouncementSerializer(serializers.ModelSerializer):
 class BrainMapsSerializer(serializers.ModelSerializer):
     class Meta:
         model = BrainMaps
-        fields = ('id', 'title', 'subtitle', 'img', 'url', 'desc')
+        fields = ('id', 'title', 'subtitle', 'img', 'url', 'desc', 'info_url')
 
 class FrontPageVideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = FrontPageVideo
-        fields = ('id', 'videofile', 'updated_at')
+        fields = ('id', 'imagefile', 'videofile', 'updated_at')
 
 class FrontPageCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = FrontPageCard
-        fields = ('id', 'title', 'subtitle', 'desc', 'img', 'url', 'link', 'updated_at')
+        fields = ('id', 'order', 'title', 'subtitle', 'desc', 'img', 'url', 'link', 'updated_at')
+
+class PageHeaderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PageHeader
+        fields = ('id', 'title', 'subtitle', 'desc', 'updated_at')

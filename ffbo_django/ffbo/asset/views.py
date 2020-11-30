@@ -4,13 +4,15 @@ from django.contrib.auth.models import User
 from rest_framework import viewsets
 from .models import (
   Member, Component, Gallery, Post, Announcement,
-  BrainMaps, FrontPageVideo, FrontPageCard
+  BrainMaps, FrontPageVideo, FrontPageCard,
+  PageHeader
 )
 from .serializers import (
   MemberSerializer, ComponentSerializer,
   GallerySerializer, PostSerializer,
   AnnouncementSerializer, BrainMapsSerializer,
-  FrontPageVideoSerializer, FrontPageCardSerializer
+  FrontPageVideoSerializer, FrontPageCardSerializer,
+  PageHeaderSerializer
 )
 
 
@@ -70,3 +72,10 @@ class FrontPageCardViewSet(viewsets.ModelViewSet):
     """
     queryset = FrontPageCard.objects.all()
     serializer_class = FrontPageCardSerializer
+
+class PageHeaderViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = PageHeader.objects.all()
+    serializer_class = PageHeaderSerializer

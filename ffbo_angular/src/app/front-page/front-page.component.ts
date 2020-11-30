@@ -163,7 +163,7 @@ export class FrontPageComponent implements OnInit {
     this.asset.getFrontPageCards().subscribe(
       data => {
         this.cards = data.sort((c1, c2) => {
-          return c1.updated_at <= c2.updated_at ? 1: -1;
+          return c1.order >= c2.order ? 1: -1;
         });
         console.log('Got cards', this.cards);
       },
