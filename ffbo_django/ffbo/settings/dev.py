@@ -15,6 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "amacrine.ee.columbia.edu",
+    "neuronlp.fruitflybrain.org",
     "localhost"
 ]
 
