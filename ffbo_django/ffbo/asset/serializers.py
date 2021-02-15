@@ -3,7 +3,7 @@ from .models import (
   Component, Member, Gallery, Post,
   Announcement, BrainMaps,
   FrontPageVideo, FrontPageCard,
-  PageHeader
+  PageHeader, GenericImage
 )
 
 class ComponentSerializer(serializers.ModelSerializer):
@@ -50,3 +50,8 @@ class PageHeaderSerializer(serializers.ModelSerializer):
     class Meta:
         model = PageHeader
         fields = ('id', 'title', 'subtitle', 'desc', 'updated_at')
+
+class GenericImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GenericImage
+        fields = ('id', 'title', 'img', 'desc', 'updated_at')

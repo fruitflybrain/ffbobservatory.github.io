@@ -160,3 +160,14 @@ class PageHeader(models.Model):
     subtitle = models.CharField(blank=True, max_length=1024)
     desc =  models.TextField()
     updated_at = models.DateTimeField(auto_now=True)
+
+class GenericImage(models.Model):
+    def __str__(self):
+        return 'Images: ' + self.title
+
+    def __unicode__(self):
+        return 'Images: ' + self.title
+    title = models.CharField(max_length=1024)
+    img = models.ImageField()
+    desc =  models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)

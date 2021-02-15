@@ -5,14 +5,14 @@ from rest_framework import viewsets
 from .models import (
   Member, Component, Gallery, Post, Announcement,
   BrainMaps, FrontPageVideo, FrontPageCard,
-  PageHeader
+  PageHeader, GenericImage
 )
 from .serializers import (
   MemberSerializer, ComponentSerializer,
   GallerySerializer, PostSerializer,
   AnnouncementSerializer, BrainMapsSerializer,
   FrontPageVideoSerializer, FrontPageCardSerializer,
-  PageHeaderSerializer
+  PageHeaderSerializer, GenericImageSerializer
 )
 
 
@@ -79,3 +79,10 @@ class PageHeaderViewSet(viewsets.ModelViewSet):
     """
     queryset = PageHeader.objects.all()
     serializer_class = PageHeaderSerializer
+
+class GenericImageViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = GenericImage.objects.all()
+    serializer_class = GenericImageSerializer
