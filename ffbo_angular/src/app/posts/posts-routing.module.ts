@@ -7,7 +7,9 @@ import {
   FAQsComponent,
   WorkshopsComponent,
   CodeComponent,
-  HackathonsComponent
+  HackathonsComponent,
+  TestPostComponent,
+  ExploreFFBOComponent
 } from './posts.component';
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'hackathons', component: HackathonsComponent },
   { path: 'workshops', component: WorkshopsComponent },
   { path: 'licenses', component: LicenseComponent },
+  { path: 'explore_ffbo', component: ExploreFFBOComponent },
+  { path: 'test_post', component: TestPostComponent },
 ];
 
 @NgModule({

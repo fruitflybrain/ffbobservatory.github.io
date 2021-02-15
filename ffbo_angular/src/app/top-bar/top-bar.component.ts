@@ -29,22 +29,22 @@ export class FFBONavBarComponent implements OnInit {
   }
 
   getStarted() {
-    let structToFuncDiv = document.getElementsByClassName(
-        'mat-card front-page-card'
-      )[0] as HTMLElement;
+    let structToFuncDiv = document.getElementById(
+        'frontpage-overview-header'
+      ) as HTMLElement;
 
     if (!structToFuncDiv) {
       setTimeout(
         () => {
-          structToFuncDiv = document.getElementsByClassName(
-            'mat-card front-page-card'
-          )[0] as HTMLElement;
+          structToFuncDiv = document.getElementById(
+            'frontpage-overview-header'
+          ) as HTMLElement;
           scrollToElement(structToFuncDiv);
         }, 500);
     } else {
       scrollToElement(structToFuncDiv);
     }
-  }
+}
 
   showNLPComponentCard(){
     const dialogRef = this.dialog.open(FFBOComponentDialogComponent, {

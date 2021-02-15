@@ -9,8 +9,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
-import { NgxMdModule } from 'ngx-md';
-
+import { MarkdownModule } from 'ngx-markdown'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FFBOComponentDialogComponent } from './ffbo-component-dialog/ffbo-component-dialog.component';
 import { FFBOComponentCardComponent } from './ffbo-component-card/ffbo-component-card.component';
@@ -45,11 +45,12 @@ import { MatListModule } from '@angular/material/list';
     MatTabsModule,
     MatIconModule,
     MatStepperModule,
-    NgxMdModule,
+    MarkdownModule.forChild(),
     HttpClientModule,
     MatExpansionModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    FontAwesomeModule
   ],
   exports: [
     FFBOComponentCardComponent

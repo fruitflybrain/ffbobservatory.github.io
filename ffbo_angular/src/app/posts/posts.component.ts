@@ -1,12 +1,13 @@
 import { AssetService } from './../asset.service';
-import { Component, OnInit } from '@angular/core';
-import marked from 'marked';
+import { Component, OnInit, Input } from '@angular/core';
+// import marked from 'marked';
+import { MarkdownService } from 'ngx-markdown';
 
 const POST_TEMPLATE = `
 <div class="page post-container">
 <div class="post-markdown">
-  <h2 class="mat-display-1">{{title}}</h2>
-  <div [innerHTML]="body"></div>
+  <h2 class="mat-display-1 post-title">{{title}}</h2>
+  <div markdown class="markdown-body" [innerHTML]="body"></div>
 </div>
 `;
 
@@ -31,7 +32,10 @@ export class PostsComponent implements OnInit {
   workshops: Post;
   tutorials: Post;
 
-  constructor(private asset: AssetService) { }
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
   ngOnInit(): void {
     this.asset.getPosts().subscribe(
@@ -59,21 +63,19 @@ export class PostsComponent implements OnInit {
 })
 export class WorkshopsComponent implements OnInit {
   title: string;
-  body: HTMLElement;
-  md: any;
+  @Input() body: string;
 
   constructor(
-    private asset: AssetService
-  ) {
-    this.md = marked.setOptions({ });
-  }
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
 
   ngOnInit(): void {
     this.asset.getOnePost(3).subscribe(
       data => {
         this.title = data.title;
-        this.body = this.md.parse(data.body);
+        this.body = this.markdownService.compile(data.body);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -89,21 +91,19 @@ export class WorkshopsComponent implements OnInit {
 })
 export class CodeComponent implements OnInit {
   title: string;
-  body: HTMLElement;
-  md: any;
+  @Input() body: string;
 
   constructor(
-    private asset: AssetService
-  ) {
-    this.md = marked.setOptions({ });
-  }
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
 
   ngOnInit(): void {
     this.asset.getOnePost(2).subscribe(
       data => {
         this.title = data.title;
-        this.body = this.md.parse(data.body);
+        this.body = this.markdownService.compile(data.body);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -119,21 +119,18 @@ export class CodeComponent implements OnInit {
 })
 export class HackathonsComponent implements OnInit {
   title: string;
-  body: HTMLElement;
-  md: any;
+  @Input() body: string;
 
   constructor(
-    private asset: AssetService
-  ) {
-    this.md = marked.setOptions({ });
-  }
-
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
   ngOnInit(): void {
     this.asset.getOnePost(1).subscribe(
       data => {
         this.title = data.title;
-        this.body = this.md.parse(data.body);
+        this.body = this.markdownService.compile(data.body);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -149,21 +146,18 @@ export class HackathonsComponent implements OnInit {
 })
 export class FAQsComponent implements OnInit {
   title: string;
-  body: HTMLElement;
-  md: any;
+  @Input() body: string;
 
   constructor(
-    private asset: AssetService
-  ) {
-    this.md = marked.setOptions({ });
-  }
-
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
   ngOnInit(): void {
     this.asset.getOnePost(4).subscribe(
       data => {
         this.title = data.title;
-        this.body = this.md.parse(data.body);
+        this.body = this.markdownService.compile(data.body);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -179,17 +173,18 @@ export class FAQsComponent implements OnInit {
 })
 export class LicenseComponent implements OnInit {
   title: string;
-  body: HTMLElement;
-  md: any;
+  @Input() body: string;
 
-  constructor( private asset: AssetService ) {}
-
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
 
   ngOnInit(): void {
     this.asset.getOnePost(5).subscribe(
       data => {
         this.title = data.title;
-        this.body = data.body;
+        this.body = this.markdownService.compile(data.body);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -197,3 +192,57 @@ export class LicenseComponent implements OnInit {
     );
   }
 }
+
+@Component({
+  template: POST_TEMPLATE,
+  styleUrls: ['./posts.component.scss']
+})
+export class ExploreFFBOComponent implements OnInit {
+  title: string;
+  @Input() body: string;
+
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
+
+  ngOnInit(): void {
+    this.asset.getOnePost(7).subscribe(
+      data => {
+        this.title = data.title;
+        this.body = this.markdownService.compile(data.body);
+      },
+      error => {
+        console.log('Get Posts Error', error);
+      }
+    );
+  }
+}
+
+
+@Component({
+  template: POST_TEMPLATE,
+  styleUrls: ['./posts.component.scss']
+})
+export class TestPostComponent implements OnInit {
+  title: string;
+  @Input() body: string;
+
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
+
+  ngOnInit(): void {
+    this.asset.getOnePost(8).subscribe(
+      data => {
+        this.title = data.title;
+        this.body = this.markdownService.compile(data.body);
+      },
+      error => {
+        console.log('Get Posts Error', error);
+      }
+    );
+  }
+}
+

@@ -1,13 +1,13 @@
 <div>
   <app-banner></app-banner>
   <div class="card-container">
-    <h2 class="section-header mat-display-2">Overview</h2>
+    <h2 id="frontpage-overview-header" class="section-header mat-display-2">Overview</h2>
     <!-- <div class="innovations-container">
       <div class="innovations-drawer">
         <mat-drawer-container class="mat-elevation-z4 stakeholders-tabs">
           <mat-drawer mode="side" opened>
             <mat-action-list>
-              <button mat-list-item 
+              <button mat-list-item
                 *ngFor="let stakeholder of stakeholders"
                 (click)="selected = stakeholder.label; onSelectedTabChange()"
                 class="stakeholder-tabs-btn">
@@ -35,7 +35,7 @@
       </div>
       <div class="innovations-svg" [innerHTML]="innovationsSVG"></div>
     </div> -->
-    
+
     <div *ngFor="let data of cards">
       <app-front-page-cards [data]="data">
       </app-front-page-cards>

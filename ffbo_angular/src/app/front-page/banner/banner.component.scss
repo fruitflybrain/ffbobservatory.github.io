@@ -21,7 +21,7 @@
     ul {
       list-style: inside;
     }
-    
+
     h1 {
       font-weight:  400;
       font-size: 3.2rem;
@@ -46,20 +46,28 @@
       .banner-btn{
         margin-top: 20px;
         margin-right: 20px;
-      }
-    }
 
-    .banner-btn:nth-child(2n+1){
-      // background-color: mat-color($primary, darker);
-      // color: white;
-      background-color: $accent;
-      color: white;
-    }
-    .banner-btn:nth-child(2n){
-      // background-color: mat-color($primary, lighter);
-      // color: black;
-      background-color: $accent;
-      color: white;
+        .mat-button-wrapper {
+          display: flex;
+        }
+
+        fa-icon {
+          padding-right: 5px;
+        }
+      }
+
+      .banner-btn:nth-child(2n+1){
+        // background-color: mat-color($primary, darker);
+        // color: white;
+        background-color: $accent;
+        color: white;
+      }
+      .banner-btn:nth-child(2n){
+        // background-color: mat-color($primary, lighter);
+        // color: black;
+        background-color: $accent;
+        color: white;
+      }
     }
   }
 

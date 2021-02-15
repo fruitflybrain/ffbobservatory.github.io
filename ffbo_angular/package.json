@@ -36,7 +36,7 @@
     "jszip": "^3.3.0",
     "marked": "^1.1.0",
     "minireset.css": "~0.0.4",
-    "ngx-md": "^8.1.6",
+    "ngx-markdown": "^11.0.1",
     "resize-observer-polyfill": "^1.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
