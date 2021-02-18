@@ -34,7 +34,7 @@ class AnnouncementSerializer(serializers.ModelSerializer):
 class BrainMapsSerializer(serializers.ModelSerializer):
     class Meta:
         model = BrainMaps
-        fields = ('id', 'title', 'subtitle', 'img', 'url', 'desc', 'info_url')
+        fields = ('id', 'title', 'subtitle', 'category', 'img', 'url', 'desc', 'info_url')
 
 class FrontPageVideoSerializer(serializers.ModelSerializer):
     class Meta:

@@ -118,6 +118,11 @@ class BrainMaps(models.Model):
 
     title = models.CharField(max_length=256)
     subtitle = models.CharField(max_length=512)
+    category = models.CharField(null=True, max_length=256, choices=[
+        ('connectome', 'Connectome'),
+        ('gene', 'Gene Expression'),
+        ('activity', 'Activity Maps'),
+    ])
     img = models.ImageField()
     desc = models.TextField()
     url = models.URLField()
