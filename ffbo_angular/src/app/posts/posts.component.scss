@@ -68,7 +68,6 @@
 
 // }
 
-
 .markdown-body ::ng-deep .octicon {
   display: inline-block;
   fill: currentColor;
@@ -204,7 +203,7 @@
 }
 
 .markdown-body ::ng-deep a {
-  color: #0366d6;
+  color: rgb(88, 166, 255);
   text-decoration: none;
 }
 
@@ -842,22 +841,22 @@
 .markdown-body ::ng-deep table ::ng-deep td,
 .markdown-body ::ng-deep table ::ng-deep th {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 1px solid rgb(128, 128, 128);
 }
 
 .markdown-body ::ng-deep table ::ng-deep tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
+  background-color: rgb(13, 17, 23);
+  border-top: 1px solid rgb(39, 44, 50);
 }
 
 .markdown-body ::ng-deep table ::ng-deep tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: rgb(22, 27, 34);
 }
 
 .markdown-body ::ng-deep img {
   max-width: 100%;
   box-sizing: initial;
-  background-color: #fff;
+  background-color: rgb(13, 17, 23);
 }
 
 .markdown-body ::ng-deep img[align=right] {

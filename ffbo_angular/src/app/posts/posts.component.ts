@@ -197,6 +197,32 @@ export class LicenseComponent implements OnInit {
   template: POST_TEMPLATE,
   styleUrls: ['./posts.component.scss']
 })
+export class ResourcesComponent implements OnInit {
+  title: string;
+  @Input() body: string;
+
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
+
+  ngOnInit(): void {
+    this.asset.getOnePost(6).subscribe(
+      data => {
+        this.title = data.title;
+        this.body = this.markdownService.compile(data.body);
+      },
+      error => {
+        console.log('Get Posts Error', error);
+      }
+    );
+  }
+}
+
+@Component({
+  template: POST_TEMPLATE,
+  styleUrls: ['./posts.component.scss']
+})
 export class ExploreFFBOComponent implements OnInit {
   title: string;
   @Input() body: string;
