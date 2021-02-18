@@ -1,6 +1,118 @@
+@import "~src/_variables.scss";
+
 .brainmapsviz-component-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 50px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  // max-height: 500px;
+  padding-left: 18px;
+  padding-right: 18px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+
+  .banner-text {
+    flex-basis: 40% or auto;
+    vertical-align: middle;
+    min-width:40%;
+    // background-color: inherit;
+
+    ul {
+      list-style: inside;
+    }
+
+    h1 {
+      font-weight:  400;
+      font-size: 3.2rem;
+      letter-spacing: -.02em;
+      line-height: 3.6rem;
+      margin-top: .6rem;
+      margin-bottom: .6rem;
+    }
+
+    p {
+      font-size: .9rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+      margin: .3rem .25rem;
+      max-width: 31.2rem;
+    }
+
+    .banner-btns-container{
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .banner-btn{
+        margin-top: 20px;
+        margin-right: 20px;
+
+        .mat-button-wrapper {
+          display: flex;
+        }
+
+        fa-icon {
+          padding-right: 5px;
+        }
+      }
+
+      .banner-btn:nth-child(2n+1){
+        // background-color: mat-color($primary, darker);
+        // color: white;
+        background-color: $accent;
+        color: white;
+      }
+      .banner-btn:nth-child(2n){
+        // background-color: mat-color($primary, lighter);
+        // color: black;
+        background-color: $accent;
+        color: white;
+      }
+    }
+  }
+
+  #banner-background {
+    flex-basis: 60% or auto;
+    justify-content: baseline;
+    text-align: center;
+
+    img {
+      max-height: 100vh;
+      min-height: 500px;
+    }
+  }
+}
+
+
+@media only screen and (max-width:778px) {
+  .banner {
+    height: auto;
+
+    #banner-background {
+      display: none;
+    }
+
+    .banner-text {
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .banner-btns-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
 }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class AssetService {
-    baseurl = 'https://neuronlp.fruitflybrain.org:4201';
+    baseurl = 'https://localhost:4201';
     httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     constructor(private http: HttpClient) { }

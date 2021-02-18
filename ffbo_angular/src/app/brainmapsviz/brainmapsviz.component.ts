@@ -9,48 +9,8 @@ export interface BrainMapVizCard {
   url: string | URL;
   info_url?: string | URL;
   desc: string;
+  category: string;
 }
-
-// const BRAINMAPSVIZ: BrainMapVizCard[] = [
-//   {
-//     title: '<i>in vivo</i> Antenna Activity Data',
-//     subtitle: 'Activity Data',
-//     img: '../../assets/brainmapsviz/ffbo_gfx.jpg',
-//     url: 'http://amacrine.ee.columbia.edu:15000/',
-//     desc: `
-//     The Alpha release (v0.1) of the in vivo electrophysiology recordings of the
-//     fruit fly antenna. The recordings are used to validate the antenna model published in
-//     "A Molecular Odorant Transduction Model and the Complexity of Spatio-Temporal
-//     Encoding in the Drosophila Antenna."
-//     `
-//   },
-//   {
-//     title: 'FlyCircuit Adult Data',
-//     subtitle: 'Morphology & Connectome Data',
-//     img: '../../assets/brainmapsviz/flycircuit.png',
-//     url: 'https://neuronlp.adult.fruitflybrain.org/',
-//     desc: 'Activity Data'
-//   },
-//   {
-//     title: 'L1EM Larval Data',
-//     subtitle: 'Morphology & Connectome Data',
-//     img: '../../assets/brainmapsviz/larval_l1em.png',
-//     url: 'https://neuronlp.larva.fruitflybrain.org/',
-//     desc: `
-//     Larval Data
-//     `
-//   },
-//   {
-//     title: 'Hemibrain Adult Data',
-//     subtitle: 'Morphology & Connectome Data',
-//     img: '../../assets/brainmapsviz/hemibrain.png',
-//     url: 'http://hemibrain.fruitflybrain.org/',
-//     desc: `
-//     This is the Alpha release (v0.1) of the FFBO NeuroArch Database with
-//     Hemibrain v1.0 and VNC, containing ~25,000 neurons and millions of synapses between them.
-//     `
-//   }
-// ];
 
 @Component({
   selector: 'app-brainmapsviz',
@@ -58,20 +18,21 @@ export interface BrainMapVizCard {
   styleUrls: ['./brainmapsviz.component.scss']
 })
 export class BrainmapsvizComponent implements OnInit {
-  vizs: BrainMapVizCard[];
+  vizs: {[name: string]: BrainMapVizCard[]} = {connectome:[], gene: [], activity: []};
+  backgroundImg = 'assets/brainmapsviz/neuronlp_ui.jpg';
   header = {
-    title: 'Brain Maps Visualizers', 
+    title: 'Brain Maps Visualizers',
     subtitle: '',
     desc: ''
   };
 
   sectionHeader = {
-    title: 'Brain Maps Datasets', 
+    title: 'Brain Maps Datasets',
     subtitle: '',
     desc: ''
   };
 
-  constructor(private asset: AssetService) { 
+  constructor(private asset: AssetService) {
     this.asset.getOnePageHeader(1).subscribe(
       data => {
         console.log('Got BrainMaps Header', data);
@@ -97,7 +58,11 @@ export class BrainmapsvizComponent implements OnInit {
     this.asset.getBrainMaps().subscribe(
       data => {
         console.log('Got BrainMaps', data);
-        this.vizs = data;
+        for (const v of data){
+          if (v.category in this.vizs) {
+            this.vizs[v.category].push(v);
+          }
+        }
       },
       error => {
         console.log('Get BrainMaps Error', error);

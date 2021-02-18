@@ -1,6 +1,7 @@
 .post-container {
   margin-bottom: 50px;
   width: 980px;
+  max-width: 100vw;
   padding: 15px 45px 45px 45px;
 
   .post-title {
@@ -9,6 +10,14 @@
     font-size: 2.5rem;
   }
 }
+
+
+// @media only screen and (max-width:778px) {
+//   .post-container {
+//     max-width: 100vw;
+//   }
+// }
+
 
 // .post-markdown {
 //   padding-left: 30px;
