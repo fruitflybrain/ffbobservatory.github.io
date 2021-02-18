@@ -7,7 +7,7 @@
 ```bash
 conda create -n ffbo_website python=3.6 nodejs -c conda-forge
 conda activate ffbo_website
-pip install Django django-cors-headers djangorestframework django-filter markdown Pillow
+pip install Django django-cors-headers djangorestframework django-filter markdown Pillow django-sslserver
 npm install @angular/cli@9.1.1
 ```
 
@@ -16,8 +16,8 @@ npm install @angular/cli@9.1.1
 ```bash
 # cd ffbo_django
 # conda activate ffbo_website
-python manage.py migrate  # only required before first start-up to populate sqlite3 database
-python manage.py runserver 0.0.0.0:4201
+python manage.py migrate --settings ffbo.settings.dev # only required before first start-up to populate sqlite3 database
+python manage.py runserver 0.0.0.0:4201  --settings ffbo.settings.dev
 ```
 
 Create super-user admin account:
