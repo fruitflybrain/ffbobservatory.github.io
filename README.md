@@ -7,7 +7,7 @@
 ```bash
 conda create -n ffbo_website python=3.6 nodejs -c conda-forge
 conda activate ffbo_website
-pip install Django django-cors-headers djangorestframework django-filter markdown Pillow django-sslserver
+pip install Django django-cors-headers djangorestframework django-filter markdown Pillow django-sslserver whitenoise
 npm install @angular/cli@9.1.1
 ```
 
