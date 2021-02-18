@@ -111,35 +111,14 @@ html, body {
   height: 100%;
 }
 
-// body {
-//   margin: 0;
-//   font-family: Roboto, "Helvetica Neue", sans-serif;
-// }
-
-a {
-  color: #62a9f5; //mat-color($accent, lighter);
-}
-
-a:hover {
-  color: #47a0ff;
-}
-
-
-a:link {
-  text-decoration: none;
-}
-
-
-// p {
-//   font-weight: 400;
-// }
-
 .page {
   max-width: 1248px;
   margin-top: 70px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .page-title {
@@ -148,10 +127,22 @@ a:link {
   font-weight: 400 !important;
 }
 
+.section-title {
+  font-size: 1.8rem !important;
+  margin-top: .5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.section-subtitle {
+  font-size: 1.5rem !important;
+  margin-top: .5rem !important;
+  margin-bottom: 1rem !important;
+}
+
 .page-subtitle {
   font-size: 1.2rem !important;
   margin-top: 0 !important;
-  margin-bottom: .6rem !important;
+  margin-bottom: .3rem !important;
 }
 
 .page-desc {
@@ -160,5 +151,21 @@ a:link {
   margin-bottom: .6rem !important;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+.section-desc {
+  font-size: 1rem !important;
+  margin-top: 0 !important;
+  margin-bottom: .6rem !important;
+}
+
+a {
+  color: rgb(77, 159, 253);
+}
+
+a:hover {
+  color: #82b9f3;
+}
+
+
+a:link {
+  text-decoration: none;
+}
