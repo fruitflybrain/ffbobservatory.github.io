@@ -163,7 +163,7 @@ class PageHeader(models.Model):
 
     title = models.CharField(max_length=1024)
     subtitle = models.CharField(blank=True, max_length=1024)
-    desc =  models.TextField()
+    desc =  models.TextField(blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 class GenericImage(models.Model):

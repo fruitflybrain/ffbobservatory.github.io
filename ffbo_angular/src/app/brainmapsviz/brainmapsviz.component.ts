@@ -26,7 +26,13 @@ export class BrainmapsvizComponent implements OnInit {
     desc: ''
   };
 
-  sectionHeader = {
+  sectionHeader1 = {
+    title: 'Brain Maps Gallery',
+    subtitle: '',
+    desc: ''
+  };
+
+  sectionHeader2 = {
     title: 'Brain Maps Datasets',
     subtitle: '',
     desc: ''
@@ -46,7 +52,18 @@ export class BrainmapsvizComponent implements OnInit {
     this.asset.getOnePageHeader(2).subscribe(
       data => {
         console.log('Got BrainMaps Section Header', data);
-        this.sectionHeader = data;
+        this.sectionHeader2 = data;
+      },
+      error => {
+        console.log('Get BrainMaps Section Header Error', error);
+      }
+    );
+
+
+    this.asset.getOnePageHeader(3).subscribe(
+      data => {
+        console.log('Got BrainMaps Section Header', data);
+        this.sectionHeader1 = data;
       },
       error => {
         console.log('Get BrainMaps Section Header Error', error);

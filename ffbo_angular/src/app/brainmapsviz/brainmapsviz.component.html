@@ -9,19 +9,22 @@
       <img [src]="backgroundImg" alt='BrainMapsViz UI'/>
     </div>
   </div>
-  <app-gallery></app-gallery>
-  <h2 class="section-title" *ngIf="sectionHeader.title">{{this.sectionHeader.title}}</h2>
-  <p class="page-desc" [innerHTML]="this.sectionHeader.desc"></p>
+  <h2 class="section-title" *ngIf="sectionHeader1.title">{{this.sectionHeader1.title}}</h2>
+  <p class="page-desc" [innerHTML]="this.sectionHeader1.desc"></p>
 
-  <h3 class="section-subtitle">&nbsp;&nbsp;Connectome</h3>
+  <app-gallery></app-gallery>
+  <h2 class="section-title" *ngIf="sectionHeader2.title">{{this.sectionHeader2.title}}</h2>
+  <p class="page-desc" [innerHTML]="this.sectionHeader2.desc"></p>
+
+  <h3 class="section-subtitle">Connectome</h3>
   <div class="brainmapsviz-component-container">
     <app-map-viz-card *ngFor="let v of vizs.connectome" [data]="v"></app-map-viz-card>
   </div>
-  <h3 class="section-subtitle">&nbsp;&nbsp;Gene Expression</h3>
+  <h3 class="section-subtitle">Gene Expression</h3>
   <div class="brainmapsviz-component-container">
     <app-map-viz-card *ngFor="let v of vizs.gene" [data]="v"></app-map-viz-card>
   </div>
-  <h3 class="section-subtitle">&nbsp;&nbsp;Activities Maps</h3>
+  <h3 class="section-subtitle">Activities Maps</h3>
   <div class="brainmapsviz-component-container">
     <app-map-viz-card *ngFor="let v of vizs.activity" [data]="v"></app-map-viz-card>
   </div>
