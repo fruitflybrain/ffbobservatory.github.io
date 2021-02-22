@@ -44,8 +44,17 @@
       justify-content: flex-start;
       flex-wrap: wrap;
       .banner-btn{
-        margin-top: 20px;
-        margin-right: 20px;
+        margin: 20px 10px 0 10px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 120px;
+        align-items: center;
+
+        img {
+          height: 30px;
+        }
 
         .mat-button-wrapper {
           display: flex;
