@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./innovations/innovations.module').then(m => m.InnovationsModule)
   },
   {
-    path: 'brainmaps',
-    loadChildren: () => import('./brainmaps/brainmaps.module').then(m => m.BrainmapsModule)
-  },
-  {
     path: 'posts',
     loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
   },
