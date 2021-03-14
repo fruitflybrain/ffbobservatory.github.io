@@ -18,7 +18,9 @@ export interface BrainMapVizCard {
   styleUrls: ['./brainmapsviz.component.scss']
 })
 export class BrainmapsvizComponent implements OnInit {
-  vizs: {[name: string]: BrainMapVizCard[]} = {connectome:[], gene: [], activity: []};
+  vizs: { [name: string]: BrainMapVizCard[] } = {
+    connectome: [], gene: [], activity: []
+  };
   backgroundImg = 'assets/brainmapsviz/neuronlp_ui.jpg';
   header = {
     title: 'Brain Maps Visualizers',
