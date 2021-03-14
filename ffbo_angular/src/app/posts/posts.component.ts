@@ -272,3 +272,30 @@ export class TestPostComponent implements OnInit {
   }
 }
 
+
+@Component({
+  template: POST_TEMPLATE,
+  styleUrls: ['./posts.component.scss']
+})
+export class GeneMatchIntroComponent implements OnInit {
+  title: string;
+  @Input() body: string;
+
+  constructor(
+    private asset: AssetService,
+    private markdownService: MarkdownService
+  ) {}
+
+  ngOnInit(): void {
+    this.asset.getOnePost(9).subscribe(
+      data => {
+        this.title = data.title;
+        this.body = this.markdownService.compile(data.body);
+      },
+      error => {
+        console.log('Get Posts Error', error);
+      }
+    );
+  }
+}
+

@@ -10,7 +10,8 @@ import {
   HackathonsComponent,
   TestPostComponent,
   ExploreFFBOComponent,
-  ResourcesComponent
+  ResourcesComponent,
+  GeneMatchIntroComponent
 } from './posts.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'resources', component: ResourcesComponent },
   { path: 'explore_ffbo', component: ExploreFFBOComponent },
   { path: 'test_post', component: TestPostComponent },
+  { path: 'gene_match_introduction', component: GeneMatchIntroComponent },
 ];
 
 @NgModule({
