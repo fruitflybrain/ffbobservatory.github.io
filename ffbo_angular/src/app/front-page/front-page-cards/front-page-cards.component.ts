@@ -1,7 +1,6 @@
 import { FrontPageCard } from './../front-page.component';
 import { Component, OnInit, Input} from '@angular/core';
-import marked from 'marked';
-
+import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-front-page-cards',
@@ -11,15 +10,12 @@ import marked from 'marked';
 export class FrontPageCardsComponent implements OnInit {
 
   @Input() data: FrontPageCard;
-  md: any;
   desc: any;
 
-  constructor() { 
-    this.md = marked.setOptions({})
-  }
+  constructor(private markdownService: MarkdownService) { }
 
   ngOnInit(): void {
-    this.desc = this.md.parse(this.data.desc);
+    this.desc = this.markdownService.compile(this.data.desc);
   }
 
 }

@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { BrainMapVizCard } from '../brainmapsviz.component';
-import marked from 'marked';
+import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-map-viz-card',
@@ -10,16 +10,13 @@ import marked from 'marked';
 })
 export class MapVizCardComponent implements OnInit {
   @Input() data: BrainMapVizCard;
-  
-  md: any;
+
   desc: any;
 
-  constructor() { 
-    this.md = marked.setOptions({});
-  }
+  constructor(private markdownService: MarkdownService) {}
 
   ngOnInit(): void {
-    this.desc = this.md.parse(this.data.desc);
+    this.desc = this.markdownService.compile(this.data.desc);
   }
 
 }

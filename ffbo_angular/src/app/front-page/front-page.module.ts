@@ -9,7 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
-import { MarkdownModule } from 'ngx-markdown'
+import { MarkdownModule } from 'ngx-markdown';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FFBOComponentDialogComponent } from './ffbo-component-dialog/ffbo-component-dialog.component';
@@ -55,6 +55,6 @@ import { MatListModule } from '@angular/material/list';
   exports: [
     FFBOComponentCardComponent
   ],
-  providers:[]
+  providers: []
 })
 export class FrontPageModule { }

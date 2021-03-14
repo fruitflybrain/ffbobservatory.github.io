@@ -1,6 +1,5 @@
 import { AssetService } from './../asset.service';
 import { Component, OnInit, Input } from '@angular/core';
-// import marked from 'marked';
 import { MarkdownService } from 'ngx-markdown';
 
 const POST_TEMPLATE = `
