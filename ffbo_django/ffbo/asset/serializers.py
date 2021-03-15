@@ -24,7 +24,8 @@ class GallerySerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'title', 'body', 'updated_at')
+        fields = ('id', 'title', 'url', 'body', 'updated_at')
+        lookup_field = 'url'
 
 class AnnouncementSerializer(serializers.ModelSerializer):
     class Meta:

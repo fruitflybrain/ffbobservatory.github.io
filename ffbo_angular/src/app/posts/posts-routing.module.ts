@@ -3,27 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {
   PostsComponent,
-  LicenseComponent,
-  FAQsComponent,
-  WorkshopsComponent,
-  CodeComponent,
-  HackathonsComponent,
-  TestPostComponent,
-  ExploreFFBOComponent,
-  ResourcesComponent,
-  GeneMatchIntroComponent
 } from './posts.component';
 
+// Posts Router captures all sub URLs and uses the PostComponent's
+// ActivatedRouter callback to display the correct page
 const routes: Routes = [
-  { path: 'faqs', component: FAQsComponent },
-  { path: 'code', component: CodeComponent },
-  { path: 'hackathons', component: HackathonsComponent },
-  { path: 'workshops', component: WorkshopsComponent },
-  { path: 'licenses', component: LicenseComponent },
-  { path: 'resources', component: ResourcesComponent },
-  { path: 'explore_ffbo', component: ExploreFFBOComponent },
-  { path: 'test_post', component: TestPostComponent },
-  { path: 'gene_match_introduction', component: GeneMatchIntroComponent },
+  { path: '**', component: PostsComponent },
 ];
 
 @NgModule({

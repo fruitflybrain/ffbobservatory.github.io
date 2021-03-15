@@ -22,6 +22,10 @@ class Post(models.Model):
         return 'Post: ' + self.title
 
     title = models.CharField(max_length=1024)
+    url = models.CharField(
+        unique=True, max_length=128,
+        help_text="Unique URL pattern that is used for access @ BASEURL/post/url/"
+    )
     body = models.TextField()
     updated_at = models.DateTimeField(auto_now=True)
 

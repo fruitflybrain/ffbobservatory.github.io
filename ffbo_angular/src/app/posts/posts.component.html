@@ -1,1 +1,20 @@
-<div class="page post-container"></div>
+<div class="page post-container">
+    <div *ngIf="!selectedPost">
+        <h2 class="mat-display-1 post-title">Posts</h2>
+        <mat-nav-list *ngIf="!selectedPost">
+            <mat-list-item *ngFor="let name of postNames">
+                <a mat-list-item [routerLink]="name" class="post-names-item">
+                    <span>{{posts[name].title}}</span>
+                    <mat-chip-list>
+                        <mat-chip>{{posts[name].updated_at}}</mat-chip>
+                        <mat-chip>URL: {{name}}</mat-chip>
+                    </mat-chip-list>
+                </a>
+            </mat-list-item>
+        </mat-nav-list>
+    </div>
+    <div class="post-markdown" *ngIf="selectedPost">
+      <h2 class="mat-display-1 post-title" *ngIf="posts[selectedPost].title">{{posts[selectedPost].title}}</h2>
+      <div markdown class="markdown-body" *ngIf="posts[selectedPost].body" [innerHTML]="posts[selectedPost].body"></div>
+    </div>
+</div>

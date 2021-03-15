@@ -1,80 +1,64 @@
 import { AssetService } from './../asset.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
-
-const POST_TEMPLATE = `
-<div class="page post-container">
-<div class="post-markdown">
-  <h2 class="mat-display-1 post-title">{{title}}</h2>
-  <div markdown class="markdown-body" [innerHTML]="body"></div>
-</div>
-`;
-
+import { ActivatedRoute } from '@angular/router';
 
 interface Post {
-  title: string | any;
-  updated_at: string | any;
-  body: string | any;
+  title: string;
+  updated_at: string;
+  body: string;
 }
-
 
 @Component({
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[];
-  selectedPost: Post = undefined;
-  faqs: Post;
-  code: Post;
-  hackathons: Post;
-  workshops: Post;
-  tutorials: Post;
+  posts: { [url: string]: Post };  // dictionary of posts keyed by their url
+  selectedPost: string;
 
   constructor(
     private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
+    private markdownService: MarkdownService,
+    private route: ActivatedRoute
+  ) {
+    this.posts = {};
+    this.selectedPost = '';
+  }
+
+  /**
+   * Return list of posts URLs for template indexing
+   */
+  get postNames(): Array<string> {
+    return Object.keys(this.posts);
+  }
 
   ngOnInit(): void {
+
+    // Capture's Router's sub-URL pattern
+    // the sub-URL pattern is assumed to one of the keys of `this.posts`
+    // or empty
+    this.route.url.subscribe(params => {
+      if (params[0]) { // if not empty, select the active post as the chosen post
+        this.selectedPost = params[0].path;
+      } else { // otherwise, change selectedPost to empty, this will display list of all posts
+        this.selectedPost = '';
+      }
+    });
+
     this.asset.getPosts().subscribe(
       data => {
-        this.posts = data;
-        this.hackathons = data[0];
-        this.code = data[1];
-        this.workshops = data[2];
-        this.faqs = data[3];
-
-        this.selectedPost = this.hackathons;
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class WorkshopsComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-
-  ngOnInit(): void {
-    this.asset.getOnePost(3).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
+        data.forEach(d => {
+          // format datetime to a more readable format
+          const datetime = new Date(Date.parse(d.updated_at));
+          this.posts[d.url] = {
+            title: d.title,
+            body: this.markdownService.compile(d.body),
+            updated_at: datetime.toLocaleString('en-US', {
+              timeZone: 'America/New_York'
+            }),
+          };
+        }, this);
       },
       error => {
         console.log('Get Posts Error', error);
@@ -82,219 +66,3 @@ export class WorkshopsComponent implements OnInit {
     );
   }
 }
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class CodeComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-
-  ngOnInit(): void {
-    this.asset.getOnePost(2).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class HackathonsComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(1).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class FAQsComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(4).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class LicenseComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(5).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class ResourcesComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(6).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class ExploreFFBOComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(7).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class TestPostComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(8).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-
-
-@Component({
-  template: POST_TEMPLATE,
-  styleUrls: ['./posts.component.scss']
-})
-export class GeneMatchIntroComponent implements OnInit {
-  title: string;
-  @Input() body: string;
-
-  constructor(
-    private asset: AssetService,
-    private markdownService: MarkdownService
-  ) {}
-
-  ngOnInit(): void {
-    this.asset.getOnePost(9).subscribe(
-      data => {
-        this.title = data.title;
-        this.body = this.markdownService.compile(data.body);
-      },
-      error => {
-        console.log('Get Posts Error', error);
-      }
-    );
-  }
-}
-

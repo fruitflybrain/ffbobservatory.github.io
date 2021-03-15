@@ -1,3 +1,9 @@
+"""View Sets of FFBO Webpage
+
+Note:
+    URL Pattern capturing and parsing is inspired by
+    https://stackoverflow.com/questions/21292646/capture-parameters-in-django-rest-framework
+"""
 from django.shortcuts import render
 
 from django.contrib.auth.models import User
@@ -43,7 +49,7 @@ class PostViewSet(viewsets.ModelViewSet):
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-
+    lookup_field = 'url'
 
 class AnnouncementViewSet(viewsets.ModelViewSet):
     """
