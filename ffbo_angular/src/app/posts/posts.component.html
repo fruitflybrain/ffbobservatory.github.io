@@ -13,8 +13,8 @@
             </mat-list-item>
         </mat-nav-list>
     </div>
-    <div class="post-markdown" *ngIf="selectedPost">
-      <h2 class="mat-display-1 post-title" *ngIf="posts[selectedPost].title">{{posts[selectedPost].title}}</h2>
-      <div markdown class="markdown-body" *ngIf="posts[selectedPost].body" [innerHTML]="posts[selectedPost].body"></div>
+    <div class="post-markdown" *ngIf="selectedPost && posts[selectedPost]">
+      <h2 class="mat-display-1 post-title" >{{posts[selectedPost].title}}</h2>
+      <div markdown class="markdown-body" [innerHTML]="posts[selectedPost].body"></div>
     </div>
 </div>
