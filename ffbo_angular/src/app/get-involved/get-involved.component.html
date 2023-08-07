@@ -31,16 +31,34 @@
     </div>
   </div>
   <div
-    *ngIf="contributors.length > 0 || collaborators.length > 0"
+    *ngIf="collaborators.length > 0"
     class="get-involved-sections get-invovled-collaborators-and-contributors"
   >
-    <h3 class="mat-display-1" style="margin-bottom: 0px;">Past Collaborators & Contributors</h3>
+    <h3 class="mat-display-1" style="margin-bottom: 0px;">Collaborators</h3>
     <div class="get-involved-sections-cards">
       <app-profile-card
         *ngFor="let profile of collaborators"
         [profile]="profile">
       </app-profile-card>
     </div>
+  </div>
+  <div
+    *ngIf="collaborators.length > 0"
+    class="get-involved-sections get-invovled-collaborators-and-contributors"
+  >
+    <h3 class="mat-display-1" style="margin-bottom: 0px;">Past Collaborators</h3>
+    <div class="get-involved-sections-cards">
+      <app-profile-card
+        *ngFor="let profile of past_collaborators"
+        [profile]="profile">
+      </app-profile-card>
+    </div>
+  </div>
+  <div
+    *ngIf="contributors.length > 0"
+    class="get-involved-sections get-invovled-collaborators-and-contributors"
+  >
+    <h3 class="mat-display-1" style="margin-bottom: 0px;">Contributors</h3>
     <div>
       <ul>
         <li *ngFor="let profile of contributors">
@@ -48,6 +66,5 @@
         </li>
       </ul>
     </div>
-
   </div>
 </div>

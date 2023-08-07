@@ -32,10 +32,10 @@ class Post(models.Model):
 
 class Member(models.Model):
     def __str__(self):
-        return 'Member: ' + self.name
+        return f'{self.role}:{self.name}'
 
     def __unicode__(self):
-        return 'Member: ' + self.name
+        return f'{self.role}:{self.name}'
 
     name = models.CharField(max_length=128)
     desc = models.TextField(blank=True)
@@ -45,6 +45,7 @@ class Member(models.Model):
       choices=[
         ('alumni', 'Alumni'),
         ('collaborators', 'Collaborators'),
+        ('past_collaborators', 'Past Collaborators'),
         ('contributors', 'Contributors'),
         ('team', 'Team')
       ])

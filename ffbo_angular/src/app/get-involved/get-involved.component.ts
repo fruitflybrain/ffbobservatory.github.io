@@ -19,6 +19,7 @@ export class GetInvolvedComponent implements OnInit {
   team: Profile[] = [];
   alumni: Profile[] = [];
   collaborators: Profile[] = [];
+  past_collaborators: Profile[] = [];
   contributors: Profile[] = [];
 
   constructor(private asset: AssetService) { }
@@ -66,6 +67,9 @@ export class GetInvolvedComponent implements OnInit {
               break;
             case 'collaborators':
               this.collaborators.push(member);
+              break;
+            case 'past_collaborators':
+              this.past_collaborators.push(member);
               break;
             case 'contributors':
               this.contributors.push(member);
